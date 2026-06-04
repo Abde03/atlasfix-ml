@@ -118,8 +118,8 @@ for i in range(N_ARTISANS):
     lat, lon = jitter(base_lat, base_lon)
     cat = random.choice(CATEGORIES)
 
-    # Note : légèrement biaisée vers le haut (effet marketplace)
-    rating = round(min(5.0, max(1.0, random.gauss(4.1, 0.6))), 1)
+    # Uniform pour maximiser la variance — le modèle matching a besoin d'artisans très différents
+    rating = round(random.uniform(1.5, 5.0), 1)
     n_reviews = random.randint(0, 130)
     exp = random.randint(1, 25)
 
@@ -259,10 +259,10 @@ for i in range(N_INTERACTIONS):
         + artisan["is_verified"]          * 0.10
     )  # q ∈ [~0.28, ~0.85]
 
-    p_accept = 0.04 + q * 0.28   # low-quality: ~0.12  high-quality: ~0.28
-    p_reject = 0.20 - q * 0.15   # low-quality: ~0.16  high-quality: ~0.07
-    p_msg    = 0.18 + q * 0.05
-    p_view   = 0.35
+    p_accept = 0.02 + q * 0.46   # low-quality: ~0.08  high-quality: ~0.46
+    p_reject = 0.27 - q * 0.22   # low-quality: ~0.21  high-quality: ~0.05
+    p_msg    = 0.15 + q * 0.07
+    p_view   = 0.25
     p_ignore = max(0.0, 1.0 - p_accept - p_reject - p_msg - p_view)
 
     itype = random.choices(TYPES, weights=[p_view, p_msg, p_accept, p_reject, p_ignore])[0]
