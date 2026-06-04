@@ -246,12 +246,26 @@ write_csv("accepted_offers.csv", accepted_offers)
 print("Génération des interactions...")
 interactions = []
 TYPES = ["view_profile", "message_sent", "accept_offer", "reject_offer", "ignore"]
-POIDS = [0.35, 0.20, 0.15, 0.15, 0.15]
 
 for i in range(N_INTERACTIONS):
     client = random.choice(clients)
     artisan = random.choice(artisans)
-    itype = random.choices(TYPES, weights=POIDS)[0]
+
+    # Quality signal — drives accept probability so the model has something to learn
+    q = (
+        artisan["rating"] / 5.0          * 0.40
+        + artisan["global_score"]         * 0.30
+        + artisan["response_rate"]        * 0.20
+        + artisan["is_verified"]          * 0.10
+    )  # q ∈ [~0.28, ~0.85]
+
+    p_accept = 0.04 + q * 0.28   # low-quality: ~0.12  high-quality: ~0.28
+    p_reject = 0.20 - q * 0.15   # low-quality: ~0.16  high-quality: ~0.07
+    p_msg    = 0.18 + q * 0.05
+    p_view   = 0.35
+    p_ignore = max(0.0, 1.0 - p_accept - p_reject - p_msg - p_view)
+
+    itype = random.choices(TYPES, weights=[p_view, p_msg, p_accept, p_reject, p_ignore])[0]
 
     # Valeur numérique de l'interaction (pour le CF)
     value_map = {
