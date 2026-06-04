@@ -1,0 +1,191 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# AtlasFix — Monitoring hebdomadaire
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Se déclenche :
+#   - Chaque lundi à 3h du matin (après le retraining de 2h)
+#   - Manuellement depuis GitHub
+#
+# Ce qu'il fait :
+#   1. Détecte le drift dans les nouvelles données
+#   2. Suit la performance des modèles en production
+#   3. Si drift OU dégradation → déclenche automatiquement le retraining
+#
+# ─────────────────────────────────────────────────────────────────────────────
+
+name: Monitoring hebdomadaire
+
+on:
+  schedule:
+    - cron: "0 3 * * 1"   # Lundi 3h UTC (après le retraining de 2h)
+  workflow_dispatch:        # Lancement manuel
+
+env:
+  PYTHON_VERSION: "3.11"
+  MLFLOW_ALLOW_FILE_STORE: "true"
+
+jobs:
+
+  # ════════════════════════════════════════════════════════════════════════════
+  # JOB 1 — DRIFT DETECTION
+  # ════════════════════════════════════════════════════════════════════════════
+  detect-drift:
+    name: "Drift Detection"
+    runs-on: ubuntu-latest
+
+    outputs:
+      drift_detected: ${{ steps.drift.outputs.drift_detected }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: Installer les dépendances
+        run: pip install -r requirements.txt scipy
+
+      - name: Générer les données (simule production en attendant les vraies)
+        run: python data/generate_data.py
+
+      - name: Détecter le drift
+        id: drift
+        run: |
+          python monitoring/detect_drift.py
+          # Lire le flag si drift détecté
+          if [ -f monitoring/drift_detected.flag ]; then
+            echo "drift_detected=true" >> $GITHUB_OUTPUT
+            echo "🔴 Drift détecté"
+          else
+            echo "drift_detected=false" >> $GITHUB_OUTPUT
+            echo "🟢 Pas de drift"
+          fi
+
+      - name: Upload rapport drift
+        uses: actions/upload-artifact@v4
+        with:
+          name: drift-report
+          path: monitoring/reports/
+
+
+  # ════════════════════════════════════════════════════════════════════════════
+  # JOB 2 — PERFORMANCE TRACKING
+  # ════════════════════════════════════════════════════════════════════════════
+  track-performance:
+    name: "Performance Tracking"
+    runs-on: ubuntu-latest
+
+    outputs:
+      degraded: ${{ steps.perf.outputs.degraded }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: Installer les dépendances
+        run: pip install -r requirements.txt scipy
+
+      - name: Générer les données
+        run: python data/generate_data.py
+
+      - name: Suivre la performance
+        id: perf
+        run: |
+          python monitoring/track_performance.py
+          if [ -f monitoring/degradation_detected.flag ]; then
+            echo "degraded=true" >> $GITHUB_OUTPUT
+          else
+            echo "degraded=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Upload graphe tendance
+        uses: actions/upload-artifact@v4
+        with:
+          name: performance-trend
+          path: monitoring/reports/performance_trend.png
+
+
+  # ════════════════════════════════════════════════════════════════════════════
+  # JOB 3 — RETRAINING AUTOMATIQUE
+  # Déclenché seulement si drift OU dégradation détectés
+  # ════════════════════════════════════════════════════════════════════════════
+  auto-retrain:
+    name: "Auto Retraining"
+    runs-on: ubuntu-latest
+    needs: [detect-drift, track-performance]
+
+    # Condition : drift OU dégradation
+    if: |
+      needs.detect-drift.outputs.drift_detected == 'true' ||
+      needs.track-performance.outputs.degraded == 'true'
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: Installer les dépendances
+        run: pip install -r requirements.txt scipy
+
+      - name: Générer les données
+        run: python data/generate_data.py
+
+      - name: Réentraîner les modèles
+        run: |
+          echo "🔄 Retraining déclenché automatiquement..."
+          python training/train_pricing.py
+          python training/train_matching.py
+        env:
+          MLFLOW_ALLOW_FILE_STORE: "true"
+
+      - name: Évaluer et promouvoir si gates passent
+        run: |
+          python scripts/evaluate_and_gate.py
+          python scripts/promote_models.py
+        env:
+          MLFLOW_ALLOW_FILE_STORE: "true"
+          GATE_PRICING_MAX_MAE:      900
+          GATE_PRICING_MIN_COVERAGE: 30
+          GATE_MATCHING_MIN_AUC:     0.45
+          GATE_MATCHING_MIN_PK5:     0.25
+
+      - name: Commit nouveaux modèles
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add models/production/
+          git commit -m "auto-retrain: drift/degradation detected [skip ci]
+
+          Triggered by: drift=${{ needs.detect-drift.outputs.drift_detected }} degraded=${{ needs.track-performance.outputs.degraded }}
+          Date: $(date -u '+%Y-%m-%d %H:%M UTC')" || echo "Rien à committer"
+          git push
+
+
+  # ════════════════════════════════════════════════════════════════════════════
+  # JOB 4 — RÉSUMÉ
+  # ════════════════════════════════════════════════════════════════════════════
+  summary:
+    name: "Résumé monitoring"
+    runs-on: ubuntu-latest
+    needs: [detect-drift, track-performance, auto-retrain]
+    if: always()
+
+    steps:
+      - name: Résumé
+        run: |
+          echo "════════════════════════════════════"
+          echo "   ATLASFIX MONITORING — RÉSUMÉ"
+          echo "════════════════════════════════════"
+          echo "Drift détecté  : ${{ needs.detect-drift.outputs.drift_detected }}"
+          echo "Dégradation    : ${{ needs.track-performance.outputs.degraded }}"
+          echo "Auto-retrain   : ${{ needs.auto-retrain.result }}"
+          echo "════════════════════════════════════"

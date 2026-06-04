@@ -1,0 +1,14 @@
+[
+  {
+    "timestamp": "2026-06-04T15:45:32.888237+00:00",
+    "pricing_mae": 678.47,
+    "pricing_coverage": 22.43,
+    "matching_auc": 0.6293,
+    "matching_pk5": 0.0,
+    "degraded": true,
+    "issues": [
+      "MAE augment\u00e9e de 68.6% (402.51 \u2192 678.47)",
+      "Coverage baiss\u00e9e de 19.2% (41.67% \u2192 22.43%)"
+    ]
+  }
+]
