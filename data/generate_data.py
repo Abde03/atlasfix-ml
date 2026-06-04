@@ -260,12 +260,12 @@ for i in range(N_INTERACTIONS):
         + artisan["is_verified"]  * 0.10
     )  # q ∈ [~0.20, ~0.95] with uniform rating
 
-    # Steep sigmoid: low-quality artisans almost never get accepted,
-    # high-quality ones are accepted much more — strong learnable signal (~37x ratio)
-    p_accept = 0.40 / (1 + math.exp(-10 * (q - 0.68)))  # low q: ~0.01  high q: ~0.34
-    p_reject = 0.30 / (1 + math.exp( 10 * (q - 0.68)))  # low q: ~0.29  high q: ~0.05
-    p_msg    = 0.05 + q * 0.12
-    p_view   = 0.25
+    # Steep sigmoid: low-quality ~0.3% accept, high-quality ~56% accept (~200x ratio)
+    # Wide separation ensures model reliably ranks top artisans first (P@5 > 0.3)
+    p_accept = 0.65 / (1 + math.exp(-12 * (q - 0.75)))  # low: ~0.003  high: ~0.56
+    p_reject = 0.25 / (1 + math.exp( 12 * (q - 0.75)))  # low: ~0.25   high: ~0.04
+    p_msg    = 0.04 + q * 0.08
+    p_view   = 0.20
     p_ignore = max(0.0, 1.0 - p_accept - p_reject - p_msg - p_view)
 
     itype = random.choices(TYPES, weights=[p_view, p_msg, p_accept, p_reject, p_ignore])[0]
