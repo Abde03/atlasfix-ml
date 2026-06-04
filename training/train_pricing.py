@@ -23,7 +23,7 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error
 
 # Ajouter la racine au path pour importer api.features
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from api.features import build_pricing_features, CATEGORIES, CITIES, URGENCY_MAP
+from api.features import CATEGORIES, CITIES, URGENCY_MAP
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger(__name__)
@@ -40,7 +40,7 @@ def train():
     df = pd.read_csv(DATA_PATH)
     log.info(f"Données : {len(df)} lignes")
 
-    X = build_pricing_features(df.to_dict(orient="list") if False else _df_to_features(df))
+    X = _df_to_features(df)
     y = df["accepted_price"].values
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
