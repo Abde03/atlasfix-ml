@@ -184,6 +184,8 @@ jobs:
     name: "④ Promotion en production"
     runs-on: ubuntu-latest
     needs: evaluate
+    permissions:
+      contents: write
     # Lance seulement si LES DEUX gates passent (ou si force_promote)
     if: |
       (needs.evaluate.outputs.pricing_passed == 'true' &&
