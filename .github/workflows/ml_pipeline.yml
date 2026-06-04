@@ -101,6 +101,11 @@ jobs:
       - name: Générer les données d'entraînement
         run: python data/generate_data.py
 
+      - name: Préparer le store MLflow (DB fraîche à chaque run)
+        run: |
+          mkdir -p mlflow_store
+          rm -f mlflow_store/mlflow.db
+
       - name: Entraîner le modèle Pricing
         run: python training/train_pricing.py
         env:

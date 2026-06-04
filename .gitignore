@@ -14,9 +14,9 @@ build/
 # .env.example is intentionally committed (template, no real secrets)
 
 # ── MLflow ────────────────────────────────────────────────────────────────────
-mlflow_store/        # SQLite DB — local tracking state, not shareable as-is
-mlruns/              # legacy file-store runs
-notebooks/mlruns/    # old file-store created before SQLite migration
+mlflow_store/mlflow.db   # SQLite DB — version-locked, never commit
+mlruns/                  # legacy file-store runs
+notebooks/mlruns/        # old file-store created before SQLite migration
 
 # ── Model artifacts (binary, large — regenerate by running notebooks) ─────────
 models/staging/*.pkl
