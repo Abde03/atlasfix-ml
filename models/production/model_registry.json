@@ -1,0 +1,31 @@
+[
+  {
+    "timestamp": "2026-06-04T14:24:25.984099+00:00",
+    "models": [
+      {
+        "model": "pricing_model.pkl",
+        "promoted_at": "2026-06-04T14:24:25.984099+00:00",
+        "run_id": "5c600a1038904446a9114d57ccf94866",
+        "metrics": {
+          "mae": 402.51,
+          "rmse": 525.92,
+          "coverage": 41.67,
+          "width": 732.18
+        }
+      },
+      {
+        "model": "matching_model.pkl",
+        "promoted_at": "2026-06-04T14:24:25.984099+00:00",
+        "run_id": "bff2d04d6bff4c72b128e618433dbb79",
+        "metrics": {
+          "auc": 0.456,
+          "ap": 0.1535,
+          "pk5": 0.4,
+          "pk10": 0.2
+        }
+      }
+    ],
+    "git_sha": "local",
+    "triggered_by": "manual"
+  }
+]

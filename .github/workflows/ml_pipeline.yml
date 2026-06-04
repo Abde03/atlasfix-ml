@@ -1,0 +1,244 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# AtlasFix ML Pipeline — GitHub Actions
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Ce pipeline se déclenche à chaque git push sur main.
+# Il fait exactement 5 choses dans l'ordre :
+#
+#   1. TESTS       → vérifie que le code et les données sont valides
+#   2. TRAIN       → réentraîne les deux modèles
+#   3. EVALUATE    → calcule les métriques et vérifie les quality gates
+#   4. PROMOTE     → si les gates passent, copie en production
+#   5. NOTIFY      → résumé dans les logs (+ Slack si configuré)
+#
+# ─────────────────────────────────────────────────────────────────────────────
+
+name: ML Pipeline
+
+on:
+  push:
+    branches: [main]
+    paths:
+      # Se déclenche seulement si ces fichiers changent
+      - "data/**"
+      - "notebooks/**"
+      - "training/**"
+      - "api/**"
+      - "tests/**"
+      - ".github/workflows/ml_pipeline.yml"
+
+  # Retraining automatique chaque semaine (lundi 2h du matin)
+  schedule:
+    - cron: "0 2 * * 1"
+
+  # Lancement manuel depuis GitHub
+  workflow_dispatch:
+    inputs:
+      force_promote:
+        description: "Forcer la promotion même si les métriques baissent ?"
+        required: false
+        default: "false"
+
+# ── Variables d'environnement globales ────────────────────────────────────────
+env:
+  PYTHON_VERSION: "3.11"
+  MLFLOW_ALLOW_FILE_STORE: "true"
+
+jobs:
+
+  # ════════════════════════════════════════════════════════════════════════════
+  # JOB 1 — TESTS
+  # ════════════════════════════════════════════════════════════════════════════
+  tests:
+    name: "① Tests"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: Installer les dépendances
+        run: pip install -r requirements.txt
+
+      - name: Vérification syntaxe Python
+        run: python -m py_compile api/main.py api/features.py api/models_loader.py
+
+      - name: Générer les données synthétiques
+        run: python data/generate_data.py
+
+      - name: Lancer les tests pytest
+        run: |
+          pytest tests/ -v --tb=short
+        env:
+          MLFLOW_ALLOW_FILE_STORE: "true"
+
+
+  # ════════════════════════════════════════════════════════════════════════════
+  # JOB 2 — ENTRAÎNEMENT
+  # ════════════════════════════════════════════════════════════════════════════
+  train:
+    name: "② Entraînement"
+    runs-on: ubuntu-latest
+    needs: tests   # Lance seulement si les tests passent
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: Installer les dépendances
+        run: pip install -r requirements.txt
+
+      - name: Générer les données d'entraînement
+        run: python data/generate_data.py
+
+      - name: Entraîner le modèle Pricing
+        run: python training/train_pricing.py
+        env:
+          MLFLOW_ALLOW_FILE_STORE: "true"
+
+      - name: Entraîner le modèle Matching
+        run: python training/train_matching.py
+        env:
+          MLFLOW_ALLOW_FILE_STORE: "true"
+
+      # Sauvegarder les modèles pour les jobs suivants
+      - name: Upload artifacts (modèles entraînés)
+        uses: actions/upload-artifact@v4
+        with:
+          name: trained-models
+          path: models/staging/
+          retention-days: 7
+
+
+  # ════════════════════════════════════════════════════════════════════════════
+  # JOB 3 — ÉVALUATION + QUALITY GATES
+  # ════════════════════════════════════════════════════════════════════════════
+  evaluate:
+    name: "③ Évaluation & Quality Gates"
+    runs-on: ubuntu-latest
+    needs: train
+
+    outputs:
+      pricing_passed:  ${{ steps.gates.outputs.pricing_passed }}
+      matching_passed: ${{ steps.gates.outputs.matching_passed }}
+      pricing_mae:     ${{ steps.gates.outputs.pricing_mae }}
+      matching_auc:    ${{ steps.gates.outputs.matching_auc }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: Installer les dépendances
+        run: pip install -r requirements.txt
+
+      - name: Récupérer les modèles entraînés
+        uses: actions/download-artifact@v4
+        with:
+          name: trained-models
+          path: models/staging/
+
+      - name: Générer données de test
+        run: python data/generate_data.py
+
+      - name: Lancer l'évaluation
+        id: gates
+        run: python scripts/evaluate_and_gate.py
+        env:
+          MLFLOW_ALLOW_FILE_STORE: "true"
+          # Seuils des quality gates — modifie ces valeurs selon tes attentes
+          GATE_PRICING_MAX_MAE:      800    # MAD — erreur max acceptable
+          GATE_PRICING_MIN_COVERAGE: 35     # % minimum de couverture
+          GATE_MATCHING_MIN_AUC:     0.50   # AUC minimum acceptable
+          GATE_MATCHING_MIN_PK5:     0.30   # Precision@5 minimum
+
+      - name: Upload rapport d'évaluation
+        uses: actions/upload-artifact@v4
+        with:
+          name: evaluation-report
+          path: evaluation_report.json
+
+
+  # ════════════════════════════════════════════════════════════════════════════
+  # JOB 4 — PROMOTION EN PRODUCTION
+  # ════════════════════════════════════════════════════════════════════════════
+  promote:
+    name: "④ Promotion en production"
+    runs-on: ubuntu-latest
+    needs: evaluate
+    # Lance seulement si LES DEUX gates passent (ou si force_promote)
+    if: |
+      (needs.evaluate.outputs.pricing_passed == 'true' &&
+       needs.evaluate.outputs.matching_passed == 'true') ||
+      github.event.inputs.force_promote == 'true'
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Récupérer les modèles validés
+        uses: actions/download-artifact@v4
+        with:
+          name: trained-models
+          path: models/staging/
+
+      - name: Promouvoir en production
+        run: python scripts/promote_models.py
+
+      - name: Commit des modèles en production
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add models/production/
+          git add models/production/model_registry.json
+          git commit -m "chore: promote models to production [skip ci]
+
+          pricing MAE  : ${{ needs.evaluate.outputs.pricing_mae }} MAD
+          matching AUC : ${{ needs.evaluate.outputs.matching_auc }}
+          promoted at  : $(date -u '+%Y-%m-%d %H:%M UTC')" || echo "Rien à committer"
+          git push
+
+
+  # ════════════════════════════════════════════════════════════════════════════
+  # JOB 5 — NOTIFICATION (résumé)
+  # ════════════════════════════════════════════════════════════════════════════
+  notify:
+    name: "⑤ Résumé"
+    runs-on: ubuntu-latest
+    needs: [tests, train, evaluate, promote]
+    if: always()   # Toujours exécuté, même si un job précédent échoue
+
+    steps:
+      - name: Résumé du pipeline
+        run: |
+          echo "════════════════════════════════════"
+          echo "   ATLASFIX ML PIPELINE — RÉSUMÉ"
+          echo "════════════════════════════════════"
+          echo "Tests         : ${{ needs.tests.result }}"
+          echo "Entraînement  : ${{ needs.train.result }}"
+          echo "Évaluation    : ${{ needs.evaluate.result }}"
+          echo "Promotion     : ${{ needs.promote.result }}"
+          echo ""
+          echo "Pricing MAE   : ${{ needs.evaluate.outputs.pricing_mae }} MAD"
+          echo "Matching AUC  : ${{ needs.evaluate.outputs.matching_auc }}"
+          echo "════════════════════════════════════"
+
+      # Optionnel : notification Slack (décommente et ajoute SLACK_WEBHOOK dans secrets)
+      # - name: Notification Slack
+      #   if: needs.promote.result == 'success'
+      #   run: |
+      #     curl -X POST ${{ secrets.SLACK_WEBHOOK }} \
+      #       -H 'Content-type: application/json' \
+      #       -d '{"text":"✅ AtlasFix ML — Nouveaux modèles déployés en production !"}'

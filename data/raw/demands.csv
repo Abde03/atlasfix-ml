@@ -1,0 +1,801 @@
+id,client_id,title,category,city,latitude,longitude,urgency,budget_min,budget_max,desc_len,n_photos,status,created_at
+1,52,Lavage vitres,Nettoyage,Marrakech,31.65075,-8.02435,normal,70,780,250,0,completed,2026-04-29
+2,326,Transport canapé,Déménagement,Oujda,34.79313,-1.96508,normal,210,2860,168,3,completed,2026-02-18
+3,146,Installer pompe à chaleur,Climatisation,Agadir,30.37682,-9.59114,normal,350,4160,317,4,open,2025-07-31
+4,388,Placard sur mesure,Menuiserie,Oujda,34.58,-1.82635,normal,210,2860,283,1,open,2026-05-14
+5,156,Installer des prises,Électricité,Oujda,34.65263,-1.87098,urgent,140,1820,129,0,completed,2025-11-08
+6,164,Nettoyage après travaux,Nettoyage,Oujda,34.60084,-1.95463,urgent,70,780,322,5,open,2025-09-10
+7,393,Changer cylindre,Serrurerie,Fès,34.10949,-4.97619,normal,70,910,294,3,completed,2025-10-19
+8,242,Décoration chambre,Peinture,Tanger,35.68274,-5.86995,normal,140,2080,191,3,open,2025-12-22
+9,391,Changer cylindre,Serrurerie,Casablanca,33.6298,-7.61054,très urgent,70,910,211,5,completed,2025-10-22
+10,361,Créer une ouverture,Maçonnerie,Marrakech,31.66454,-8.03387,urgent,280,4550,42,2,completed,2025-11-17
+11,379,Enduit à refaire,Maçonnerie,Marrakech,31.65492,-7.99405,normal,280,4550,68,1,open,2026-02-04
+12,370,Montage meubles,Déménagement,Oujda,34.78444,-1.81481,urgent,210,2860,229,5,completed,2026-02-08
+13,311,Transport canapé,Déménagement,Meknès,33.79822,-5.64328,normal,210,2860,305,2,completed,2025-07-30
+14,384,Installer des prises,Électricité,Tanger,35.86267,-5.78374,urgent,140,1820,107,4,open,2026-03-18
+15,46,Engazonnement,Jardinage,Marrakech,31.59228,-7.97103,urgent,105,1170,315,4,completed,2025-06-15
+16,395,Installer des prises,Électricité,Tanger,35.85835,-5.864,urgent,140,1820,139,1,open,2026-01-25
+17,186,Joints à refaire,Carrelage,Marrakech,31.66791,-7.93698,normal,175,2600,41,1,open,2026-01-08
+18,203,Taille de haie,Jardinage,Casablanca,33.64481,-7.68487,très urgent,105,1170,221,0,completed,2026-02-17
+19,276,Taille de haie,Jardinage,Agadir,30.44398,-9.56905,urgent,105,1170,319,0,completed,2026-03-03
+20,263,Installer des prises,Électricité,Oujda,34.71049,-1.80482,urgent,140,1820,250,2,completed,2026-05-03
+21,94,Installer pompe à chaleur,Climatisation,Tanger,35.74956,-5.77322,urgent,350,4160,251,0,completed,2025-06-07
+22,10,Robinet qui goutte,Plomberie,Marrakech,31.5911,-8.05667,urgent,105,1170,329,5,completed,2026-05-04
+23,395,Déménagement 3 pièces,Déménagement,Tanger,35.84453,-5.78753,normal,210,2860,126,1,open,2025-07-25
+24,14,Désinfection locaux,Nettoyage,Casablanca,33.63352,-7.58113,très urgent,70,780,197,2,completed,2025-09-18
+25,84,Changer cylindre,Serrurerie,Agadir,30.37007,-9.50732,urgent,70,910,43,1,completed,2025-08-06
+26,228,PC qui ne démarre plus,Informatique,Marrakech,31.60364,-7.9926,normal,70,1170,135,3,completed,2025-07-21
+27,297,Réseau WiFi,Informatique,Rabat,33.94801,-6.90438,très urgent,70,1170,339,2,completed,2026-01-02
+28,47,Lavage vitres,Nettoyage,Tanger,35.75474,-5.83211,très urgent,70,780,38,0,completed,2025-12-25
+29,185,Rafraîchir façade,Peinture,Rabat,34.00666,-6.7664,normal,140,2080,73,5,completed,2026-01-31
+30,374,Clim qui ne refroidit plus,Climatisation,Tanger,35.6612,-5.75888,normal,350,4160,34,1,completed,2026-05-25
+31,32,Déménagement 3 pièces,Déménagement,Marrakech,31.70871,-7.9463,normal,210,2860,242,1,completed,2026-02-24
+32,343,Réparer parquet,Menuiserie,Tanger,35.84146,-5.91846,normal,210,2860,284,1,open,2025-12-12
+33,136,Déménagement 3 pièces,Déménagement,Tanger,35.65755,-5.93652,normal,210,2860,270,0,completed,2025-12-29
+34,194,Déménagement 3 pièces,Déménagement,Fès,33.95939,-5.10488,urgent,210,2860,77,3,completed,2026-02-02
+35,275,Système d'arrosage,Jardinage,Fès,34.11047,-4.9331,normal,105,1170,273,3,completed,2025-08-08
+36,277,Poser carrelage salle de bain,Carrelage,Rabat,34.0161,-6.78782,urgent,175,2600,130,1,open,2025-08-16
+37,116,Installer pompe à chaleur,Climatisation,Rabat,34.07348,-6.79462,normal,350,4160,344,0,open,2025-09-06
+38,374,Installer pompe à chaleur,Climatisation,Agadir,30.39075,-9.49562,urgent,350,4160,296,4,completed,2025-08-10
+39,192,Clim qui ne refroidit plus,Climatisation,Fès,34.05046,-4.90603,normal,350,4160,227,5,open,2025-09-05
+40,8,Placard sur mesure,Menuiserie,Casablanca,33.64561,-7.64649,normal,210,2860,35,4,completed,2025-09-08
+41,296,Installer interphone,Serrurerie,Oujda,34.79323,-1.92152,normal,70,910,255,0,completed,2026-02-22
+42,96,Décoration chambre,Peinture,Tanger,35.82588,-5.83673,normal,140,2080,79,5,completed,2025-10-16
+43,219,Chaudière à réviser,Climatisation,Casablanca,33.67359,-7.67062,normal,350,4160,264,0,open,2025-11-02
+44,65,Terrasse à carreler,Carrelage,Agadir,30.41754,-9.58658,très urgent,175,2600,288,1,completed,2025-09-11
+45,398,Fuite sous l'évier,Plomberie,Marrakech,31.67997,-8.01268,urgent,105,1170,107,4,completed,2026-03-03
+46,118,Caméras surveillance,Informatique,Fès,34.00616,-5.08646,normal,70,1170,346,1,completed,2025-08-20
+47,218,Créer une ouverture,Maçonnerie,Agadir,30.33027,-9.49666,normal,280,4550,229,4,completed,2026-01-29
+48,370,Repeindre le salon,Peinture,Casablanca,33.48118,-7.54475,urgent,140,2080,136,5,completed,2025-07-04
+49,74,Engazonnement,Jardinage,Fès,34.09051,-4.93362,très urgent,105,1170,154,3,completed,2026-01-04
+50,128,Terrasse à carreler,Carrelage,Rabat,33.96172,-6.74451,normal,175,2600,235,0,completed,2026-05-14
+51,228,Réparer parquet,Menuiserie,Agadir,30.48414,-9.70388,normal,210,2860,189,4,open,2026-04-06
+52,242,Enduit à refaire,Maçonnerie,Oujda,34.6432,-1.99251,urgent,280,4550,262,1,open,2025-11-25
+53,140,Robinet qui goutte,Plomberie,Meknès,33.96658,-5.60018,urgent,105,1170,248,4,open,2025-10-31
+54,116,Désinfection locaux,Nettoyage,Rabat,33.93194,-6.79149,très urgent,70,780,215,1,completed,2026-02-12
+55,30,Installer pompe à chaleur,Climatisation,Rabat,34.09986,-6.88912,urgent,350,4160,171,2,completed,2026-01-04
+56,183,Tableau à refaire,Électricité,Casablanca,33.48686,-7.52364,normal,140,1820,283,1,completed,2025-07-27
+57,311,Montage meubles,Déménagement,Meknès,33.91655,-5.46721,urgent,210,2860,51,4,open,2025-07-24
+58,295,Panne de courant,Électricité,Rabat,34.12181,-6.89812,normal,140,1820,339,3,completed,2025-11-28
+59,294,Nettoyage après travaux,Nettoyage,Casablanca,33.66828,-7.52209,urgent,70,780,251,5,completed,2026-03-21
+60,323,Terrasse à carreler,Carrelage,Rabat,33.97599,-6.8606,normal,175,2600,263,2,completed,2025-11-27
+61,142,Engazonnement,Jardinage,Casablanca,33.53516,-7.54675,urgent,105,1170,112,1,completed,2026-05-01
+62,206,Poser carrelage salle de bain,Carrelage,Fès,34.10783,-4.92289,normal,175,2600,345,4,completed,2025-11-13
+63,370,Éclairage LED,Électricité,Meknès,33.85305,-5.54791,normal,140,1820,225,1,open,2025-11-30
+64,173,Engazonnement,Jardinage,Tanger,35.81459,-5.73469,normal,105,1170,87,1,completed,2026-05-28
+65,152,Désinfection locaux,Nettoyage,Fès,34.01124,-4.9577,normal,70,780,76,5,completed,2025-12-28
+66,367,Poser carrelage salle de bain,Carrelage,Tanger,35.73718,-5.74292,normal,175,2600,180,4,completed,2025-11-16
+67,21,Créer une ouverture,Maçonnerie,Fès,34.06952,-5.04891,normal,280,4550,142,1,completed,2026-05-01
+68,7,Décoration chambre,Peinture,Marrakech,31.72995,-7.9038,normal,140,2080,254,3,completed,2025-09-10
+69,266,Transport canapé,Déménagement,Meknès,33.92101,-5.46328,très urgent,210,2860,163,5,completed,2025-10-16
+70,187,Enduit à refaire,Maçonnerie,Tanger,35.76823,-5.92545,urgent,280,4550,194,5,open,2026-03-27
+71,66,Installer des prises,Électricité,Oujda,34.69435,-1.99685,urgent,140,1820,146,5,open,2026-01-28
+72,138,Transport canapé,Déménagement,Casablanca,33.5645,-7.60323,normal,210,2860,63,1,open,2026-03-17
+73,333,WC bouché,Plomberie,Tanger,35.75445,-5.78939,normal,105,1170,211,0,completed,2026-03-22
+74,15,Réseau WiFi,Informatique,Oujda,34.67174,-1.85424,normal,70,1170,232,1,completed,2026-03-06
+75,156,Terrasse à carreler,Carrelage,Marrakech,31.6446,-7.89981,très urgent,175,2600,103,4,completed,2025-11-12
+76,28,PC qui ne démarre plus,Informatique,Tanger,35.77841,-5.77462,normal,70,1170,62,4,completed,2025-09-11
+77,397,Placard sur mesure,Menuiserie,Fès,33.93157,-4.90728,urgent,210,2860,199,0,open,2026-03-24
+78,359,Installer pompe à chaleur,Climatisation,Meknès,33.95943,-5.57297,normal,350,4160,205,1,open,2025-09-02
+79,363,Installer interphone,Serrurerie,Agadir,30.42773,-9.6663,normal,70,910,146,2,completed,2025-07-15
+80,385,Installer des prises,Électricité,Agadir,30.3241,-9.57515,très urgent,140,1820,60,5,completed,2025-06-04
+81,3,Poser carrelage salle de bain,Carrelage,Meknès,33.85161,-5.48243,normal,175,2600,221,0,completed,2026-04-25
+82,94,Nettoyage après travaux,Nettoyage,Marrakech,31.73237,-8.06824,urgent,70,780,109,4,completed,2026-01-15
+83,77,Taille de haie,Jardinage,Casablanca,33.5995,-7.49568,urgent,105,1170,91,2,completed,2025-11-29
+84,303,Désinfection locaux,Nettoyage,Fès,34.11984,-5.00051,urgent,70,780,343,2,completed,2026-03-11
+85,60,Clim qui ne refroidit plus,Climatisation,Rabat,33.98595,-6.87064,normal,350,4160,281,1,completed,2025-12-04
+86,338,Caméras surveillance,Informatique,Rabat,34.09609,-6.93004,urgent,70,1170,299,4,completed,2026-02-26
+87,280,Installer pompe à chaleur,Climatisation,Marrakech,31.58249,-8.05992,urgent,350,4160,179,5,completed,2025-12-14
+88,13,Engazonnement,Jardinage,Rabat,33.98231,-6.84504,normal,105,1170,284,2,completed,2025-07-02
+89,97,Panne de courant,Électricité,Agadir,30.51258,-9.54451,normal,140,1820,118,5,open,2026-03-04
+90,15,Chauffe-eau en panne,Plomberie,Agadir,30.40291,-9.63015,normal,105,1170,252,5,completed,2026-02-19
+91,358,Robinet qui goutte,Plomberie,Marrakech,31.54272,-7.88381,urgent,105,1170,193,0,completed,2025-09-17
+92,314,WC bouché,Plomberie,Casablanca,33.66436,-7.65336,urgent,105,1170,178,0,completed,2025-09-02
+93,117,Terrasse à carreler,Carrelage,Meknès,33.79507,-5.62478,normal,175,2600,162,3,completed,2026-04-20
+94,335,PC qui ne démarre plus,Informatique,Agadir,30.40817,-9.704,urgent,70,1170,223,2,completed,2026-02-08
+95,6,Clim qui ne refroidit plus,Climatisation,Meknès,33.79443,-5.48954,normal,350,4160,144,0,completed,2025-08-24
+96,35,Placard sur mesure,Menuiserie,Tanger,35.68758,-5.78209,très urgent,210,2860,233,2,completed,2026-03-22
+97,390,Panne de courant,Électricité,Meknès,33.96331,-5.46427,très urgent,140,1820,314,3,open,2026-01-30
+98,246,Tableau à refaire,Électricité,Rabat,33.96223,-6.76958,normal,140,1820,64,1,completed,2026-01-14
+99,306,WC bouché,Plomberie,Marrakech,31.68756,-7.93247,normal,105,1170,37,1,open,2025-09-01
+100,180,Taille de haie,Jardinage,Marrakech,31.71632,-8.07701,normal,105,1170,179,4,open,2026-04-21
+101,100,Poser carrelage salle de bain,Carrelage,Oujda,34.58406,-1.92426,urgent,175,2600,338,4,open,2025-08-16
+102,281,Terrasse à carreler,Carrelage,Casablanca,33.48907,-7.68383,normal,175,2600,38,4,completed,2025-11-15
+103,74,Installer des prises,Électricité,Marrakech,31.52267,-8.08847,normal,140,1820,228,4,open,2026-04-21
+104,19,Montage meubles,Déménagement,Rabat,33.91707,-6.77155,normal,210,2860,322,5,completed,2026-04-15
+105,384,Fissures dans le mur,Maçonnerie,Oujda,34.71105,-1.94488,très urgent,280,4550,262,3,completed,2026-01-22
+106,115,Porte qui frotte,Menuiserie,Agadir,30.45744,-9.66851,très urgent,210,2860,161,1,completed,2026-01-11
+107,22,Système d'arrosage,Jardinage,Meknès,33.93905,-5.53833,normal,105,1170,235,1,completed,2025-09-18
+108,216,Changer cylindre,Serrurerie,Oujda,34.73718,-1.92353,normal,70,910,216,2,open,2025-08-11
+109,371,Désinfection locaux,Nettoyage,Marrakech,31.57458,-7.93513,normal,70,780,346,2,completed,2025-12-30
+110,158,Fissures dans le mur,Maçonnerie,Meknès,33.81595,-5.63192,urgent,280,4550,183,4,completed,2025-09-23
+111,81,Chaudière à réviser,Climatisation,Meknès,33.98801,-5.56205,très urgent,350,4160,42,5,open,2026-05-11
+112,89,Repeindre le salon,Peinture,Fès,34.06384,-4.98377,urgent,140,2080,107,3,open,2025-08-09
+113,391,Taille de haie,Jardinage,Tanger,35.78336,-5.77705,normal,105,1170,48,5,open,2025-07-17
+114,11,Chauffe-eau en panne,Plomberie,Casablanca,33.53667,-7.67846,très urgent,105,1170,212,1,completed,2025-11-08
+115,320,Poser carrelage salle de bain,Carrelage,Oujda,34.68131,-1.86738,normal,175,2600,81,4,open,2025-08-26
+116,213,Installer des prises,Électricité,Meknès,33.81961,-5.53599,normal,140,1820,173,5,completed,2025-08-01
+117,50,WC bouché,Plomberie,Fès,34.11551,-5.00588,normal,105,1170,40,4,completed,2026-01-15
+118,94,Taille de haie,Jardinage,Casablanca,33.67479,-7.49324,normal,105,1170,203,0,completed,2025-09-02
+119,154,Chaudière à réviser,Climatisation,Meknès,33.98361,-5.63141,très urgent,350,4160,130,5,open,2025-07-16
+120,182,Déménagement 3 pièces,Déménagement,Oujda,34.58204,-1.82685,normal,210,2860,116,2,completed,2026-02-21
+121,13,Système d'arrosage,Jardinage,Tanger,35.84724,-5.93086,normal,105,1170,186,2,completed,2025-11-23
+122,384,Clim qui ne refroidit plus,Climatisation,Oujda,34.72117,-1.94753,normal,350,4160,349,0,completed,2025-11-05
+123,241,Changer cylindre,Serrurerie,Meknès,33.79317,-5.51013,urgent,70,910,201,2,completed,2025-12-29
+124,178,Caméras surveillance,Informatique,Agadir,30.43913,-9.60052,normal,70,1170,260,5,open,2025-11-14
+125,261,Installer des prises,Électricité,Casablanca,33.64029,-7.52359,normal,140,1820,68,1,completed,2026-03-23
+126,39,Robinet qui goutte,Plomberie,Casablanca,33.62424,-7.62415,très urgent,105,1170,66,1,completed,2026-04-23
+127,314,Panne de courant,Électricité,Casablanca,33.61724,-7.65477,urgent,140,1820,71,1,open,2025-06-05
+128,222,Clim qui ne refroidit plus,Climatisation,Marrakech,31.56684,-7.93419,normal,350,4160,350,4,open,2026-06-01
+129,254,Déménagement 3 pièces,Déménagement,Fès,34.02664,-4.94993,normal,210,2860,61,3,open,2025-07-14
+130,91,Fissures dans le mur,Maçonnerie,Agadir,30.3508,-9.58902,très urgent,280,4550,93,5,completed,2025-09-07
+131,84,Installer interphone,Serrurerie,Agadir,30.44976,-9.59666,normal,70,910,248,2,completed,2025-10-05
+132,336,Clim qui ne refroidit plus,Climatisation,Agadir,30.38055,-9.67134,normal,350,4160,282,2,completed,2026-04-17
+133,41,Chaudière à réviser,Climatisation,Oujda,34.58119,-1.85859,normal,350,4160,331,2,completed,2026-05-17
+134,135,Réseau WiFi,Informatique,Tanger,35.74886,-5.78163,normal,70,1170,285,2,completed,2026-03-10
+135,117,Transport canapé,Déménagement,Fès,33.93442,-5.03181,normal,210,2860,266,2,completed,2026-01-27
+136,238,Système d'arrosage,Jardinage,Fès,33.95591,-4.94583,normal,105,1170,42,1,completed,2026-04-23
+137,188,Fuite sous l'évier,Plomberie,Meknès,33.9565,-5.51232,normal,105,1170,333,1,open,2025-12-21
+138,242,Porte qui frotte,Menuiserie,Agadir,30.39262,-9.70152,normal,210,2860,185,4,open,2026-02-08
+139,311,PC qui ne démarre plus,Informatique,Oujda,34.67218,-1.81468,normal,70,1170,60,2,completed,2025-11-16
+140,312,Rafraîchir façade,Peinture,Fès,33.97604,-4.90414,urgent,140,2080,243,3,open,2026-04-23
+141,82,Terrasse à carreler,Carrelage,Agadir,30.4676,-9.61345,normal,175,2600,96,4,open,2025-12-12
+142,353,Placard sur mesure,Menuiserie,Tanger,35.77362,-5.83972,normal,210,2860,219,3,open,2026-05-22
+143,120,Poser carrelage salle de bain,Carrelage,Oujda,34.74871,-1.89951,normal,175,2600,199,5,open,2025-11-15
+144,324,Déménagement 3 pièces,Déménagement,Marrakech,31.6745,-7.95745,urgent,210,2860,157,3,completed,2025-11-11
+145,197,Porte qui frotte,Menuiserie,Tanger,35.66897,-5.83596,urgent,210,2860,166,0,completed,2025-10-23
+146,399,WC bouché,Plomberie,Oujda,34.63191,-1.88263,normal,105,1170,347,3,completed,2025-11-14
+147,310,Désinfection locaux,Nettoyage,Marrakech,31.69958,-7.94957,très urgent,70,780,335,4,open,2025-07-05
+148,377,Fissures dans le mur,Maçonnerie,Agadir,30.37336,-9.62491,urgent,280,4550,35,2,open,2025-11-02
+149,13,Chauffe-eau en panne,Plomberie,Meknès,33.80241,-5.55488,très urgent,105,1170,105,3,completed,2026-04-04
+150,56,Repeindre le salon,Peinture,Oujda,34.63826,-1.8668,normal,140,2080,113,4,open,2025-08-06
+151,27,Terrasse à carreler,Carrelage,Oujda,34.65834,-1.95134,urgent,175,2600,311,0,completed,2025-11-16
+152,168,Montage meubles,Déménagement,Casablanca,33.60415,-7.62785,urgent,210,2860,50,4,open,2026-06-04
+153,68,Système d'arrosage,Jardinage,Rabat,34.11321,-6.91946,normal,105,1170,113,5,open,2025-12-03
+154,174,Éclairage LED,Électricité,Meknès,33.85968,-5.64036,normal,140,1820,61,4,completed,2026-05-25
+155,46,Enduit à refaire,Maçonnerie,Oujda,34.61298,-1.85459,urgent,280,4550,146,1,open,2026-03-16
+156,13,WC bouché,Plomberie,Marrakech,31.62489,-8.08009,urgent,105,1170,108,1,completed,2025-12-19
+157,203,Fuite sous l'évier,Plomberie,Agadir,30.42612,-9.56142,urgent,105,1170,311,0,open,2025-09-18
+158,118,Déménagement 3 pièces,Déménagement,Oujda,34.58014,-1.86776,normal,210,2860,218,4,completed,2025-12-24
+159,275,Chauffe-eau en panne,Plomberie,Agadir,30.37713,-9.62528,normal,105,1170,133,4,open,2025-11-18
+160,134,Serrure bloquée,Serrurerie,Rabat,34.05343,-6.85205,normal,70,910,292,3,open,2025-06-25
+161,199,Tableau à refaire,Électricité,Marrakech,31.56467,-7.96592,urgent,140,1820,139,4,completed,2026-01-27
+162,321,Enduit à refaire,Maçonnerie,Agadir,30.36657,-9.70106,normal,280,4550,122,2,open,2025-12-19
+163,369,Joints à refaire,Carrelage,Oujda,34.7914,-1.88939,normal,175,2600,281,3,completed,2026-05-11
+164,316,Éclairage LED,Électricité,Casablanca,33.64936,-7.56401,urgent,140,1820,170,0,open,2026-03-21
+165,82,Panne de courant,Électricité,Casablanca,33.54457,-7.55828,très urgent,140,1820,220,0,open,2025-11-03
+166,395,Fuite sous l'évier,Plomberie,Rabat,33.9781,-6.8929,très urgent,105,1170,134,0,completed,2026-02-02
+167,58,Éclairage LED,Électricité,Marrakech,31.61982,-7.89755,urgent,140,1820,169,2,open,2025-07-06
+168,375,Réseau WiFi,Informatique,Fès,33.97178,-5.02215,normal,70,1170,49,3,completed,2026-01-01
+169,296,Fuite sous l'évier,Plomberie,Rabat,34.12024,-6.76022,urgent,105,1170,275,1,completed,2026-05-13
+170,97,Enduit à refaire,Maçonnerie,Oujda,34.7538,-1.80419,normal,280,4550,318,3,completed,2026-02-09
+171,381,WC bouché,Plomberie,Agadir,30.3984,-9.5769,normal,105,1170,271,4,open,2026-03-13
+172,277,Placard sur mesure,Menuiserie,Tanger,35.81035,-5.86713,normal,210,2860,235,2,completed,2025-10-31
+173,345,Engazonnement,Jardinage,Meknès,33.8633,-5.56207,urgent,105,1170,100,2,completed,2026-01-28
+174,277,Chaudière à réviser,Climatisation,Fès,34.11757,-5.03385,très urgent,350,4160,350,1,completed,2026-04-23
+175,294,Réparer parquet,Menuiserie,Marrakech,31.6997,-8.00351,urgent,210,2860,87,4,completed,2025-07-27
+176,131,Lavage vitres,Nettoyage,Fès,34.08513,-4.96021,urgent,70,780,280,0,open,2026-03-11
+177,203,Lavage vitres,Nettoyage,Meknès,33.83276,-5.57949,normal,70,780,84,1,completed,2025-08-22
+178,1,Lavage vitres,Nettoyage,Rabat,34.01986,-6.75169,urgent,70,780,186,1,completed,2025-09-19
+179,13,Fuite sous l'évier,Plomberie,Casablanca,33.52895,-7.65313,urgent,105,1170,66,0,open,2026-01-06
+180,184,Chaudière à réviser,Climatisation,Meknès,33.78768,-5.52621,normal,350,4160,221,1,open,2026-04-01
+181,245,Installer pompe à chaleur,Climatisation,Casablanca,33.61183,-7.48666,normal,350,4160,209,0,open,2025-12-17
+182,386,Lavage vitres,Nettoyage,Rabat,34.00419,-6.82276,urgent,70,780,281,0,completed,2025-07-18
+183,279,Tableau à refaire,Électricité,Rabat,33.96585,-6.77011,urgent,140,1820,78,3,completed,2025-10-05
+184,166,Repeindre le salon,Peinture,Oujda,34.62541,-1.93073,normal,140,2080,95,4,completed,2026-02-18
+185,258,Placard sur mesure,Menuiserie,Oujda,34.638,-1.89734,urgent,210,2860,304,5,completed,2026-03-30
+186,252,Porte qui frotte,Menuiserie,Oujda,34.64203,-1.98432,normal,210,2860,199,3,open,2025-07-13
+187,102,Taille de haie,Jardinage,Oujda,34.63244,-1.93577,urgent,105,1170,120,3,open,2025-09-26
+188,175,Clim qui ne refroidit plus,Climatisation,Oujda,34.62805,-1.92336,urgent,350,4160,89,0,open,2026-04-09
+189,289,Fuite sous l'évier,Plomberie,Oujda,34.68587,-1.84776,normal,105,1170,298,5,completed,2026-01-04
+190,143,Serrure bloquée,Serrurerie,Meknès,33.79987,-5.63654,urgent,70,910,213,3,completed,2025-08-13
+191,83,Panne de courant,Électricité,Fès,34.0689,-5.01165,très urgent,140,1820,221,4,open,2026-05-06
+192,95,Transport canapé,Déménagement,Meknès,33.81044,-5.64681,normal,210,2860,183,1,completed,2025-06-09
+193,262,Chauffe-eau en panne,Plomberie,Rabat,34.02621,-6.89222,normal,105,1170,185,1,open,2026-02-04
+194,110,Fissures dans le mur,Maçonnerie,Oujda,34.682,-1.97321,normal,280,4550,313,5,completed,2025-08-17
+195,262,Placard sur mesure,Menuiserie,Rabat,34.01608,-6.73568,normal,210,2860,114,1,completed,2026-04-20
+196,135,Installer interphone,Serrurerie,Casablanca,33.62767,-7.68863,normal,70,910,232,0,open,2025-12-12
+197,201,Engazonnement,Jardinage,Marrakech,31.68325,-8.06168,urgent,105,1170,290,3,completed,2025-08-23
+198,267,Repeindre le salon,Peinture,Oujda,34.74575,-1.92594,normal,140,2080,63,4,open,2026-04-28
+199,21,Terrasse à carreler,Carrelage,Agadir,30.40472,-9.60577,urgent,175,2600,204,2,completed,2025-11-18
+200,262,Engazonnement,Jardinage,Meknès,33.94916,-5.47389,normal,105,1170,316,5,completed,2026-03-24
+201,173,Tableau à refaire,Électricité,Oujda,34.78945,-1.90432,urgent,140,1820,62,2,completed,2025-10-29
+202,161,Joints à refaire,Carrelage,Marrakech,31.64377,-8.01385,normal,175,2600,201,4,completed,2025-10-17
+203,343,Installer pompe à chaleur,Climatisation,Marrakech,31.68751,-7.89666,normal,350,4160,181,1,completed,2026-06-03
+204,165,Enduit à refaire,Maçonnerie,Oujda,34.70438,-1.98201,urgent,280,4550,179,5,open,2026-04-24
+205,173,Porte qui frotte,Menuiserie,Oujda,34.65967,-1.93483,urgent,210,2860,320,3,completed,2025-10-12
+206,130,Éclairage LED,Électricité,Meknès,33.9612,-5.44268,normal,140,1820,126,2,completed,2026-03-12
+207,262,Transport canapé,Déménagement,Meknès,33.82846,-5.64438,normal,210,2860,280,4,open,2025-12-19
+208,161,Tableau à refaire,Électricité,Fès,33.96435,-5.02998,urgent,140,1820,57,0,completed,2025-07-29
+209,138,Placard sur mesure,Menuiserie,Rabat,34.11295,-6.80123,normal,210,2860,320,0,open,2026-04-19
+210,369,Rafraîchir façade,Peinture,Agadir,30.41262,-9.65637,urgent,140,2080,322,2,completed,2025-10-03
+211,284,Déménagement 3 pièces,Déménagement,Tanger,35.81622,-5.90495,très urgent,210,2860,226,1,completed,2025-08-25
+212,380,Montage meubles,Déménagement,Agadir,30.49473,-9.67928,normal,210,2860,238,1,open,2025-08-27
+213,89,Créer une ouverture,Maçonnerie,Agadir,30.34291,-9.65458,normal,280,4550,326,4,completed,2025-09-21
+214,42,Changer cylindre,Serrurerie,Oujda,34.67427,-1.85969,normal,70,910,344,3,open,2025-09-17
+215,345,Système d'arrosage,Jardinage,Meknès,33.95611,-5.54212,normal,105,1170,285,4,completed,2026-04-10
+216,74,Réseau WiFi,Informatique,Rabat,34.04273,-6.79859,normal,70,1170,236,1,open,2025-12-28
+217,141,Fissures dans le mur,Maçonnerie,Agadir,30.51395,-9.62417,urgent,280,4550,42,5,completed,2026-04-30
+218,366,Robinet qui goutte,Plomberie,Meknès,33.90899,-5.57767,normal,105,1170,253,5,completed,2025-07-19
+219,179,Enduit à refaire,Maçonnerie,Agadir,30.39896,-9.49062,normal,280,4550,116,1,completed,2026-02-23
+220,101,Fuite sous l'évier,Plomberie,Meknès,33.86422,-5.49093,normal,105,1170,111,0,completed,2025-10-10
+221,131,Taille de haie,Jardinage,Fès,33.98858,-4.92249,normal,105,1170,125,1,completed,2026-02-25
+222,48,Transport canapé,Déménagement,Casablanca,33.5888,-7.52859,urgent,210,2860,120,2,completed,2025-08-28
+223,101,Transport canapé,Déménagement,Rabat,33.92736,-6.92776,urgent,210,2860,121,4,open,2026-03-14
+224,390,Joints à refaire,Carrelage,Fès,33.95821,-4.90656,normal,175,2600,34,2,completed,2026-02-21
+225,259,WC bouché,Plomberie,Meknès,33.81457,-5.64496,normal,105,1170,97,1,completed,2026-03-24
+226,126,Système d'arrosage,Jardinage,Fès,34.07875,-4.95385,normal,105,1170,340,0,open,2025-08-12
+227,1,Décoration chambre,Peinture,Oujda,34.69295,-1.91357,urgent,140,2080,311,4,completed,2026-01-28
+228,182,Déménagement 3 pièces,Déménagement,Meknès,33.94791,-5.54223,normal,210,2860,287,3,open,2025-09-17
+229,38,Déménagement 3 pièces,Déménagement,Tanger,35.83343,-5.91713,très urgent,210,2860,225,3,open,2025-11-12
+230,250,Enduit à refaire,Maçonnerie,Casablanca,33.5116,-7.53032,urgent,280,4550,260,4,completed,2025-08-14
+231,155,Installer interphone,Serrurerie,Marrakech,31.55216,-7.8945,très urgent,70,910,159,3,completed,2026-01-28
+232,105,Système d'arrosage,Jardinage,Fès,34.01509,-5.09701,très urgent,105,1170,81,2,completed,2026-01-28
+233,335,Changer cylindre,Serrurerie,Rabat,34.04214,-6.873,normal,70,910,274,0,completed,2025-07-08
+234,100,Décoration chambre,Peinture,Fès,33.92758,-5.0862,urgent,140,2080,317,2,open,2025-09-23
+235,323,Lavage vitres,Nettoyage,Tanger,35.65661,-5.85488,urgent,70,780,265,2,completed,2025-12-09
+236,300,Panne de courant,Électricité,Oujda,34.74259,-1.9258,normal,140,1820,310,5,completed,2025-08-21
+237,339,Réseau WiFi,Informatique,Oujda,34.73674,-1.88217,normal,70,1170,130,0,completed,2025-12-22
+238,23,Décoration chambre,Peinture,Casablanca,33.67117,-7.65586,normal,140,2080,243,1,completed,2025-10-12
+239,34,Placard sur mesure,Menuiserie,Casablanca,33.5224,-7.59355,normal,210,2860,269,1,completed,2025-08-01
+240,236,Terrasse à carreler,Carrelage,Tanger,35.8353,-5.73548,normal,175,2600,315,4,completed,2025-11-20
+241,168,Nettoyage après travaux,Nettoyage,Fès,34.06957,-4.92749,normal,70,780,172,4,completed,2025-09-27
+242,248,Rafraîchir façade,Peinture,Tanger,35.85462,-5.87712,très urgent,140,2080,237,0,completed,2025-10-13
+243,285,Créer une ouverture,Maçonnerie,Marrakech,31.71182,-8.03543,très urgent,280,4550,80,5,completed,2026-01-01
+244,291,Poser carrelage salle de bain,Carrelage,Agadir,30.33723,-9.67108,normal,175,2600,63,2,completed,2026-01-13
+245,222,Placard sur mesure,Menuiserie,Meknès,33.8877,-5.64879,très urgent,210,2860,90,2,open,2025-12-23
+246,302,Créer une ouverture,Maçonnerie,Meknès,33.87839,-5.60457,normal,280,4550,114,2,open,2026-04-03
+247,193,Panne de courant,Électricité,Rabat,33.93054,-6.77756,normal,140,1820,306,3,completed,2026-05-27
+248,2,Taille de haie,Jardinage,Fès,33.93226,-5.0451,urgent,105,1170,212,5,completed,2025-08-27
+249,170,Éclairage LED,Électricité,Casablanca,33.68041,-7.6801,normal,140,1820,30,1,completed,2026-02-10
+250,304,Décoration chambre,Peinture,Rabat,34.09264,-6.88821,normal,140,2080,340,2,open,2026-02-22
+251,50,Système d'arrosage,Jardinage,Marrakech,31.67037,-8.08228,urgent,105,1170,113,5,completed,2025-12-04
+252,157,Repeindre le salon,Peinture,Meknès,33.87576,-5.45422,urgent,140,2080,188,5,open,2026-01-26
+253,77,PC qui ne démarre plus,Informatique,Fès,33.93315,-5.09541,urgent,70,1170,105,0,completed,2025-08-19
+254,145,Terrasse à carreler,Carrelage,Tanger,35.77664,-5.78673,normal,175,2600,92,5,completed,2026-03-13
+255,364,Créer une ouverture,Maçonnerie,Oujda,34.72047,-1.94076,normal,280,4550,206,0,open,2025-12-20
+256,96,Système d'arrosage,Jardinage,Oujda,34.72093,-1.93356,urgent,105,1170,195,3,open,2026-06-01
+257,217,Clim qui ne refroidit plus,Climatisation,Tanger,35.85854,-5.77962,urgent,350,4160,124,0,completed,2025-10-10
+258,250,Terrasse à carreler,Carrelage,Fès,33.93428,-5.07776,normal,175,2600,283,2,completed,2025-09-04
+259,395,Chauffe-eau en panne,Plomberie,Tanger,35.8052,-5.76909,normal,105,1170,31,0,completed,2025-09-20
+260,349,Chaudière à réviser,Climatisation,Agadir,30.43447,-9.51387,très urgent,350,4160,343,4,open,2025-06-24
+261,233,Caméras surveillance,Informatique,Agadir,30.43619,-9.5428,normal,70,1170,200,0,completed,2025-07-06
+262,238,Déménagement 3 pièces,Déménagement,Marrakech,31.72098,-7.90871,normal,210,2860,165,2,completed,2025-09-29
+263,297,Rafraîchir façade,Peinture,Meknès,33.84277,-5.54065,normal,140,2080,260,1,completed,2025-06-28
+264,275,Lavage vitres,Nettoyage,Meknès,33.78893,-5.46761,urgent,70,780,186,4,completed,2026-03-28
+265,339,Nettoyage après travaux,Nettoyage,Agadir,30.48827,-9.52129,très urgent,70,780,229,4,completed,2026-03-10
+266,351,Installer interphone,Serrurerie,Rabat,33.98388,-6.89661,normal,70,910,80,1,completed,2025-10-14
+267,344,Rafraîchir façade,Peinture,Meknès,33.82039,-5.5632,urgent,140,2080,215,0,completed,2025-11-09
+268,281,Installer pompe à chaleur,Climatisation,Rabat,33.92927,-6.91607,normal,350,4160,31,1,open,2025-09-03
+269,59,Engazonnement,Jardinage,Tanger,35.67765,-5.77649,urgent,105,1170,268,4,open,2026-04-14
+270,143,Panne de courant,Électricité,Tanger,35.82199,-5.86573,normal,140,1820,126,4,completed,2026-04-17
+271,84,Placard sur mesure,Menuiserie,Tanger,35.68606,-5.76584,normal,210,2860,275,5,completed,2025-12-20
+272,263,Installer interphone,Serrurerie,Marrakech,31.55761,-7.95492,normal,70,910,330,5,completed,2025-09-28
+273,286,Engazonnement,Jardinage,Meknès,33.85506,-5.57565,urgent,105,1170,48,3,open,2025-12-02
+274,9,Clim qui ne refroidit plus,Climatisation,Tanger,35.79165,-5.85226,urgent,350,4160,191,3,open,2026-04-04
+275,267,Nettoyage après travaux,Nettoyage,Rabat,34.04098,-6.84734,normal,70,780,312,5,completed,2026-04-19
+276,327,Terrasse à carreler,Carrelage,Marrakech,31.58886,-7.91144,normal,175,2600,84,0,completed,2025-08-13
+277,195,Placard sur mesure,Menuiserie,Agadir,30.39319,-9.61712,normal,210,2860,301,2,open,2025-11-04
+278,209,Fuite sous l'évier,Plomberie,Casablanca,33.67715,-7.62704,urgent,105,1170,100,4,completed,2025-12-06
+279,136,Joints à refaire,Carrelage,Tanger,35.84348,-5.90262,normal,175,2600,70,1,open,2026-03-12
+280,387,Désinfection locaux,Nettoyage,Rabat,34.08827,-6.83102,normal,70,780,309,2,completed,2025-11-03
+281,207,Fuite sous l'évier,Plomberie,Agadir,30.51836,-9.61536,urgent,105,1170,167,5,open,2025-07-22
+282,302,Chauffe-eau en panne,Plomberie,Rabat,34.10553,-6.94051,urgent,105,1170,237,4,open,2026-04-02
+283,288,Créer une ouverture,Maçonnerie,Rabat,33.98502,-6.90968,très urgent,280,4550,83,5,completed,2025-09-23
+284,378,Clim qui ne refroidit plus,Climatisation,Marrakech,31.73537,-8.08807,normal,350,4160,169,4,completed,2026-02-11
+285,31,Installer interphone,Serrurerie,Marrakech,31.65399,-8.00522,urgent,70,910,179,2,open,2025-12-31
+286,297,Rafraîchir façade,Peinture,Agadir,30.37354,-9.5211,normal,140,2080,245,2,completed,2025-06-04
+287,303,Fissures dans le mur,Maçonnerie,Agadir,30.46916,-9.58153,urgent,280,4550,327,0,completed,2025-08-10
+288,128,Caméras surveillance,Informatique,Casablanca,33.6231,-7.55,normal,70,1170,141,2,completed,2025-06-05
+289,368,Panne de courant,Électricité,Casablanca,33.55437,-7.6241,normal,140,1820,105,5,completed,2025-12-09
+290,194,Chaudière à réviser,Climatisation,Agadir,30.41556,-9.66263,urgent,350,4160,135,3,completed,2026-05-09
+291,251,Décoration chambre,Peinture,Meknès,33.79597,-5.65475,normal,140,2080,61,0,completed,2025-10-30
+292,57,Rafraîchir façade,Peinture,Fès,33.98648,-5.06982,urgent,140,2080,272,4,open,2025-11-29
+293,156,Installer pompe à chaleur,Climatisation,Marrakech,31.61855,-7.94036,normal,350,4160,274,3,open,2025-09-24
+294,225,Porte qui frotte,Menuiserie,Casablanca,33.63386,-7.5584,normal,210,2860,312,4,completed,2025-07-30
+295,190,Nettoyage après travaux,Nettoyage,Agadir,30.46886,-9.64744,urgent,70,780,188,5,completed,2026-03-21
+296,145,Décoration chambre,Peinture,Marrakech,31.68523,-7.94468,normal,140,2080,344,4,completed,2025-09-05
+297,271,Fuite sous l'évier,Plomberie,Fès,34.13246,-5.03732,urgent,105,1170,313,3,completed,2026-02-05
+298,56,Réseau WiFi,Informatique,Agadir,30.47556,-9.61435,urgent,70,1170,169,4,open,2026-05-12
+299,309,Transport canapé,Déménagement,Tanger,35.67217,-5.84009,normal,210,2860,155,2,open,2025-12-03
+300,242,Fissures dans le mur,Maçonnerie,Tanger,35.75802,-5.84896,normal,280,4550,69,0,completed,2025-09-30
+301,105,Taille de haie,Jardinage,Meknès,33.90106,-5.49571,normal,105,1170,310,3,completed,2025-09-21
+302,50,Robinet qui goutte,Plomberie,Agadir,30.32222,-9.57918,normal,105,1170,173,5,completed,2025-09-19
+303,122,Transport canapé,Déménagement,Rabat,33.93301,-6.89559,normal,210,2860,153,0,completed,2026-03-08
+304,388,Caméras surveillance,Informatique,Casablanca,33.66526,-7.59206,très urgent,70,1170,240,2,open,2026-03-29
+305,118,Déménagement 3 pièces,Déménagement,Agadir,30.31971,-9.55564,très urgent,210,2860,261,4,completed,2025-07-23
+306,11,Clim qui ne refroidit plus,Climatisation,Agadir,30.36132,-9.52841,normal,350,4160,53,5,open,2025-09-13
+307,68,Décoration chambre,Peinture,Oujda,34.59184,-1.92233,urgent,140,2080,46,0,completed,2025-09-16
+308,388,Rafraîchir façade,Peinture,Meknès,33.81867,-5.64173,très urgent,140,2080,272,3,open,2025-06-21
+309,273,Porte qui frotte,Menuiserie,Meknès,33.80886,-5.49013,normal,210,2860,108,3,open,2026-05-28
+310,86,Rafraîchir façade,Peinture,Tanger,35.84304,-5.90808,très urgent,140,2080,302,5,completed,2026-01-07
+311,143,Joints à refaire,Carrelage,Agadir,30.45078,-9.50595,urgent,175,2600,40,1,completed,2026-03-05
+312,298,Installer des prises,Électricité,Fès,34.11997,-5.05844,urgent,140,1820,87,4,completed,2025-07-01
+313,276,Enduit à refaire,Maçonnerie,Fès,33.97719,-5.09713,urgent,280,4550,308,0,open,2025-07-16
+314,174,Nettoyage après travaux,Nettoyage,Rabat,33.96893,-6.87791,normal,70,780,121,0,completed,2025-08-14
+315,326,Tableau à refaire,Électricité,Fès,34.06029,-5.09266,urgent,140,1820,309,0,completed,2026-01-25
+316,142,Joints à refaire,Carrelage,Casablanca,33.47215,-7.69542,normal,175,2600,42,5,open,2025-08-27
+317,388,Caméras surveillance,Informatique,Rabat,33.93066,-6.90854,très urgent,70,1170,80,3,completed,2026-05-01
+318,323,Réseau WiFi,Informatique,Casablanca,33.6205,-7.4842,normal,70,1170,88,4,completed,2025-10-15
+319,280,Placard sur mesure,Menuiserie,Oujda,34.64069,-1.9066,urgent,210,2860,107,1,completed,2026-02-15
+320,161,Changer cylindre,Serrurerie,Oujda,34.58732,-1.92552,normal,70,910,336,0,open,2025-10-07
+321,194,Poser carrelage salle de bain,Carrelage,Tanger,35.67057,-5.78559,normal,175,2600,106,3,completed,2025-10-02
+322,138,Lavage vitres,Nettoyage,Marrakech,31.73559,-8.0093,normal,70,780,188,1,completed,2025-06-25
+323,241,Fuite sous l'évier,Plomberie,Meknès,33.83035,-5.56672,urgent,105,1170,315,3,completed,2026-04-19
+324,270,Réparer parquet,Menuiserie,Fès,33.93914,-5.0502,normal,210,2860,92,3,open,2025-08-06
+325,285,Lavage vitres,Nettoyage,Casablanca,33.52156,-7.53936,très urgent,70,780,120,4,completed,2025-10-09
+326,194,Caméras surveillance,Informatique,Marrakech,31.63562,-8.07533,normal,70,1170,109,5,open,2025-12-25
+327,317,Clim qui ne refroidit plus,Climatisation,Agadir,30.47666,-9.5934,urgent,350,4160,187,3,open,2025-10-06
+328,215,Réseau WiFi,Informatique,Fès,34.00481,-4.9513,normal,70,1170,139,0,open,2025-07-16
+329,237,Fuite sous l'évier,Plomberie,Meknès,33.84845,-5.44304,normal,105,1170,211,2,completed,2025-09-07
+330,370,Installer pompe à chaleur,Climatisation,Tanger,35.72489,-5.79439,normal,350,4160,41,5,open,2025-11-08
+331,211,Rafraîchir façade,Peinture,Agadir,30.43061,-9.49865,normal,140,2080,41,1,completed,2025-10-05
+332,266,Porte qui frotte,Menuiserie,Agadir,30.39138,-9.49594,normal,210,2860,61,5,completed,2025-10-30
+333,30,Rafraîchir façade,Peinture,Marrakech,31.56564,-8.04248,très urgent,140,2080,211,1,completed,2026-03-31
+334,203,Caméras surveillance,Informatique,Marrakech,31.69581,-7.91495,normal,70,1170,337,3,completed,2025-08-06
+335,311,Créer une ouverture,Maçonnerie,Marrakech,31.64968,-7.9528,normal,280,4550,140,1,completed,2025-09-27
+336,18,Réseau WiFi,Informatique,Rabat,34.11954,-6.75119,urgent,70,1170,288,3,completed,2025-12-20
+337,257,Changer cylindre,Serrurerie,Casablanca,33.4673,-7.65795,urgent,70,910,45,4,open,2025-07-31
+338,282,Réparer parquet,Menuiserie,Casablanca,33.51783,-7.61633,normal,210,2860,284,2,completed,2025-08-04
+339,2,Déménagement 3 pièces,Déménagement,Marrakech,31.6061,-7.95737,normal,210,2860,59,0,open,2025-08-06
+340,270,Clim qui ne refroidit plus,Climatisation,Agadir,30.34323,-9.64302,normal,350,4160,301,3,open,2026-03-31
+341,72,Serrure bloquée,Serrurerie,Marrakech,31.55828,-7.93289,très urgent,70,910,340,4,completed,2025-10-04
+342,172,Joints à refaire,Carrelage,Meknès,33.80199,-5.60024,normal,175,2600,180,1,completed,2025-06-25
+343,11,Poser carrelage salle de bain,Carrelage,Marrakech,31.62785,-8.0037,normal,175,2600,53,4,completed,2025-08-08
+344,10,Fuite sous l'évier,Plomberie,Marrakech,31.71054,-8.07723,urgent,105,1170,214,3,completed,2025-06-17
+345,351,Système d'arrosage,Jardinage,Rabat,33.98206,-6.78859,normal,105,1170,119,1,open,2025-12-03
+346,27,Installer interphone,Serrurerie,Fès,34.01951,-5.08459,urgent,70,910,278,3,completed,2025-08-16
+347,269,Rafraîchir façade,Peinture,Agadir,30.48178,-9.69749,normal,140,2080,313,0,completed,2025-09-11
+348,122,Taille de haie,Jardinage,Fès,34.01329,-5.06228,urgent,105,1170,344,5,open,2026-05-11
+349,190,Système d'arrosage,Jardinage,Casablanca,33.59595,-7.68764,normal,105,1170,319,4,completed,2025-10-28
+350,9,Caméras surveillance,Informatique,Oujda,34.79306,-1.89348,normal,70,1170,336,5,completed,2026-01-05
+351,193,Installer pompe à chaleur,Climatisation,Agadir,30.49921,-9.56745,urgent,350,4160,263,0,completed,2025-08-17
+352,188,Montage meubles,Déménagement,Meknès,33.92307,-5.53243,normal,210,2860,319,0,open,2025-11-09
+353,292,Transport canapé,Déménagement,Marrakech,31.72751,-7.89666,normal,210,2860,144,2,completed,2025-12-27
+354,29,Serrure bloquée,Serrurerie,Casablanca,33.67905,-7.59564,normal,70,910,90,3,completed,2026-04-28
+355,384,Enduit à refaire,Maçonnerie,Agadir,30.44113,-9.49114,normal,280,4550,340,1,open,2026-04-08
+356,186,Installer pompe à chaleur,Climatisation,Marrakech,31.71567,-7.97673,urgent,350,4160,317,0,completed,2025-06-05
+357,340,Installer des prises,Électricité,Fès,34.12027,-4.98567,normal,140,1820,45,4,completed,2025-12-28
+358,279,Installer pompe à chaleur,Climatisation,Fès,34.01906,-5.05059,urgent,350,4160,225,4,completed,2026-04-22
+359,8,Lavage vitres,Nettoyage,Oujda,34.75346,-1.99826,urgent,70,780,104,1,completed,2026-03-23
+360,129,Fissures dans le mur,Maçonnerie,Agadir,30.40589,-9.674,normal,280,4550,189,4,open,2025-06-19
+361,85,Système d'arrosage,Jardinage,Marrakech,31.5216,-7.94484,normal,105,1170,337,3,completed,2025-07-06
+362,391,Serrure bloquée,Serrurerie,Marrakech,31.53762,-7.94471,urgent,70,910,201,0,open,2025-12-13
+363,271,Chauffe-eau en panne,Plomberie,Agadir,30.33701,-9.57002,normal,105,1170,194,0,completed,2026-04-22
+364,299,Système d'arrosage,Jardinage,Meknès,33.92095,-5.64453,normal,105,1170,173,2,open,2026-01-15
+365,227,Transport canapé,Déménagement,Agadir,30.40418,-9.69363,très urgent,210,2860,101,5,completed,2026-05-13
+366,71,Poser carrelage salle de bain,Carrelage,Casablanca,33.58509,-7.678,urgent,175,2600,350,3,completed,2025-08-25
+367,394,Rafraîchir façade,Peinture,Casablanca,33.55089,-7.58461,normal,140,2080,64,1,open,2025-09-30
+368,46,Porte qui frotte,Menuiserie,Tanger,35.72877,-5.74089,normal,210,2860,235,0,completed,2026-01-27
+369,85,Chaudière à réviser,Climatisation,Rabat,33.92979,-6.91438,normal,350,4160,142,3,open,2026-05-12
+370,163,Porte qui frotte,Menuiserie,Oujda,34.68578,-1.89552,normal,210,2860,92,1,open,2026-05-11
+371,280,Rafraîchir façade,Peinture,Agadir,30.3769,-9.69557,très urgent,140,2080,326,2,open,2025-11-01
+372,262,Fuite sous l'évier,Plomberie,Rabat,34.00602,-6.88814,normal,105,1170,261,1,completed,2025-12-24
+373,56,Porte qui frotte,Menuiserie,Oujda,34.73879,-1.91147,normal,210,2860,125,0,open,2026-04-27
+374,48,Système d'arrosage,Jardinage,Fès,33.94732,-5.0663,normal,105,1170,244,1,completed,2026-02-10
+375,352,Montage meubles,Déménagement,Oujda,34.62916,-1.9274,urgent,210,2860,306,1,completed,2025-09-02
+376,210,Robinet qui goutte,Plomberie,Tanger,35.70089,-5.77989,très urgent,105,1170,41,3,completed,2025-12-27
+377,233,Taille de haie,Jardinage,Casablanca,33.55205,-7.49506,normal,105,1170,237,4,completed,2025-06-11
+378,193,Nettoyage après travaux,Nettoyage,Fès,33.94343,-4.92634,normal,70,780,208,2,completed,2025-12-22
+379,398,Terrasse à carreler,Carrelage,Oujda,34.7812,-1.87102,normal,175,2600,106,5,open,2025-09-01
+380,38,Montage meubles,Déménagement,Fès,33.99598,-5.02207,normal,210,2860,334,0,completed,2026-05-19
+381,221,Déménagement 3 pièces,Déménagement,Agadir,30.48906,-9.51852,très urgent,210,2860,94,0,completed,2026-04-09
+382,340,Lavage vitres,Nettoyage,Meknès,33.9962,-5.52606,urgent,70,780,289,2,completed,2026-04-10
+383,263,Nettoyage après travaux,Nettoyage,Rabat,34.05274,-6.8884,normal,70,780,309,4,completed,2026-05-25
+384,183,Réparer parquet,Menuiserie,Marrakech,31.71495,-8.00236,normal,210,2860,130,4,completed,2025-09-07
+385,232,Rafraîchir façade,Peinture,Meknès,33.95409,-5.44708,normal,140,2080,266,3,completed,2025-12-17
+386,320,Déménagement 3 pièces,Déménagement,Meknès,33.89476,-5.50005,normal,210,2860,96,2,completed,2026-02-11
+387,330,Désinfection locaux,Nettoyage,Tanger,35.79876,-5.94197,urgent,70,780,350,1,completed,2025-10-19
+388,387,Serrure bloquée,Serrurerie,Meknès,33.94273,-5.58365,normal,70,910,49,0,completed,2025-10-25
+389,399,Réseau WiFi,Informatique,Tanger,35.83571,-5.88409,normal,70,1170,298,3,completed,2025-09-12
+390,314,Rafraîchir façade,Peinture,Fès,34.0632,-4.97104,normal,140,2080,302,5,completed,2025-12-21
+391,280,Transport canapé,Déménagement,Rabat,33.98635,-6.91416,normal,210,2860,197,1,completed,2026-02-06
+392,176,Installer interphone,Serrurerie,Fès,34.13462,-5.07095,très urgent,70,910,143,5,open,2026-04-11
+393,352,Joints à refaire,Carrelage,Rabat,33.96113,-6.73535,normal,175,2600,316,5,completed,2025-06-17
+394,266,Rafraîchir façade,Peinture,Meknès,33.99071,-5.53461,normal,140,2080,194,3,completed,2025-10-15
+395,100,Décoration chambre,Peinture,Rabat,34.10258,-6.75644,urgent,140,2080,68,0,completed,2026-02-06
+396,102,Nettoyage après travaux,Nettoyage,Tanger,35.77722,-5.88392,normal,70,780,216,1,completed,2025-11-17
+397,56,Joints à refaire,Carrelage,Tanger,35.69513,-5.89528,normal,175,2600,347,1,completed,2026-02-27
+398,219,Taille de haie,Jardinage,Tanger,35.66129,-5.73458,normal,105,1170,106,5,completed,2025-10-27
+399,19,Joints à refaire,Carrelage,Fès,34.02392,-4.97498,très urgent,175,2600,92,5,completed,2026-03-18
+400,376,Placard sur mesure,Menuiserie,Oujda,34.58005,-1.94146,normal,210,2860,293,4,completed,2025-12-26
+401,71,Joints à refaire,Carrelage,Meknès,33.87536,-5.4488,urgent,175,2600,328,4,completed,2026-03-06
+402,153,Réparer parquet,Menuiserie,Fès,34.03172,-5.03505,normal,210,2860,173,4,completed,2026-04-01
+403,163,Réseau WiFi,Informatique,Agadir,30.35813,-9.67834,très urgent,70,1170,90,0,completed,2025-11-21
+404,4,Fuite sous l'évier,Plomberie,Casablanca,33.49871,-7.63156,urgent,105,1170,330,5,completed,2025-10-03
+405,60,Terrasse à carreler,Carrelage,Tanger,35.66636,-5.9409,normal,175,2600,47,4,open,2026-01-07
+406,285,Réseau WiFi,Informatique,Fès,34.07265,-5.04672,normal,70,1170,296,4,completed,2026-03-31
+407,252,Placard sur mesure,Menuiserie,Oujda,34.78683,-1.87024,très urgent,210,2860,246,3,completed,2025-10-31
+408,77,PC qui ne démarre plus,Informatique,Casablanca,33.49304,-7.515,très urgent,70,1170,115,2,open,2026-02-28
+409,112,Réparer parquet,Menuiserie,Rabat,34.07215,-6.90854,normal,210,2860,132,4,open,2025-06-07
+410,321,Rafraîchir façade,Peinture,Rabat,33.92555,-6.79008,urgent,140,2080,296,1,completed,2025-08-24
+411,284,Système d'arrosage,Jardinage,Tanger,35.65663,-5.90642,normal,105,1170,295,5,open,2025-09-02
+412,93,Poser carrelage salle de bain,Carrelage,Oujda,34.67897,-1.96322,très urgent,175,2600,317,5,open,2025-12-15
+413,80,Montage meubles,Déménagement,Casablanca,33.53536,-7.56415,normal,210,2860,262,3,completed,2025-10-05
+414,201,Chauffe-eau en panne,Plomberie,Fès,34.0805,-4.90046,urgent,105,1170,119,0,completed,2025-09-13
+415,368,PC qui ne démarre plus,Informatique,Marrakech,31.72156,-7.9475,très urgent,70,1170,44,2,open,2026-03-26
+416,291,Montage meubles,Déménagement,Marrakech,31.68161,-7.8986,très urgent,210,2860,248,2,completed,2025-07-12
+417,121,Désinfection locaux,Nettoyage,Fès,33.97632,-5.07209,urgent,70,780,155,4,completed,2025-09-16
+418,158,Rafraîchir façade,Peinture,Meknès,33.8118,-5.4987,normal,140,2080,282,1,open,2025-10-30
+419,127,Fuite sous l'évier,Plomberie,Tanger,35.70783,-5.88721,urgent,105,1170,285,4,completed,2025-09-04
+420,299,Engazonnement,Jardinage,Casablanca,33.50538,-7.66022,normal,105,1170,58,2,open,2026-01-29
+421,389,Désinfection locaux,Nettoyage,Oujda,34.734,-1.97319,urgent,70,780,197,1,completed,2026-02-24
+422,77,Fuite sous l'évier,Plomberie,Rabat,33.94192,-6.87094,urgent,105,1170,57,4,open,2025-06-26
+423,136,Désinfection locaux,Nettoyage,Oujda,34.70974,-1.81632,urgent,70,780,295,4,completed,2026-01-14
+424,355,PC qui ne démarre plus,Informatique,Tanger,35.79568,-5.86484,normal,70,1170,303,3,completed,2025-09-15
+425,155,Fissures dans le mur,Maçonnerie,Meknès,33.92494,-5.47926,urgent,280,4550,323,2,open,2025-11-28
+426,84,Fissures dans le mur,Maçonnerie,Rabat,33.91773,-6.91745,normal,280,4550,330,5,open,2025-07-21
+427,156,Fissures dans le mur,Maçonnerie,Oujda,34.63852,-1.83186,normal,280,4550,59,4,completed,2026-03-26
+428,43,Fissures dans le mur,Maçonnerie,Oujda,34.59868,-1.81034,normal,280,4550,54,5,open,2025-08-02
+429,107,Porte qui frotte,Menuiserie,Rabat,34.10019,-6.74993,très urgent,210,2860,239,3,completed,2025-07-01
+430,395,Caméras surveillance,Informatique,Rabat,33.93786,-6.86699,normal,70,1170,122,0,open,2025-06-20
+431,229,Réparer parquet,Menuiserie,Tanger,35.79447,-5.74199,urgent,210,2860,157,1,completed,2025-09-21
+432,293,Enduit à refaire,Maçonnerie,Meknès,33.86762,-5.61035,normal,280,4550,121,3,completed,2025-11-05
+433,77,Rafraîchir façade,Peinture,Fès,33.94691,-5.04661,urgent,140,2080,232,5,completed,2025-06-08
+434,168,Placard sur mesure,Menuiserie,Fès,34.05413,-5.0269,normal,210,2860,332,1,completed,2025-11-30
+435,34,Caméras surveillance,Informatique,Casablanca,33.63912,-7.6515,urgent,70,1170,335,2,open,2026-03-29
+436,255,WC bouché,Plomberie,Rabat,33.96228,-6.8516,normal,105,1170,127,3,completed,2026-03-07
+437,158,Placard sur mesure,Menuiserie,Marrakech,31.70438,-8.03313,normal,210,2860,109,0,open,2025-07-01
+438,217,Panne de courant,Électricité,Tanger,35.7842,-5.83847,normal,140,1820,172,0,open,2026-01-16
+439,369,Réseau WiFi,Informatique,Rabat,34.00603,-6.76334,normal,70,1170,146,1,open,2026-03-02
+440,333,Tableau à refaire,Électricité,Tanger,35.72046,-5.73607,normal,140,1820,33,1,completed,2025-06-20
+441,64,WC bouché,Plomberie,Tanger,35.84771,-5.85442,normal,105,1170,261,2,completed,2026-04-18
+442,227,Déménagement 3 pièces,Déménagement,Tanger,35.73182,-5.85018,normal,210,2860,156,2,completed,2025-08-13
+443,129,Taille de haie,Jardinage,Meknès,33.78598,-5.64587,normal,105,1170,90,4,open,2025-06-17
+444,378,Installer interphone,Serrurerie,Marrakech,31.5431,-8.00302,urgent,70,910,76,3,open,2025-06-25
+445,279,Fuite sous l'évier,Plomberie,Rabat,34.08843,-6.8048,normal,105,1170,105,4,open,2025-11-26
+446,361,Chauffe-eau en panne,Plomberie,Oujda,34.59685,-1.90959,normal,105,1170,82,1,open,2025-11-21
+447,41,Chauffe-eau en panne,Plomberie,Agadir,30.39777,-9.59146,normal,105,1170,183,1,completed,2025-08-01
+448,13,Robinet qui goutte,Plomberie,Meknès,33.82468,-5.54045,normal,105,1170,211,3,completed,2026-04-05
+449,16,Créer une ouverture,Maçonnerie,Rabat,34.03414,-6.87754,très urgent,280,4550,132,4,completed,2025-10-12
+450,224,Porte qui frotte,Menuiserie,Rabat,33.98917,-6.93585,normal,210,2860,100,5,completed,2025-06-20
+451,207,Serrure bloquée,Serrurerie,Meknès,33.80705,-5.44674,urgent,70,910,42,0,completed,2026-01-18
+452,342,Engazonnement,Jardinage,Rabat,34.1104,-6.94163,urgent,105,1170,164,4,open,2025-07-08
+453,367,Déménagement 3 pièces,Déménagement,Agadir,30.44384,-9.63809,urgent,210,2860,63,2,completed,2025-10-12
+454,20,Transport canapé,Déménagement,Agadir,30.45949,-9.57693,normal,210,2860,232,4,completed,2026-04-27
+455,34,Créer une ouverture,Maçonnerie,Oujda,34.70623,-1.87137,urgent,280,4550,225,4,completed,2025-07-26
+456,196,Installer des prises,Électricité,Fès,33.97196,-5.04613,normal,140,1820,275,4,open,2025-09-01
+457,391,Terrasse à carreler,Carrelage,Meknès,33.82496,-5.49606,très urgent,175,2600,332,4,open,2025-08-01
+458,313,Taille de haie,Jardinage,Casablanca,33.47948,-7.52006,normal,105,1170,250,5,open,2026-01-29
+459,27,Nettoyage après travaux,Nettoyage,Oujda,34.75585,-1.90263,normal,70,780,75,3,open,2026-05-08
+460,341,Chaudière à réviser,Climatisation,Casablanca,33.60139,-7.55511,normal,350,4160,309,0,open,2026-05-29
+461,385,Montage meubles,Déménagement,Oujda,34.77337,-1.82547,normal,210,2860,257,0,completed,2026-02-16
+462,149,Clim qui ne refroidit plus,Climatisation,Casablanca,33.64128,-7.51382,très urgent,350,4160,234,2,open,2025-08-25
+463,389,Tableau à refaire,Électricité,Oujda,34.78331,-1.82849,normal,140,1820,149,4,completed,2026-01-14
+464,89,Chauffe-eau en panne,Plomberie,Casablanca,33.5211,-7.68778,normal,105,1170,272,5,open,2025-09-08
+465,195,Transport canapé,Déménagement,Rabat,33.97756,-6.86252,urgent,210,2860,73,1,completed,2026-05-15
+466,85,Montage meubles,Déménagement,Meknès,33.90641,-5.54629,normal,210,2860,230,4,completed,2026-02-03
+467,26,Rafraîchir façade,Peinture,Casablanca,33.59231,-7.64832,normal,140,2080,75,4,completed,2026-01-08
+468,283,Chaudière à réviser,Climatisation,Marrakech,31.55967,-8.02778,urgent,350,4160,313,4,open,2025-12-14
+469,182,Panne de courant,Électricité,Oujda,34.70422,-1.83378,urgent,140,1820,233,1,open,2026-04-09
+470,216,Réseau WiFi,Informatique,Agadir,30.50025,-9.62484,normal,70,1170,165,4,completed,2026-01-21
+471,78,Tableau à refaire,Électricité,Oujda,34.5811,-1.89825,normal,140,1820,102,1,completed,2026-03-27
+472,141,Désinfection locaux,Nettoyage,Fès,33.92527,-4.89888,très urgent,70,780,143,2,completed,2026-05-26
+473,315,Fuite sous l'évier,Plomberie,Meknès,33.81511,-5.59951,normal,105,1170,299,3,completed,2026-01-07
+474,33,Installer des prises,Électricité,Agadir,30.33566,-9.49027,normal,140,1820,157,2,completed,2025-09-16
+475,120,Créer une ouverture,Maçonnerie,Oujda,34.73421,-1.82612,normal,280,4550,157,0,completed,2026-03-15
+476,206,Poser carrelage salle de bain,Carrelage,Casablanca,33.66175,-7.62,très urgent,175,2600,184,3,open,2026-04-15
+477,50,Changer cylindre,Serrurerie,Tanger,35.79199,-5.75334,urgent,70,910,170,0,completed,2025-12-26
+478,387,Caméras surveillance,Informatique,Oujda,34.77245,-1.81813,normal,70,1170,294,1,completed,2026-03-06
+479,280,Clim qui ne refroidit plus,Climatisation,Casablanca,33.5832,-7.49111,urgent,350,4160,235,3,completed,2025-07-23
+480,227,Rafraîchir façade,Peinture,Meknès,33.89717,-5.44021,urgent,140,2080,197,4,open,2026-04-20
+481,193,Rafraîchir façade,Peinture,Meknès,33.91868,-5.539,urgent,140,2080,157,5,completed,2026-05-26
+482,226,Rafraîchir façade,Peinture,Meknès,33.90803,-5.5065,urgent,140,2080,197,2,completed,2026-05-07
+483,64,Transport canapé,Déménagement,Fès,34.08138,-4.96118,normal,210,2860,274,2,open,2026-05-25
+484,23,Terrasse à carreler,Carrelage,Rabat,33.92801,-6.93271,urgent,175,2600,61,1,completed,2026-03-15
+485,216,Joints à refaire,Carrelage,Marrakech,31.61021,-7.93583,normal,175,2600,293,4,open,2026-04-06
+486,29,Changer cylindre,Serrurerie,Oujda,34.58025,-2.01415,urgent,70,910,323,2,completed,2026-03-02
+487,92,Robinet qui goutte,Plomberie,Agadir,30.51872,-9.49029,urgent,105,1170,170,5,completed,2026-01-10
+488,26,Joints à refaire,Carrelage,Meknès,33.84207,-5.6523,urgent,175,2600,189,2,completed,2026-02-09
+489,276,Fuite sous l'évier,Plomberie,Oujda,34.74778,-1.9528,normal,105,1170,143,1,completed,2026-01-07
+490,190,Rafraîchir façade,Peinture,Meknès,33.97477,-5.48605,urgent,140,2080,124,3,open,2025-07-01
+491,56,Changer cylindre,Serrurerie,Tanger,35.78191,-5.86708,très urgent,70,910,34,5,completed,2025-08-25
+492,90,Placard sur mesure,Menuiserie,Agadir,30.35884,-9.54144,normal,210,2860,274,5,completed,2025-12-26
+493,162,Montage meubles,Déménagement,Rabat,33.99715,-6.9273,normal,210,2860,81,0,completed,2025-10-10
+494,265,Chaudière à réviser,Climatisation,Meknès,34.00018,-5.65409,très urgent,350,4160,304,0,open,2026-02-23
+495,203,Système d'arrosage,Jardinage,Oujda,34.793,-1.99186,urgent,105,1170,118,4,completed,2026-01-17
+496,7,Repeindre le salon,Peinture,Oujda,34.60776,-1.8642,urgent,140,2080,114,5,completed,2025-08-18
+497,85,WC bouché,Plomberie,Marrakech,31.63572,-8.03974,urgent,105,1170,275,2,open,2026-05-26
+498,302,Réseau WiFi,Informatique,Meknès,33.97272,-5.54032,normal,70,1170,209,5,open,2026-02-22
+499,90,Rafraîchir façade,Peinture,Fès,33.95187,-4.98757,urgent,140,2080,287,2,completed,2025-10-19
+500,347,Serrure bloquée,Serrurerie,Agadir,30.38575,-9.62676,urgent,70,910,203,5,open,2025-07-13
+501,58,Réparer parquet,Menuiserie,Marrakech,31.55472,-7.93506,normal,210,2860,305,4,completed,2026-02-10
+502,376,Installer des prises,Électricité,Oujda,34.67338,-1.85225,urgent,140,1820,154,5,open,2026-02-09
+503,87,WC bouché,Plomberie,Marrakech,31.70898,-7.96919,normal,105,1170,116,0,completed,2026-06-04
+504,278,Chauffe-eau en panne,Plomberie,Rabat,34.04398,-6.86603,normal,105,1170,51,2,open,2025-06-20
+505,198,Transport canapé,Déménagement,Marrakech,31.59166,-7.9713,urgent,210,2860,166,4,completed,2025-09-29
+506,7,Fuite sous l'évier,Plomberie,Rabat,34.02408,-6.79508,normal,105,1170,272,4,open,2026-01-07
+507,177,Réparer parquet,Menuiserie,Agadir,30.37463,-9.50798,très urgent,210,2860,163,2,completed,2025-09-19
+508,353,Tableau à refaire,Électricité,Oujda,34.70892,-1.97249,urgent,140,1820,312,0,open,2025-10-05
+509,330,Montage meubles,Déménagement,Rabat,33.94459,-6.85101,normal,210,2860,160,4,completed,2026-03-21
+510,301,Désinfection locaux,Nettoyage,Fès,34.1165,-4.94285,normal,70,780,186,2,completed,2025-08-11
+511,141,Système d'arrosage,Jardinage,Fès,33.98007,-5.05783,urgent,105,1170,336,4,completed,2026-06-02
+512,138,Réparer parquet,Menuiserie,Marrakech,31.70121,-7.94895,normal,210,2860,113,4,open,2025-07-26
+513,78,Panne de courant,Électricité,Oujda,34.5851,-1.8206,normal,140,1820,320,1,completed,2026-06-03
+514,109,Porte qui frotte,Menuiserie,Fès,33.95138,-4.93163,normal,210,2860,147,1,completed,2025-07-06
+515,237,Installer interphone,Serrurerie,Meknès,33.81017,-5.45864,normal,70,910,335,5,completed,2026-02-05
+516,6,Désinfection locaux,Nettoyage,Rabat,34.08962,-6.90877,normal,70,780,77,2,open,2025-10-02
+517,284,Rafraîchir façade,Peinture,Tanger,35.79191,-5.80348,normal,140,2080,291,0,completed,2026-01-05
+518,71,Enduit à refaire,Maçonnerie,Tanger,35.71827,-5.75479,normal,280,4550,80,0,open,2025-06-12
+519,235,Changer cylindre,Serrurerie,Fès,33.92595,-4.93138,normal,70,910,198,5,completed,2025-07-12
+520,353,Robinet qui goutte,Plomberie,Meknès,33.87898,-5.46149,normal,105,1170,167,0,open,2025-12-10
+521,154,Tableau à refaire,Électricité,Rabat,34.06503,-6.75688,très urgent,140,1820,174,0,completed,2025-07-25
+522,303,Décoration chambre,Peinture,Oujda,34.58766,-1.8865,normal,140,2080,317,1,completed,2025-09-15
+523,73,Installer interphone,Serrurerie,Meknès,33.81984,-5.52418,urgent,70,910,300,1,completed,2026-03-15
+524,290,Tableau à refaire,Électricité,Oujda,34.693,-1.87202,urgent,140,1820,344,0,completed,2026-04-02
+525,186,Taille de haie,Jardinage,Rabat,34.03589,-6.75581,normal,105,1170,334,1,open,2025-08-10
+526,221,Réseau WiFi,Informatique,Tanger,35.74967,-5.73381,normal,70,1170,316,1,completed,2025-07-14
+527,390,Déménagement 3 pièces,Déménagement,Tanger,35.85345,-5.7387,urgent,210,2860,214,2,completed,2026-01-25
+528,149,PC qui ne démarre plus,Informatique,Rabat,34.05787,-6.91988,normal,70,1170,338,1,completed,2026-03-08
+529,283,Porte qui frotte,Menuiserie,Agadir,30.33956,-9.5521,normal,210,2860,100,3,open,2025-08-15
+530,309,Système d'arrosage,Jardinage,Tanger,35.76214,-5.92601,normal,105,1170,165,5,completed,2025-08-10
+531,178,Chaudière à réviser,Climatisation,Agadir,30.40031,-9.52601,normal,350,4160,252,4,open,2025-08-15
+532,65,Poser carrelage salle de bain,Carrelage,Oujda,34.75816,-1.86593,normal,175,2600,55,0,completed,2026-05-30
+533,141,WC bouché,Plomberie,Oujda,34.61571,-1.84064,normal,105,1170,270,1,completed,2025-10-25
+534,46,Taille de haie,Jardinage,Fès,33.95998,-5.0515,normal,105,1170,76,1,completed,2025-12-20
+535,396,Poser carrelage salle de bain,Carrelage,Casablanca,33.56909,-7.68517,normal,175,2600,317,5,completed,2025-07-20
+536,191,Fuite sous l'évier,Plomberie,Fès,34.10764,-4.91656,normal,105,1170,74,2,open,2025-06-26
+537,381,Poser carrelage salle de bain,Carrelage,Marrakech,31.72615,-7.90279,normal,175,2600,321,1,open,2026-01-26
+538,37,Changer cylindre,Serrurerie,Tanger,35.79852,-5.94111,normal,70,910,74,4,completed,2026-03-18
+539,117,Installer pompe à chaleur,Climatisation,Fès,34.09761,-4.99526,normal,350,4160,314,4,open,2025-11-27
+540,68,Montage meubles,Déménagement,Agadir,30.38002,-9.60411,normal,210,2860,75,4,completed,2025-08-15
+541,160,Nettoyage après travaux,Nettoyage,Rabat,33.95889,-6.78311,urgent,70,780,48,2,open,2025-12-01
+542,397,Désinfection locaux,Nettoyage,Meknès,33.83334,-5.6158,normal,70,780,181,1,completed,2025-12-05
+543,269,Créer une ouverture,Maçonnerie,Tanger,35.83979,-5.90938,normal,280,4550,237,2,completed,2025-06-23
+544,100,Transport canapé,Déménagement,Marrakech,31.73539,-7.87376,urgent,210,2860,307,4,open,2025-09-02
+545,163,Enduit à refaire,Maçonnerie,Meknès,33.98456,-5.48291,urgent,280,4550,182,3,completed,2025-06-28
+546,28,Taille de haie,Jardinage,Oujda,34.77903,-1.86714,normal,105,1170,259,4,open,2025-12-07
+547,204,Placard sur mesure,Menuiserie,Marrakech,31.64346,-7.93155,normal,210,2860,47,4,completed,2025-07-28
+548,323,PC qui ne démarre plus,Informatique,Agadir,30.47766,-9.56219,urgent,70,1170,149,0,completed,2026-01-26
+549,199,Installer des prises,Électricité,Casablanca,33.49576,-7.52376,urgent,140,1820,257,5,completed,2025-08-29
+550,368,Montage meubles,Déménagement,Tanger,35.85018,-5.87397,très urgent,210,2860,167,5,completed,2025-09-02
+551,342,Porte qui frotte,Menuiserie,Fès,34.01984,-5.04027,urgent,210,2860,319,2,completed,2025-06-09
+552,389,Caméras surveillance,Informatique,Casablanca,33.48206,-7.67391,normal,70,1170,123,2,completed,2026-05-21
+553,133,Engazonnement,Jardinage,Tanger,35.65831,-5.88102,très urgent,105,1170,282,0,completed,2025-09-09
+554,238,Déménagement 3 pièces,Déménagement,Casablanca,33.66624,-7.54476,normal,210,2860,217,5,open,2026-05-11
+555,385,Panne de courant,Électricité,Casablanca,33.46709,-7.61301,très urgent,140,1820,348,1,completed,2025-09-16
+556,2,Rafraîchir façade,Peinture,Tanger,35.67865,-5.93531,normal,140,2080,53,4,completed,2025-07-06
+557,154,Chaudière à réviser,Climatisation,Rabat,34.11937,-6.73555,normal,350,4160,345,4,completed,2025-12-04
+558,192,Chaudière à réviser,Climatisation,Tanger,35.68307,-5.86398,normal,350,4160,60,3,completed,2026-03-26
+559,10,Changer cylindre,Serrurerie,Meknès,33.98926,-5.4589,normal,70,910,67,4,completed,2026-02-03
+560,399,PC qui ne démarre plus,Informatique,Marrakech,31.73677,-7.98089,urgent,70,1170,94,5,completed,2026-05-09
+561,148,Repeindre le salon,Peinture,Tanger,35.83775,-5.93767,normal,140,2080,264,3,completed,2025-11-22
+562,112,Placard sur mesure,Menuiserie,Tanger,35.83051,-5.92635,normal,210,2860,224,2,open,2025-09-06
+563,147,Installer des prises,Électricité,Oujda,34.69475,-1.97977,normal,140,1820,125,5,completed,2025-09-24
+564,170,Installer des prises,Électricité,Rabat,33.91609,-6.77945,normal,140,1820,245,5,open,2025-06-06
+565,327,Lavage vitres,Nettoyage,Meknès,33.89576,-5.60287,normal,70,780,89,0,completed,2025-09-24
+566,4,Décoration chambre,Peinture,Tanger,35.85846,-5.74243,normal,140,2080,318,4,completed,2026-01-20
+567,96,Installer des prises,Électricité,Fès,34.0535,-4.97976,normal,140,1820,115,3,open,2026-01-04
+568,344,Placard sur mesure,Menuiserie,Casablanca,33.65629,-7.66732,normal,210,2860,296,1,open,2026-01-27
+569,13,Caméras surveillance,Informatique,Fès,33.92543,-5.01191,normal,70,1170,206,1,open,2025-06-07
+570,93,Fissures dans le mur,Maçonnerie,Meknès,33.93683,-5.61903,urgent,280,4550,341,5,completed,2025-12-01
+571,64,Désinfection locaux,Nettoyage,Oujda,34.73487,-1.8711,normal,70,780,252,0,completed,2026-01-13
+572,191,Poser carrelage salle de bain,Carrelage,Rabat,34.0707,-6.75928,normal,175,2600,267,5,completed,2026-05-30
+573,285,Désinfection locaux,Nettoyage,Casablanca,33.61825,-7.53566,urgent,70,780,151,3,completed,2026-04-09
+574,281,Changer cylindre,Serrurerie,Fès,34.03514,-4.9823,urgent,70,910,290,2,open,2025-07-01
+575,337,Tableau à refaire,Électricité,Fès,33.96154,-4.94508,normal,140,1820,57,1,completed,2026-03-05
+576,70,Clim qui ne refroidit plus,Climatisation,Fès,33.93798,-5.08893,normal,350,4160,172,5,open,2026-02-27
+577,383,Panne de courant,Électricité,Rabat,34.00392,-6.74355,normal,140,1820,338,5,open,2026-05-14
+578,65,PC qui ne démarre plus,Informatique,Casablanca,33.49258,-7.56082,très urgent,70,1170,171,5,completed,2025-08-10
+579,255,Poser carrelage salle de bain,Carrelage,Fès,34.07556,-5.08579,normal,175,2600,129,0,completed,2026-02-16
+580,172,Chauffe-eau en panne,Plomberie,Meknès,33.8402,-5.6128,urgent,105,1170,59,2,completed,2026-01-15
+581,183,Installer interphone,Serrurerie,Rabat,34.04492,-6.90122,urgent,70,910,41,5,open,2025-07-19
+582,213,Chaudière à réviser,Climatisation,Rabat,34.01434,-6.86795,urgent,350,4160,111,4,completed,2025-09-23
+583,15,Repeindre le salon,Peinture,Marrakech,31.70348,-7.9288,urgent,140,2080,64,4,completed,2025-08-20
+584,104,Éclairage LED,Électricité,Meknès,33.89066,-5.54706,normal,140,1820,315,2,completed,2025-12-22
+585,197,Créer une ouverture,Maçonnerie,Meknès,33.98644,-5.63722,normal,280,4550,231,2,completed,2026-03-28
+586,154,Chaudière à réviser,Climatisation,Casablanca,33.56034,-7.60461,très urgent,350,4160,186,4,completed,2025-09-27
+587,177,Robinet qui goutte,Plomberie,Agadir,30.45963,-9.62471,normal,105,1170,96,1,completed,2025-08-03
+588,76,Rafraîchir façade,Peinture,Marrakech,31.6913,-7.94532,très urgent,140,2080,205,5,completed,2025-10-18
+589,52,Installer pompe à chaleur,Climatisation,Casablanca,33.58041,-7.59132,très urgent,350,4160,346,0,completed,2025-08-18
+590,371,Repeindre le salon,Peinture,Rabat,34.05507,-6.82627,normal,140,2080,142,1,completed,2025-08-11
+591,236,Porte qui frotte,Menuiserie,Tanger,35.79555,-5.86326,normal,210,2860,155,2,completed,2026-05-23
+592,41,Réseau WiFi,Informatique,Tanger,35.83482,-5.82773,normal,70,1170,221,5,open,2025-12-20
+593,354,Montage meubles,Déménagement,Agadir,30.42767,-9.53409,normal,210,2860,167,5,completed,2025-11-22
+594,123,Installer interphone,Serrurerie,Tanger,35.77341,-5.72781,normal,70,910,227,5,completed,2025-12-16
+595,107,Décoration chambre,Peinture,Fès,33.94229,-5.03389,normal,140,2080,304,5,completed,2025-11-21
+596,261,Tableau à refaire,Électricité,Tanger,35.69147,-5.85582,normal,140,1820,220,4,completed,2026-01-18
+597,123,Robinet qui goutte,Plomberie,Oujda,34.76673,-1.95979,normal,105,1170,331,0,open,2025-08-05
+598,147,WC bouché,Plomberie,Agadir,30.46038,-9.58004,normal,105,1170,110,3,completed,2025-11-13
+599,368,Fuite sous l'évier,Plomberie,Oujda,34.70109,-1.97194,urgent,105,1170,145,0,completed,2025-06-19
+600,352,PC qui ne démarre plus,Informatique,Rabat,34.01997,-6.83493,normal,70,1170,115,1,completed,2025-12-09
+601,229,Éclairage LED,Électricité,Agadir,30.38852,-9.66099,urgent,140,1820,173,5,completed,2026-02-17
+602,137,Chaudière à réviser,Climatisation,Oujda,34.5891,-1.912,urgent,350,4160,113,5,completed,2025-06-16
+603,211,Joints à refaire,Carrelage,Fès,33.97331,-5.01195,normal,175,2600,325,3,completed,2025-12-29
+604,240,Fuite sous l'évier,Plomberie,Rabat,33.97304,-6.93631,urgent,105,1170,212,1,completed,2025-06-16
+605,333,Lavage vitres,Nettoyage,Casablanca,33.47285,-7.49882,normal,70,780,121,5,open,2025-09-07
+606,164,Taille de haie,Jardinage,Marrakech,31.54732,-8.08348,normal,105,1170,323,5,completed,2025-12-24
+607,356,Tableau à refaire,Électricité,Oujda,34.79339,-1.82309,normal,140,1820,131,3,completed,2026-06-02
+608,398,Changer cylindre,Serrurerie,Fès,34.12119,-5.10232,urgent,70,910,324,5,completed,2025-10-08
+609,369,Terrasse à carreler,Carrelage,Tanger,35.83026,-5.7562,urgent,175,2600,150,1,open,2026-05-24
+610,395,Système d'arrosage,Jardinage,Marrakech,31.67259,-8.0481,normal,105,1170,341,1,open,2026-02-01
+611,354,PC qui ne démarre plus,Informatique,Marrakech,31.69044,-8.04045,normal,70,1170,248,0,completed,2026-01-30
+612,26,Nettoyage après travaux,Nettoyage,Oujda,34.58844,-1.97898,urgent,70,780,91,4,completed,2025-12-16
+613,8,Engazonnement,Jardinage,Rabat,33.94652,-6.92813,urgent,105,1170,313,1,completed,2026-05-17
+614,94,Caméras surveillance,Informatique,Rabat,34.12115,-6.84311,urgent,70,1170,252,5,completed,2025-10-14
+615,103,Poser carrelage salle de bain,Carrelage,Oujda,34.74157,-1.99118,normal,175,2600,140,5,completed,2025-08-25
+616,325,Installer des prises,Électricité,Agadir,30.37456,-9.67292,normal,140,1820,319,1,completed,2025-09-03
+617,30,Changer cylindre,Serrurerie,Fès,34.10272,-4.9745,très urgent,70,910,138,2,completed,2025-10-06
+618,370,Système d'arrosage,Jardinage,Marrakech,31.53581,-7.94915,normal,105,1170,169,3,completed,2025-10-23
+619,4,Taille de haie,Jardinage,Tanger,35.70093,-5.82127,normal,105,1170,92,5,completed,2025-06-10
+620,37,Enduit à refaire,Maçonnerie,Meknès,33.82312,-5.51247,normal,280,4550,176,5,completed,2026-02-01
+621,198,Installer des prises,Électricité,Tanger,35.80934,-5.77113,normal,140,1820,193,2,completed,2026-04-20
+622,45,Serrure bloquée,Serrurerie,Agadir,30.33526,-9.58378,très urgent,70,910,205,2,completed,2026-03-22
+623,296,PC qui ne démarre plus,Informatique,Meknès,33.91348,-5.60967,normal,70,1170,310,3,completed,2025-07-04
+624,71,Robinet qui goutte,Plomberie,Agadir,30.35617,-9.4951,urgent,105,1170,66,4,completed,2025-07-23
+625,339,Éclairage LED,Électricité,Fès,33.99167,-4.90469,normal,140,1820,250,4,completed,2025-12-28
+626,268,Taille de haie,Jardinage,Marrakech,31.53743,-7.99702,urgent,105,1170,148,0,completed,2025-08-10
+627,200,Chaudière à réviser,Climatisation,Casablanca,33.56453,-7.62459,normal,350,4160,301,4,completed,2026-03-09
+628,122,Clim qui ne refroidit plus,Climatisation,Marrakech,31.72479,-7.94111,très urgent,350,4160,188,1,open,2026-04-22
+629,395,Serrure bloquée,Serrurerie,Tanger,35.71815,-5.93543,normal,70,910,326,5,open,2025-08-06
+630,75,WC bouché,Plomberie,Fès,33.95137,-5.09313,urgent,105,1170,208,3,completed,2025-10-26
+631,234,Rafraîchir façade,Peinture,Oujda,34.58008,-2.00871,normal,140,2080,317,3,completed,2026-03-09
+632,255,Changer cylindre,Serrurerie,Agadir,30.44345,-9.57797,très urgent,70,910,75,3,completed,2025-11-28
+633,18,Décoration chambre,Peinture,Tanger,35.65853,-5.85417,normal,140,2080,142,3,open,2025-12-18
+634,140,Transport canapé,Déménagement,Meknès,33.91868,-5.44722,normal,210,2860,86,5,completed,2025-08-13
+635,195,Fissures dans le mur,Maçonnerie,Tanger,35.69591,-5.7919,normal,280,4550,34,1,completed,2025-08-25
+636,237,Installer interphone,Serrurerie,Marrakech,31.61362,-8.03845,normal,70,910,190,4,open,2026-04-17
+637,287,Transport canapé,Déménagement,Tanger,35.78366,-5.86672,normal,210,2860,252,1,open,2025-10-16
+638,150,Caméras surveillance,Informatique,Marrakech,31.58785,-8.03355,normal,70,1170,186,4,open,2026-04-08
+639,302,Enduit à refaire,Maçonnerie,Marrakech,31.70167,-7.88494,normal,280,4550,326,3,open,2025-10-20
+640,210,Repeindre le salon,Peinture,Casablanca,33.57868,-7.55174,urgent,140,2080,317,1,open,2026-04-03
+641,169,Désinfection locaux,Nettoyage,Meknès,33.81313,-5.49909,urgent,70,780,141,4,completed,2026-04-28
+642,139,Installer des prises,Électricité,Marrakech,31.55549,-7.88005,très urgent,140,1820,322,3,open,2025-08-01
+643,246,Robinet qui goutte,Plomberie,Oujda,34.64926,-1.82508,normal,105,1170,128,2,completed,2025-12-10
+644,300,Placard sur mesure,Menuiserie,Fès,33.93326,-5.10591,normal,210,2860,320,3,completed,2025-07-06
+645,313,Fissures dans le mur,Maçonnerie,Casablanca,33.64293,-7.66733,urgent,280,4550,212,0,open,2025-09-16
+646,376,Engazonnement,Jardinage,Tanger,35.83701,-5.75523,normal,105,1170,334,3,open,2025-11-23
+647,322,Clim qui ne refroidit plus,Climatisation,Oujda,34.78699,-1.89943,normal,350,4160,70,4,completed,2025-10-15
+648,283,Décoration chambre,Peinture,Marrakech,31.57747,-8.01845,normal,140,2080,73,0,open,2026-03-12
+649,190,Fuite sous l'évier,Plomberie,Marrakech,31.58553,-8.04952,urgent,105,1170,110,5,completed,2025-10-09
+650,235,Décoration chambre,Peinture,Fès,33.98252,-5.06315,normal,140,2080,184,1,completed,2026-03-27
+651,380,Caméras surveillance,Informatique,Meknès,33.95435,-5.53859,normal,70,1170,312,5,open,2025-08-15
+652,292,Rafraîchir façade,Peinture,Meknès,33.94826,-5.448,normal,140,2080,75,5,completed,2026-01-14
+653,239,Rafraîchir façade,Peinture,Marrakech,31.73621,-8.02389,urgent,140,2080,59,1,open,2025-06-28
+654,84,Porte qui frotte,Menuiserie,Agadir,30.41096,-9.63305,normal,210,2860,202,5,completed,2025-09-13
+655,267,Porte qui frotte,Menuiserie,Marrakech,31.52341,-8.0857,normal,210,2860,323,0,open,2025-09-29
+656,12,Créer une ouverture,Maçonnerie,Marrakech,31.57623,-7.98792,normal,280,4550,92,5,completed,2025-12-07
+657,219,Placard sur mesure,Menuiserie,Oujda,34.71041,-1.9444,urgent,210,2860,157,5,open,2026-04-28
+658,190,Créer une ouverture,Maçonnerie,Casablanca,33.48191,-7.50255,très urgent,280,4550,327,4,completed,2025-08-30
+659,111,Repeindre le salon,Peinture,Fès,33.93528,-4.99131,normal,140,2080,327,5,completed,2025-07-20
+660,84,Chaudière à réviser,Climatisation,Fès,33.98847,-4.9176,normal,350,4160,241,2,completed,2026-01-26
+661,244,Clim qui ne refroidit plus,Climatisation,Oujda,34.64802,-1.96319,normal,350,4160,337,1,completed,2025-12-18
+662,278,Fissures dans le mur,Maçonnerie,Oujda,34.61191,-1.87299,urgent,280,4550,203,4,completed,2025-09-04
+663,307,Chauffe-eau en panne,Plomberie,Tanger,35.7347,-5.77816,normal,105,1170,160,4,completed,2025-10-08
+664,322,Fissures dans le mur,Maçonnerie,Oujda,34.70257,-1.81616,urgent,280,4550,81,1,open,2025-08-04
+665,272,Engazonnement,Jardinage,Casablanca,33.51596,-7.62296,urgent,105,1170,242,5,completed,2025-07-11
+666,26,Engazonnement,Jardinage,Agadir,30.46966,-9.53368,très urgent,105,1170,336,1,completed,2026-04-17
+667,356,Poser carrelage salle de bain,Carrelage,Fès,34.05453,-4.94914,urgent,175,2600,86,3,open,2025-08-15
+668,253,Serrure bloquée,Serrurerie,Agadir,30.3737,-9.58566,normal,70,910,40,2,completed,2025-08-16
+669,91,Installer interphone,Serrurerie,Tanger,35.79952,-5.88575,urgent,70,910,225,1,completed,2025-06-04
+670,104,Rafraîchir façade,Peinture,Agadir,30.385,-9.51654,urgent,140,2080,186,4,completed,2026-02-19
+671,170,WC bouché,Plomberie,Agadir,30.42015,-9.53228,normal,105,1170,221,4,completed,2025-07-10
+672,98,Clim qui ne refroidit plus,Climatisation,Oujda,34.68602,-1.88461,très urgent,350,4160,233,3,completed,2025-08-24
+673,213,Enduit à refaire,Maçonnerie,Agadir,30.35969,-9.50701,normal,280,4550,117,1,completed,2025-08-21
+674,42,Installer interphone,Serrurerie,Tanger,35.76874,-5.91146,urgent,70,910,44,5,completed,2025-08-23
+675,147,Tableau à refaire,Électricité,Rabat,33.98254,-6.76275,très urgent,140,1820,240,1,open,2025-11-12
+676,388,Chaudière à réviser,Climatisation,Meknès,33.83568,-5.60257,urgent,350,4160,108,5,completed,2025-11-02
+677,93,WC bouché,Plomberie,Meknès,33.8669,-5.58293,normal,105,1170,293,0,completed,2025-07-23
+678,371,Installer des prises,Électricité,Marrakech,31.66295,-7.92482,normal,140,1820,169,4,completed,2026-05-30
+679,329,Panne de courant,Électricité,Fès,34.10908,-5.08771,urgent,140,1820,69,2,completed,2026-06-03
+680,79,Serrure bloquée,Serrurerie,Meknès,33.90124,-5.44104,normal,70,910,34,0,completed,2026-03-02
+681,285,Nettoyage après travaux,Nettoyage,Casablanca,33.5492,-7.48411,urgent,70,780,30,0,completed,2026-03-22
+682,227,Installer pompe à chaleur,Climatisation,Oujda,34.63147,-1.95169,normal,350,4160,228,5,completed,2025-11-10
+683,306,Serrure bloquée,Serrurerie,Fès,33.97226,-4.96573,normal,70,910,102,5,completed,2025-09-03
+684,94,Fuite sous l'évier,Plomberie,Agadir,30.46892,-9.69638,normal,105,1170,159,4,open,2025-10-26
+685,376,Engazonnement,Jardinage,Rabat,33.93226,-6.76318,normal,105,1170,238,4,completed,2025-10-24
+686,270,Éclairage LED,Électricité,Fès,34.03626,-5.06505,urgent,140,1820,40,0,open,2026-01-06
+687,210,WC bouché,Plomberie,Fès,34.07789,-5.09462,normal,105,1170,130,5,open,2025-09-11
+688,279,Installer interphone,Serrurerie,Marrakech,31.71014,-8.08838,urgent,70,910,197,1,open,2025-10-02
+689,282,Caméras surveillance,Informatique,Casablanca,33.66722,-7.57831,normal,70,1170,243,4,open,2026-04-13
+690,32,Chauffe-eau en panne,Plomberie,Oujda,34.66467,-1.8687,normal,105,1170,264,3,completed,2025-09-02
+691,257,Déménagement 3 pièces,Déménagement,Meknès,33.93094,-5.46454,normal,210,2860,277,3,completed,2026-02-17
+692,59,Clim qui ne refroidit plus,Climatisation,Meknès,33.82367,-5.55706,normal,350,4160,312,2,completed,2025-06-04
+693,80,Chaudière à réviser,Climatisation,Fès,33.96868,-5.05933,urgent,350,4160,80,5,completed,2025-09-26
+694,237,Réseau WiFi,Informatique,Rabat,34.02703,-6.87936,très urgent,70,1170,40,3,completed,2026-02-11
+695,334,Fuite sous l'évier,Plomberie,Meknès,33.94875,-5.49901,urgent,105,1170,115,0,completed,2026-05-04
+696,395,Tableau à refaire,Électricité,Fès,34.02618,-5.01198,normal,140,1820,265,4,completed,2026-04-03
+697,274,Chaudière à réviser,Climatisation,Marrakech,31.63837,-8.02458,urgent,350,4160,121,5,completed,2025-08-20
+698,193,Poser carrelage salle de bain,Carrelage,Meknès,33.90082,-5.49028,urgent,175,2600,211,4,completed,2025-11-16
+699,158,Transport canapé,Déménagement,Fès,33.99945,-5.05978,normal,210,2860,252,5,completed,2025-11-03
+700,297,Transport canapé,Déménagement,Casablanca,33.56122,-7.56225,normal,210,2860,346,3,completed,2025-07-06
+701,294,Montage meubles,Déménagement,Meknès,33.89013,-5.5338,normal,210,2860,334,3,open,2026-02-13
+702,131,Nettoyage après travaux,Nettoyage,Tanger,35.79963,-5.75819,normal,70,780,171,0,completed,2026-04-11
+703,155,Panne de courant,Électricité,Meknès,33.88529,-5.59293,normal,140,1820,205,1,completed,2025-12-15
+704,274,WC bouché,Plomberie,Agadir,30.3824,-9.70407,urgent,105,1170,293,3,completed,2025-08-30
+705,17,Porte qui frotte,Menuiserie,Meknès,33.81556,-5.55623,normal,210,2860,178,4,completed,2025-06-13
+706,139,Nettoyage après travaux,Nettoyage,Agadir,30.39722,-9.68364,normal,70,780,314,4,completed,2026-05-10
+707,248,Repeindre le salon,Peinture,Marrakech,31.6552,-7.92988,normal,140,2080,84,4,open,2025-06-11
+708,77,Engazonnement,Jardinage,Tanger,35.84927,-5.93189,normal,105,1170,206,5,completed,2025-12-27
+709,399,Montage meubles,Déménagement,Tanger,35.79086,-5.93837,très urgent,210,2860,213,3,open,2025-10-15
+710,393,Déménagement 3 pièces,Déménagement,Marrakech,31.69987,-7.87759,urgent,210,2860,180,3,completed,2026-02-16
+711,370,Chauffe-eau en panne,Plomberie,Rabat,34.02756,-6.91468,urgent,105,1170,47,0,open,2026-01-08
+712,191,PC qui ne démarre plus,Informatique,Rabat,33.92308,-6.89103,normal,70,1170,159,1,completed,2025-12-22
+713,341,Poser carrelage salle de bain,Carrelage,Meknès,33.90618,-5.45452,urgent,175,2600,221,1,open,2025-12-14
+714,73,Placard sur mesure,Menuiserie,Rabat,33.98276,-6.87529,normal,210,2860,274,1,open,2025-09-03
+715,95,Placard sur mesure,Menuiserie,Rabat,34.04447,-6.87797,normal,210,2860,180,3,completed,2026-02-14
+716,200,Repeindre le salon,Peinture,Agadir,30.46774,-9.63579,normal,140,2080,337,3,open,2025-09-30
+717,274,Fissures dans le mur,Maçonnerie,Tanger,35.65271,-5.76255,très urgent,280,4550,177,2,completed,2025-07-26
+718,2,PC qui ne démarre plus,Informatique,Marrakech,31.60666,-7.94685,très urgent,70,1170,64,5,completed,2026-04-27
+719,254,Placard sur mesure,Menuiserie,Meknès,33.9524,-5.5395,normal,210,2860,156,4,open,2026-06-03
+720,346,Joints à refaire,Carrelage,Tanger,35.68836,-5.81574,normal,175,2600,207,1,completed,2025-07-25
+721,258,Terrasse à carreler,Carrelage,Oujda,34.65821,-2.00134,normal,175,2600,202,0,completed,2025-06-28
+722,307,Installer des prises,Électricité,Agadir,30.41661,-9.63977,normal,140,1820,217,5,open,2025-11-03
+723,225,Désinfection locaux,Nettoyage,Agadir,30.34394,-9.53551,normal,70,780,212,4,open,2026-01-25
+724,103,Repeindre le salon,Peinture,Agadir,30.50291,-9.57582,normal,140,2080,148,3,completed,2025-09-25
+725,272,Enduit à refaire,Maçonnerie,Meknès,33.80337,-5.48513,urgent,280,4550,152,5,completed,2025-09-05
+726,20,Nettoyage après travaux,Nettoyage,Oujda,34.688,-1.82716,urgent,70,780,315,0,completed,2026-02-04
+727,5,Rafraîchir façade,Peinture,Meknès,33.82517,-5.50746,normal,140,2080,92,3,completed,2025-11-18
+728,168,PC qui ne démarre plus,Informatique,Marrakech,31.62574,-7.91499,normal,70,1170,81,4,completed,2025-12-03
+729,245,Fissures dans le mur,Maçonnerie,Agadir,30.38006,-9.62372,normal,280,4550,275,3,completed,2026-04-03
+730,34,Décoration chambre,Peinture,Marrakech,31.56678,-8.00357,normal,140,2080,324,2,completed,2026-01-10
+731,27,Montage meubles,Déménagement,Casablanca,33.61407,-7.67366,normal,210,2860,313,2,completed,2025-06-12
+732,120,Installer pompe à chaleur,Climatisation,Tanger,35.68679,-5.78983,normal,350,4160,239,5,completed,2025-08-30
+733,200,Rafraîchir façade,Peinture,Agadir,30.45358,-9.50315,urgent,140,2080,344,5,completed,2026-01-14
+734,190,Engazonnement,Jardinage,Tanger,35.78871,-5.81865,urgent,105,1170,94,4,completed,2025-06-30
+735,37,Engazonnement,Jardinage,Oujda,34.73667,-1.88779,urgent,105,1170,67,1,open,2025-09-08
+736,328,Transport canapé,Déménagement,Oujda,34.77291,-1.91959,très urgent,210,2860,327,4,open,2025-11-19
+737,51,Repeindre le salon,Peinture,Marrakech,31.61338,-7.92476,normal,140,2080,230,4,open,2025-09-23
+738,327,Chauffe-eau en panne,Plomberie,Marrakech,31.63559,-8.01532,normal,105,1170,304,0,completed,2026-04-12
+739,41,Décoration chambre,Peinture,Tanger,35.77603,-5.75021,normal,140,2080,346,5,completed,2026-03-24
+740,54,Taille de haie,Jardinage,Oujda,34.70337,-1.93942,normal,105,1170,247,3,completed,2025-12-12
+741,337,Joints à refaire,Carrelage,Casablanca,33.62814,-7.59744,urgent,175,2600,193,1,open,2025-06-14
+742,383,Caméras surveillance,Informatique,Rabat,33.93914,-6.89757,normal,70,1170,35,1,completed,2025-08-07
+743,158,Placard sur mesure,Menuiserie,Tanger,35.72697,-5.88949,normal,210,2860,323,0,completed,2026-03-04
+744,258,PC qui ne démarre plus,Informatique,Rabat,33.92203,-6.87885,urgent,70,1170,183,1,completed,2025-12-26
+745,176,Réseau WiFi,Informatique,Oujda,34.62305,-1.85572,normal,70,1170,255,0,open,2026-02-19
+746,369,Montage meubles,Déménagement,Meknès,33.90828,-5.61022,normal,210,2860,346,0,completed,2025-11-21
+747,385,Changer cylindre,Serrurerie,Rabat,33.99208,-6.74309,normal,70,910,156,0,completed,2025-12-13
+748,250,Montage meubles,Déménagement,Fès,34.0024,-4.93733,normal,210,2860,224,2,open,2026-04-14
+749,22,Clim qui ne refroidit plus,Climatisation,Fès,34.10645,-4.91113,normal,350,4160,123,3,open,2026-03-09
+750,305,Changer cylindre,Serrurerie,Meknès,33.87401,-5.58122,normal,70,910,120,4,open,2025-10-13
+751,36,PC qui ne démarre plus,Informatique,Meknès,33.80194,-5.46226,urgent,70,1170,266,2,completed,2025-11-22
+752,326,Décoration chambre,Peinture,Meknès,33.96447,-5.64614,normal,140,2080,93,0,open,2026-03-10
+753,1,Réparer parquet,Menuiserie,Oujda,34.79051,-2.01772,normal,210,2860,244,1,completed,2025-07-26
+754,133,Clim qui ne refroidit plus,Climatisation,Agadir,30.4177,-9.59186,normal,350,4160,333,2,completed,2026-03-25
+755,23,Serrure bloquée,Serrurerie,Oujda,34.66554,-1.8692,urgent,70,910,340,5,completed,2026-03-22
+756,259,Désinfection locaux,Nettoyage,Agadir,30.52261,-9.59612,urgent,70,780,193,2,open,2025-10-03
+757,393,Joints à refaire,Carrelage,Oujda,34.60795,-1.91335,normal,175,2600,130,0,completed,2026-03-14
+758,55,Installer interphone,Serrurerie,Agadir,30.4874,-9.54066,normal,70,910,186,1,completed,2025-07-07
+759,106,Lavage vitres,Nettoyage,Oujda,34.67442,-1.85791,très urgent,70,780,143,5,open,2025-10-27
+760,390,Taille de haie,Jardinage,Oujda,34.5816,-1.96522,normal,105,1170,34,4,open,2025-11-29
+761,99,Nettoyage après travaux,Nettoyage,Meknès,33.99498,-5.61513,normal,70,780,98,2,open,2025-06-24
+762,135,Éclairage LED,Électricité,Fès,34.11165,-5.05781,normal,140,1820,47,5,completed,2026-01-26
+763,138,Décoration chambre,Peinture,Rabat,33.91705,-6.79678,normal,140,2080,332,5,open,2025-09-22
+764,82,Décoration chambre,Peinture,Tanger,35.86714,-5.89017,normal,140,2080,68,0,completed,2026-04-15
+765,325,Placard sur mesure,Menuiserie,Fès,34.0875,-4.99049,normal,210,2860,330,5,completed,2025-08-20
+766,295,Serrure bloquée,Serrurerie,Marrakech,31.56103,-8.00852,très urgent,70,910,182,1,open,2025-10-17
+767,356,Installer pompe à chaleur,Climatisation,Marrakech,31.55867,-8.06766,normal,350,4160,348,0,open,2025-12-16
+768,270,Installer interphone,Serrurerie,Rabat,34.06145,-6.9032,normal,70,910,106,4,completed,2026-05-04
+769,78,WC bouché,Plomberie,Casablanca,33.59354,-7.52938,normal,105,1170,242,5,open,2025-09-12
+770,210,Nettoyage après travaux,Nettoyage,Casablanca,33.46715,-7.5974,urgent,70,780,45,0,open,2025-08-12
+771,171,Déménagement 3 pièces,Déménagement,Casablanca,33.47061,-7.59815,urgent,210,2860,75,1,completed,2026-05-05
+772,83,Éclairage LED,Électricité,Rabat,33.95694,-6.77392,normal,140,1820,290,3,completed,2026-02-12
+773,62,Fuite sous l'évier,Plomberie,Agadir,30.38806,-9.50685,urgent,105,1170,238,0,completed,2026-03-22
+774,36,Système d'arrosage,Jardinage,Casablanca,33.56332,-7.63166,normal,105,1170,104,1,completed,2025-08-10
+775,74,Installer des prises,Électricité,Meknès,33.78872,-5.58139,normal,140,1820,330,2,completed,2026-05-10
+776,140,Repeindre le salon,Peinture,Oujda,34.7511,-1.91692,normal,140,2080,345,0,open,2026-01-05
+777,329,Chaudière à réviser,Climatisation,Tanger,35.71967,-5.89354,normal,350,4160,239,0,completed,2025-11-04
+778,13,Installer pompe à chaleur,Climatisation,Fès,33.98365,-5.03353,urgent,350,4160,329,4,completed,2025-06-22
+779,55,Montage meubles,Déménagement,Rabat,33.98191,-6.7486,normal,210,2860,76,1,completed,2025-12-28
+780,147,PC qui ne démarre plus,Informatique,Meknès,33.84059,-5.53519,urgent,70,1170,293,5,completed,2026-01-27
+781,5,Désinfection locaux,Nettoyage,Agadir,30.38714,-9.65025,normal,70,780,148,3,completed,2025-07-19
+782,17,Engazonnement,Jardinage,Agadir,30.45368,-9.58356,normal,105,1170,183,0,open,2026-03-01
+783,394,Créer une ouverture,Maçonnerie,Meknès,33.91684,-5.49749,normal,280,4550,131,2,completed,2026-03-07
+784,224,Rafraîchir façade,Peinture,Oujda,34.78282,-2.01106,normal,140,2080,144,4,completed,2025-11-14
+785,96,Porte qui frotte,Menuiserie,Casablanca,33.50135,-7.48215,normal,210,2860,281,5,completed,2025-06-11
+786,169,WC bouché,Plomberie,Marrakech,31.68601,-8.08878,normal,105,1170,310,4,completed,2026-06-04
+787,123,Déménagement 3 pièces,Déménagement,Rabat,34.04516,-6.94898,normal,210,2860,320,0,open,2025-12-28
+788,2,Chauffe-eau en panne,Plomberie,Rabat,33.99592,-6.7869,urgent,105,1170,150,1,completed,2026-01-23
+789,273,Montage meubles,Déménagement,Oujda,34.73859,-1.88593,normal,210,2860,307,5,open,2025-07-16
+790,281,Installer interphone,Serrurerie,Oujda,34.7948,-1.93551,normal,70,910,41,4,completed,2026-02-22
+791,128,Installer interphone,Serrurerie,Rabat,34.10529,-6.79338,normal,70,910,258,0,completed,2025-07-17
+792,340,Déménagement 3 pièces,Déménagement,Tanger,35.80151,-5.87082,normal,210,2860,323,2,open,2025-09-08
+793,326,Rafraîchir façade,Peinture,Casablanca,33.47978,-7.65392,urgent,140,2080,172,3,completed,2025-11-15
+794,311,Montage meubles,Déménagement,Agadir,30.38096,-9.51365,normal,210,2860,237,3,completed,2025-07-01
+795,282,Porte qui frotte,Menuiserie,Agadir,30.51023,-9.55031,urgent,210,2860,306,0,completed,2025-08-13
+796,263,Engazonnement,Jardinage,Agadir,30.52902,-9.67393,urgent,105,1170,102,0,completed,2025-07-09
+797,353,Poser carrelage salle de bain,Carrelage,Fès,34.02629,-4.93737,normal,175,2600,128,3,open,2025-11-27
+798,233,WC bouché,Plomberie,Casablanca,33.5287,-7.66343,normal,105,1170,316,1,completed,2025-07-28
+799,352,Installer interphone,Serrurerie,Rabat,34.04865,-6.7797,très urgent,70,910,207,4,open,2025-12-24
+800,59,Fuite sous l'évier,Plomberie,Casablanca,33.56546,-7.66053,normal,105,1170,248,3,open,2025-08-08

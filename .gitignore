@@ -1,0 +1,43 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Environment & secrets ─────────────────────────────────────────────────────
+.env
+# .env.example is intentionally committed (template, no real secrets)
+
+# ── MLflow ────────────────────────────────────────────────────────────────────
+mlflow_store/        # SQLite DB — local tracking state, not shareable as-is
+mlruns/              # legacy file-store runs
+notebooks/mlruns/    # old file-store created before SQLite migration
+
+# ── Model artifacts (binary, large — regenerate by running notebooks) ─────────
+models/staging/*.pkl
+models/staging/*.png
+models/production/*.pkl
+# models/production/model_registry.json is intentionally committed
+
+# ── Data ──────────────────────────────────────────────────────────────────────
+# Synthetic CSVs are small and committed intentionally.
+# Uncomment the line below if real/sensitive data is added later:
+# data/raw/*.csv
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── IDE ───────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db

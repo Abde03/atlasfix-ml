@@ -1,0 +1,538 @@
+category,city,urgency,desc_len,n_photos,budget_min,budget_max,artisan_rating,artisan_score,artisan_exp,distance_km,same_city,accepted_price
+Nettoyage,Marrakech,normal,250,0,70,780,5.0,0.804,6,655.55,0,401
+Déménagement,Oujda,normal,168,3,210,2860,4.0,0.859,19,452.77,0,1353
+Électricité,Oujda,urgent,129,0,140,1820,3.6,0.8,7,659.99,0,875
+Serrurerie,Fès,normal,294,3,70,910,4.8,0.861,22,169.37,0,369
+Serrurerie,Casablanca,très urgent,211,5,70,910,4.0,0.678,17,242.54,0,993
+Maçonnerie,Marrakech,urgent,42,2,280,4550,3.5,0.719,15,218.78,0,2793
+Déménagement,Oujda,urgent,229,5,210,2860,4.9,0.928,21,349.12,0,1522
+Déménagement,Meknès,normal,305,2,210,2860,4.0,0.859,19,109.1,0,575
+Jardinage,Marrakech,urgent,315,4,105,1170,4.8,0.935,14,492.42,0,977
+Jardinage,Casablanca,très urgent,221,0,105,1170,3.1,0.851,18,20.84,1,901
+Jardinage,Agadir,urgent,319,0,105,1170,3.1,0.684,19,846.21,0,1004
+Électricité,Oujda,urgent,250,2,140,1820,5.0,0.909,22,658.78,0,399
+Climatisation,Tanger,urgent,251,0,350,4160,3.3,0.79,14,304.54,0,2222
+Plomberie,Marrakech,urgent,329,5,105,1170,2.8,0.458,2,294.48,0,392
+Nettoyage,Casablanca,très urgent,197,2,70,780,5.0,0.804,6,527.86,0,465
+Serrurerie,Agadir,urgent,43,1,70,910,5.0,0.899,13,535.38,0,151
+Informatique,Marrakech,normal,135,3,70,1170,4.2,0.737,10,508.21,0,618
+Informatique,Rabat,très urgent,339,2,70,1170,4.6,0.853,23,177.07,0,585
+Nettoyage,Tanger,très urgent,38,0,70,780,3.4,0.594,15,385.4,0,518
+Peinture,Rabat,normal,73,5,140,2080,5.0,0.915,23,5.53,1,762
+Climatisation,Tanger,normal,34,1,350,4160,3.2,0.558,1,492.25,0,659
+Déménagement,Marrakech,normal,242,1,210,2860,3.4,0.626,1,221.31,0,1819
+Déménagement,Tanger,normal,270,0,210,2860,4.7,0.973,21,212.88,0,1404
+Déménagement,Fès,urgent,77,3,210,2860,4.1,0.828,17,167.61,0,2075
+Jardinage,Fès,normal,273,3,105,1170,4.0,0.702,18,241.74,0,822
+Climatisation,Agadir,urgent,296,4,350,4160,3.1,0.742,17,847.77,0,2353
+Menuiserie,Casablanca,normal,35,4,210,2860,3.4,0.636,10,77.13,0,2080
+Serrurerie,Oujda,normal,255,0,70,910,5.0,0.832,3,873.63,0,445
+Peinture,Tanger,normal,79,5,140,2080,4.2,0.799,8,286.39,0,948
+Carrelage,Agadir,très urgent,288,1,175,2600,4.2,0.891,23,688.82,0,1295
+Plomberie,Marrakech,urgent,107,4,105,1170,3.8,0.79,9,207.58,0,739
+Informatique,Fès,normal,346,1,70,1170,4.3,0.853,8,380.02,0,724
+Maçonnerie,Agadir,normal,229,4,280,4550,4.1,0.71,8,475.89,0,957
+Peinture,Casablanca,urgent,136,5,140,2080,4.0,0.778,23,214.39,0,537
+Jardinage,Fès,très urgent,154,3,105,1170,3.9,0.736,8,245.71,0,628
+Carrelage,Rabat,normal,235,0,175,2600,4.2,0.891,23,214.67,0,671
+Nettoyage,Rabat,très urgent,215,1,70,780,4.6,0.835,6,459.05,0,586
+Climatisation,Rabat,urgent,171,2,350,4160,3.8,0.634,16,120.82,0,1654
+Électricité,Casablanca,normal,283,1,140,1820,4.5,0.913,17,530.36,0,1348
+Électricité,Rabat,normal,339,3,140,1820,4.9,0.827,7,16.77,1,1143
+Nettoyage,Casablanca,urgent,251,5,70,780,4.1,0.717,3,15.24,1,149
+Carrelage,Rabat,normal,263,2,175,2600,4.9,0.805,16,459.84,0,759
+Jardinage,Casablanca,urgent,112,1,105,1170,4.0,0.702,18,11.79,1,945
+Carrelage,Fès,normal,345,4,175,2600,3.8,0.761,4,56.55,0,457
+Jardinage,Tanger,normal,87,1,105,1170,4.9,0.806,15,296.28,0,723
+Nettoyage,Fès,normal,76,5,70,780,4.5,0.873,14,375.11,0,174
+Carrelage,Tanger,normal,180,4,175,2600,3.4,0.819,25,205.67,0,1156
+Maçonnerie,Fès,normal,142,1,280,4550,4.0,0.816,17,168.86,0,995
+Peinture,Marrakech,normal,254,3,140,2080,4.0,0.778,23,16.84,1,581
+Déménagement,Meknès,très urgent,163,5,210,2860,4.5,0.71,19,208.98,0,1981
+Plomberie,Tanger,normal,211,0,105,1170,4.9,0.76,3,295.84,0,895
+Informatique,Oujda,normal,232,1,70,1170,4.1,0.699,15,289.24,0,790
+Carrelage,Marrakech,très urgent,103,4,175,2600,4.4,0.948,23,279.09,0,2883
+Informatique,Tanger,normal,62,4,70,1170,3.1,0.536,5,211.88,0,715
+Serrurerie,Agadir,normal,146,2,70,910,5.0,0.832,3,7.35,1,562
+Électricité,Agadir,très urgent,60,5,140,1820,3.6,0.8,7,213.44,0,335
+Carrelage,Meknès,normal,221,0,175,2600,4.4,0.785,7,346.09,0,1270
+Nettoyage,Marrakech,urgent,109,4,70,780,4.1,0.717,3,209.95,0,644
+Jardinage,Casablanca,urgent,91,2,105,1170,4.8,0.852,20,519.23,0,371
+Nettoyage,Fès,urgent,343,2,70,780,3.9,0.596,9,239.68,0,583
+Climatisation,Rabat,normal,281,1,350,4160,4.0,0.628,6,275.69,0,2467
+Informatique,Rabat,urgent,299,4,70,1170,4.4,0.731,4,10.09,1,900
+Climatisation,Marrakech,urgent,179,5,350,4160,3.8,0.687,9,9.05,1,2633
+Jardinage,Rabat,normal,284,2,105,1170,4.2,0.797,17,6.07,1,192
+Plomberie,Agadir,normal,252,5,105,1170,3.8,0.79,9,9.67,1,847
+Plomberie,Marrakech,urgent,193,0,105,1170,4.0,0.838,17,227.82,0,842
+Plomberie,Casablanca,urgent,178,0,105,1170,4.6,0.699,12,4.17,1,1033
+Carrelage,Meknès,normal,162,3,175,2600,3.8,0.761,4,17.66,1,669
+Informatique,Agadir,urgent,223,2,70,1170,5.0,0.79,4,873.01,0,739
+Climatisation,Meknès,normal,144,0,350,4160,3.6,0.761,3,58.74,0,2501
+Menuiserie,Tanger,très urgent,233,2,210,2860,4.3,0.73,6,356.74,0,909
+Électricité,Rabat,normal,64,1,140,1820,4.3,0.765,12,446.67,0,1105
+Carrelage,Casablanca,normal,38,4,175,2600,4.9,0.805,16,545.84,0,328
+Déménagement,Rabat,normal,322,5,210,2860,4.1,0.808,23,473.56,0,1220
+Maçonnerie,Oujda,très urgent,262,3,280,4550,3.5,0.719,15,534.06,0,3570
+Menuiserie,Agadir,très urgent,161,1,210,2860,4.8,0.768,15,594.3,0,1054
+Jardinage,Meknès,normal,235,1,105,1170,4.0,0.571,1,339.65,0,565
+Nettoyage,Marrakech,normal,346,2,70,780,4.1,0.763,25,9.16,1,429
+Maçonnerie,Meknès,urgent,183,4,280,4550,4.1,0.71,8,114.36,0,2759
+Plomberie,Casablanca,très urgent,212,1,105,1170,3.8,0.862,13,205.4,0,975
+Électricité,Meknès,normal,173,5,140,1820,4.3,0.765,12,341.32,0,1111
+Plomberie,Fès,normal,40,4,105,1170,4.0,0.838,17,246.94,0,735
+Jardinage,Casablanca,normal,203,0,105,1170,4.8,0.935,14,266.43,0,789
+Déménagement,Oujda,normal,116,2,210,2860,3.5,0.542,7,462.42,0,1365
+Jardinage,Tanger,normal,186,2,105,1170,4.3,0.722,8,227.33,0,429
+Climatisation,Oujda,normal,349,0,350,4160,3.8,0.828,21,368.87,0,1317
+Serrurerie,Meknès,urgent,201,2,70,910,5.0,0.832,3,543.81,0,260
+Électricité,Casablanca,normal,68,1,140,1820,4.1,0.755,2,16.05,1,378
+Plomberie,Casablanca,très urgent,66,1,105,1170,4.3,0.709,16,219.09,0,448
+Maçonnerie,Agadir,très urgent,93,5,280,4550,4.1,0.71,8,478.55,0,2485
+Serrurerie,Agadir,normal,248,2,70,910,4.8,0.925,13,10.36,1,107
+Climatisation,Agadir,normal,282,2,350,4160,3.9,0.781,18,586.96,0,2261
+Climatisation,Oujda,normal,331,2,350,4160,3.8,0.687,9,657.96,0,2831
+Informatique,Tanger,normal,285,2,70,1170,4.5,0.57,1,691.94,0,294
+Déménagement,Fès,normal,266,2,210,2860,3.6,0.694,11,573.17,0,2141
+Jardinage,Fès,normal,42,1,105,1170,4.8,0.935,14,206.13,0,559
+Informatique,Oujda,normal,60,2,70,1170,4.1,0.699,15,292.79,0,588
+Déménagement,Marrakech,urgent,157,3,210,2860,4.4,0.919,21,6.03,1,766
+Menuiserie,Tanger,urgent,166,0,210,2860,4.5,0.719,7,207.62,0,1865
+Plomberie,Oujda,normal,347,3,105,1170,4.9,0.988,23,347.68,0,471
+Plomberie,Meknès,très urgent,105,3,105,1170,4.2,0.738,22,17.92,1,875
+Carrelage,Oujda,urgent,311,0,175,2600,3.4,0.836,23,656.49,0,1041
+Électricité,Meknès,normal,61,4,140,1820,4.3,0.765,12,349.07,0,1322
+Plomberie,Marrakech,urgent,108,1,105,1170,4.9,0.81,4,354.49,0,873
+Déménagement,Oujda,normal,218,4,210,2860,4.5,0.822,3,10.17,1,611
+Électricité,Marrakech,urgent,139,4,140,1820,4.4,0.892,25,498.08,0,1576
+Carrelage,Oujda,normal,281,3,175,2600,3.4,0.819,25,288.58,0,409
+Plomberie,Rabat,très urgent,134,0,105,1170,4.5,0.817,10,472.62,0,261
+Informatique,Fès,normal,49,3,70,1170,4.2,0.737,10,210.68,0,113
+Plomberie,Rabat,urgent,275,1,105,1170,4.9,0.76,3,97.72,0,1079
+Maçonnerie,Oujda,normal,318,3,280,4550,3.6,0.703,2,366.02,0,3330
+Menuiserie,Tanger,normal,235,2,210,2860,4.5,0.719,7,223.2,0,1967
+Jardinage,Meknès,urgent,100,2,105,1170,3.9,0.786,20,109.23,0,958
+Climatisation,Fès,très urgent,350,1,350,4160,3.4,0.706,7,286.82,0,2081
+Menuiserie,Marrakech,urgent,87,4,210,2860,4.6,0.633,6,382.37,0,391
+Nettoyage,Meknès,normal,84,1,70,780,5.0,0.804,6,343.61,0,466
+Nettoyage,Rabat,urgent,186,1,70,780,3.4,0.594,15,458.48,0,320
+Nettoyage,Rabat,urgent,281,0,70,780,3.4,0.55,4,78.55,0,383
+Électricité,Rabat,urgent,78,3,140,1820,4.5,0.913,17,450.02,0,320
+Peinture,Oujda,normal,95,4,140,2080,3.7,0.597,4,14.14,1,341
+Menuiserie,Oujda,urgent,304,5,210,2860,4.3,0.783,16,347.39,0,2491
+Plomberie,Oujda,normal,298,5,105,1170,4.9,0.988,23,352.15,0,184
+Serrurerie,Meknès,urgent,213,3,70,910,4.6,0.711,3,335.84,0,149
+Déménagement,Meknès,normal,183,1,210,2860,3.2,0.619,4,360.99,0,422
+Maçonnerie,Oujda,normal,313,5,280,4550,3.7,0.736,15,658.94,0,920
+Menuiserie,Rabat,normal,114,1,210,2860,3.8,0.806,23,101.15,0,761
+Jardinage,Marrakech,urgent,290,3,105,1170,4.5,0.892,16,656.01,0,800
+Carrelage,Agadir,urgent,204,2,175,2600,3.8,0.761,4,549.29,0,2236
+Jardinage,Meknès,normal,316,5,105,1170,4.8,0.935,14,192.69,0,630
+Électricité,Oujda,urgent,62,2,140,1820,3.6,0.8,7,664.57,0,716
+Carrelage,Marrakech,normal,201,4,175,2600,4.4,0.785,7,665.58,0,1118
+Climatisation,Marrakech,normal,181,1,350,4160,3.1,0.68,10,203.93,0,2764
+Menuiserie,Oujda,urgent,320,3,210,2860,3.3,0.687,11,534.94,0,670
+Électricité,Meknès,normal,126,2,140,1820,3.0,0.745,18,2.24,1,767
+Électricité,Fès,urgent,57,0,140,1820,4.2,0.823,12,232.21,0,1346
+Peinture,Agadir,urgent,322,2,140,2080,3.9,0.72,9,214.0,0,297
+Déménagement,Tanger,très urgent,226,1,210,2860,4.3,0.859,8,212.43,0,2804
+Maçonnerie,Agadir,normal,326,4,280,4550,3.6,0.703,2,541.84,0,811
+Jardinage,Meknès,normal,285,4,105,1170,3.7,0.89,24,544.97,0,531
+Maçonnerie,Agadir,urgent,42,5,280,4550,3.8,0.697,6,395.15,0,2352
+Plomberie,Meknès,normal,253,5,105,1170,3.6,0.603,1,209.95,0,411
+Maçonnerie,Agadir,normal,116,1,280,4550,4.6,0.876,20,685.31,0,2574
+Plomberie,Meknès,normal,111,0,105,1170,3.8,0.862,13,3.16,1,687
+Jardinage,Fès,normal,125,1,105,1170,3.7,0.784,15,400.51,0,387
+Déménagement,Casablanca,urgent,120,2,210,2860,4.9,0.928,21,193.22,0,445
+Carrelage,Fès,normal,34,2,175,2600,4.4,0.948,23,179.4,0,1275
+Plomberie,Meknès,normal,97,1,105,1170,4.9,0.76,3,176.4,0,623
+Peinture,Oujda,urgent,311,4,140,2080,4.3,0.615,9,452.68,0,1314
+Maçonnerie,Casablanca,urgent,260,4,280,4550,3.3,0.737,12,181.96,0,3751
+Serrurerie,Marrakech,très urgent,159,3,70,910,3.4,0.631,13,220.78,0,1058
+Jardinage,Fès,très urgent,81,2,105,1170,4.2,0.671,7,241.0,0,1023
+Serrurerie,Rabat,normal,274,0,70,910,3.4,0.631,13,85.41,0,439
+Nettoyage,Tanger,urgent,265,2,70,780,4.4,0.881,14,192.54,0,654
+Électricité,Oujda,normal,310,5,140,1820,4.0,0.599,3,871.12,0,876
+Informatique,Oujda,normal,130,0,70,1170,3.1,0.536,5,346.23,0,142
+Peinture,Casablanca,normal,243,1,140,2080,4.3,0.847,15,5.01,1,201
+Menuiserie,Casablanca,normal,269,1,210,2860,4.3,0.718,5,224.66,0,1670
+Carrelage,Tanger,normal,315,4,175,2600,5.0,0.867,12,691.0,0,1611
+Nettoyage,Fès,normal,172,4,70,780,4.9,0.772,20,15.17,1,322
+Peinture,Tanger,très urgent,237,0,140,2080,4.4,0.762,7,218.83,0,916
+Maçonnerie,Marrakech,très urgent,80,5,280,4550,3.6,0.686,22,215.27,0,4054
+Carrelage,Agadir,normal,63,2,175,2600,3.4,0.836,23,214.68,0,1919
+Électricité,Rabat,normal,306,3,140,1820,4.3,0.765,12,448.19,0,305
+Jardinage,Fès,urgent,212,5,105,1170,4.3,0.898,25,578.07,0,504
+Électricité,Casablanca,normal,30,1,140,1820,3.4,0.631,18,234.62,0,747
+Jardinage,Marrakech,urgent,113,5,105,1170,4.0,0.571,1,658.86,0,708
+Informatique,Fès,urgent,105,0,70,1170,4.5,0.57,1,577.13,0,200
+Carrelage,Tanger,normal,92,5,175,2600,4.9,0.702,15,504.23,0,869
+Climatisation,Tanger,urgent,124,0,350,4160,3.3,0.729,9,505.17,0,1006
+Carrelage,Fès,normal,283,2,175,2600,3.4,0.647,2,584.64,0,328
+Plomberie,Tanger,normal,31,0,105,1170,3.0,0.623,20,18.23,1,490
+Informatique,Agadir,normal,200,0,70,1170,3.5,0.781,20,541.2,0,527
+Déménagement,Marrakech,normal,165,2,210,2860,4.7,0.693,4,276.48,0,2152
+Peinture,Meknès,normal,260,1,140,2080,4.2,0.799,8,185.64,0,760
+Nettoyage,Meknès,urgent,186,4,70,780,5.0,0.825,16,194.1,0,671
+Nettoyage,Agadir,très urgent,229,4,70,780,5.0,0.804,6,846.1,0,169
+Serrurerie,Rabat,normal,80,1,70,910,3.9,0.686,18,274.85,0,399
+Peinture,Meknès,urgent,215,0,140,2080,5.0,0.877,23,528.17,0,1666
+Électricité,Tanger,normal,126,4,140,1820,3.8,0.647,25,291.57,0,329
+Menuiserie,Tanger,normal,275,5,210,2860,3.7,0.702,11,201.17,0,512
+Serrurerie,Marrakech,normal,330,5,70,910,4.9,0.82,17,393.78,0,606
+Nettoyage,Rabat,normal,312,5,70,780,4.4,0.604,5,474.43,0,502
+Carrelage,Marrakech,normal,84,0,175,2600,3.1,0.69,10,341.76,0,1920
+Plomberie,Casablanca,urgent,100,4,105,1170,3.9,0.763,8,402.0,0,284
+Nettoyage,Rabat,normal,309,2,70,780,3.4,0.594,15,464.43,0,558
+Maçonnerie,Rabat,très urgent,83,5,280,4550,4.1,0.702,21,180.96,0,2007
+Climatisation,Marrakech,normal,169,4,350,4160,3.1,0.68,10,202.03,0,1474
+Peinture,Agadir,normal,245,2,140,2080,4.4,0.762,7,534.8,0,1030
+Maçonnerie,Agadir,urgent,327,0,280,4550,4.2,0.648,11,682.94,0,1445
+Informatique,Casablanca,normal,141,2,70,1170,2.7,0.521,7,79.04,0,315
+Électricité,Casablanca,normal,105,5,140,1820,5.0,0.909,22,211.65,0,1041
+Climatisation,Agadir,urgent,135,3,350,4160,3.7,0.697,12,399.24,0,2631
+Peinture,Meknès,normal,61,0,140,2080,4.3,0.847,15,180.6,0,1046
+Menuiserie,Casablanca,normal,312,4,210,2860,4.3,0.73,6,524.87,0,1777
+Nettoyage,Agadir,urgent,188,5,70,780,3.4,0.594,15,867.93,0,372
+Peinture,Marrakech,normal,344,4,140,2080,4.3,0.615,9,273.24,0,1217
+Plomberie,Fès,urgent,313,3,105,1170,4.3,0.777,22,49.25,0,378
+Maçonnerie,Tanger,normal,69,0,280,4550,4.2,0.668,4,216.84,0,579
+Jardinage,Meknès,normal,310,3,105,1170,3.7,0.89,24,543.88,0,529
+Plomberie,Agadir,normal,173,5,105,1170,3.8,0.862,13,548.75,0,498
+Déménagement,Rabat,normal,153,0,210,2860,4.1,0.883,20,7.89,1,1646
+Déménagement,Agadir,très urgent,261,4,210,2860,3.8,0.775,18,862.68,0,2806
+Peinture,Oujda,urgent,46,0,140,2080,3.6,0.66,1,659.44,0,1534
+Peinture,Tanger,très urgent,302,5,140,2080,3.8,0.692,17,380.26,0,2133
+Carrelage,Agadir,urgent,40,1,175,2600,4.3,0.818,8,688.28,0,684
+Électricité,Fès,urgent,87,4,140,1820,3.6,0.8,7,385.39,0,618
+Nettoyage,Rabat,normal,121,0,70,780,4.8,0.664,10,278.24,0,457
+Électricité,Fès,urgent,309,0,140,1820,4.1,0.801,9,594.44,0,1645
+Informatique,Rabat,très urgent,80,3,70,1170,4.0,0.586,1,134.36,0,272
+Informatique,Casablanca,normal,88,4,70,1170,4.2,0.737,10,287.54,0,187
+Menuiserie,Oujda,urgent,107,1,210,2860,3.3,0.687,11,537.04,0,548
+Carrelage,Tanger,normal,106,3,175,2600,3.4,0.647,2,692.29,0,555
+Nettoyage,Marrakech,normal,188,1,70,780,4.4,0.604,5,204.5,0,420
+Plomberie,Meknès,urgent,315,3,105,1170,4.9,0.81,4,17.59,1,1063
+Nettoyage,Casablanca,très urgent,120,4,70,780,4.5,0.823,23,383.13,0,353
+Plomberie,Meknès,normal,211,2,105,1170,4.6,0.699,12,209.38,0,384
+Peinture,Agadir,normal,41,1,140,2080,5.0,0.877,23,1.68,1,1225
+Menuiserie,Agadir,normal,61,5,210,2860,3.2,0.758,18,478.05,0,1608
+Peinture,Marrakech,très urgent,211,1,140,2080,4.5,0.74,9,517.05,0,810
+Informatique,Marrakech,normal,337,3,70,1170,4.3,0.853,8,13.61,1,149
+Maçonnerie,Marrakech,normal,140,1,280,4550,4.2,0.648,11,495.3,0,2065
+Informatique,Rabat,urgent,288,3,70,1170,4.2,0.699,10,108.97,0,597
+Menuiserie,Casablanca,normal,284,2,210,2860,3.7,0.702,11,256.12,0,2177
+Serrurerie,Marrakech,très urgent,340,4,70,910,4.9,0.676,6,291.45,0,436
+Carrelage,Meknès,normal,180,1,175,2600,4.9,0.805,16,350.55,0,1541
+Carrelage,Marrakech,normal,53,4,175,2600,3.4,0.647,2,209.72,0,1848
+Plomberie,Marrakech,urgent,214,3,105,1170,4.6,0.699,12,218.67,0,344
+Serrurerie,Fès,urgent,278,3,70,910,4.2,0.712,3,304.3,0,340
+Peinture,Agadir,normal,313,0,140,2080,4.5,0.74,9,694.64,0,811
+Jardinage,Casablanca,normal,319,4,105,1170,4.5,0.788,1,94.69,0,336
+Informatique,Oujda,normal,336,5,70,1170,4.2,0.873,16,373.18,0,686
+Climatisation,Agadir,urgent,263,0,350,4160,3.1,0.68,10,382.53,0,3834
+Déménagement,Marrakech,normal,144,2,210,2860,3.5,0.71,20,372.37,0,1446
+Serrurerie,Casablanca,normal,90,3,70,910,4.9,0.676,6,78.73,0,278
+Climatisation,Marrakech,urgent,317,0,350,4160,2.8,0.714,4,214.21,0,2294
+Électricité,Fès,normal,45,4,140,1820,3.0,0.745,18,47.92,0,934
+Climatisation,Fès,urgent,225,4,350,4160,3.8,0.687,9,382.15,0,1512
+Nettoyage,Oujda,urgent,104,1,70,780,4.8,0.917,23,368.99,0,248
+Jardinage,Marrakech,normal,337,3,105,1170,4.3,0.722,8,288.62,0,269
+Plomberie,Agadir,normal,194,0,105,1170,4.1,0.766,17,204.68,0,350
+Déménagement,Agadir,très urgent,101,5,210,2860,3.4,0.626,1,10.85,1,2907
+Carrelage,Casablanca,urgent,350,3,175,2600,4.9,0.702,15,219.21,0,585
+Menuiserie,Tanger,normal,235,0,210,2860,3.5,0.631,9,13.54,1,719
+Plomberie,Rabat,normal,261,1,105,1170,4.9,0.988,23,123.49,0,697
+Jardinage,Fès,normal,244,1,105,1170,4.6,0.776,22,363.25,0,898
+Déménagement,Oujda,urgent,306,1,210,2860,3.7,0.609,13,334.93,0,1679
+Plomberie,Tanger,très urgent,41,3,105,1170,2.8,0.458,2,209.38,0,475
+Jardinage,Casablanca,normal,237,4,105,1170,4.3,0.706,2,404.79,0,152
+Nettoyage,Fès,normal,208,2,70,780,4.1,0.763,25,376.51,0,107
+Déménagement,Fès,normal,334,0,210,2860,3.5,0.542,7,164.54,0,781
+Déménagement,Agadir,très urgent,94,0,210,2860,4.7,0.701,6,471.01,0,1406
+Nettoyage,Meknès,urgent,289,2,70,780,4.8,0.917,23,206.83,0,749
+Nettoyage,Rabat,normal,309,4,70,780,4.0,0.586,9,289.47,0,146
+Menuiserie,Marrakech,normal,130,4,210,2860,3.5,0.631,9,501.36,0,1560
+Peinture,Meknès,normal,266,3,140,2080,5.0,0.877,23,546.23,0,507
+Déménagement,Meknès,normal,96,2,210,2860,5.0,0.988,19,53.73,0,378
+Nettoyage,Tanger,urgent,350,1,70,780,4.9,0.772,20,214.51,0,494
+Serrurerie,Meknès,normal,49,0,70,910,3.8,0.766,1,122.52,0,280
+Informatique,Tanger,normal,298,3,70,1170,3.9,0.658,1,292.1,0,461
+Peinture,Fès,normal,302,5,140,2080,4.3,0.672,9,9.32,1,598
+Déménagement,Rabat,normal,197,1,210,2860,4.1,0.883,20,11.86,1,2171
+Carrelage,Rabat,normal,316,5,175,2600,5.0,0.867,12,467.06,0,1252
+Peinture,Meknès,normal,194,3,140,2080,4.3,0.672,9,43.66,0,215
+Peinture,Rabat,urgent,68,0,140,2080,3.8,0.692,17,450.17,0,346
+Nettoyage,Tanger,normal,216,1,70,780,4.2,0.753,1,279.79,0,332
+Carrelage,Tanger,normal,347,1,175,2600,3.9,0.816,20,193.62,0,737
+Jardinage,Tanger,normal,106,5,105,1170,4.0,0.571,1,365.55,0,239
+Carrelage,Fès,très urgent,92,5,175,2600,4.9,0.688,8,392.3,0,2865
+Menuiserie,Oujda,normal,293,4,210,2860,5.0,0.855,5,379.64,0,2123
+Carrelage,Meknès,urgent,328,4,175,2600,4.3,0.818,8,224.44,0,1456
+Menuiserie,Fès,normal,173,4,210,2860,3.7,0.702,11,11.48,1,1044
+Informatique,Agadir,très urgent,90,0,70,1170,3.8,0.863,22,566.86,0,433
+Plomberie,Casablanca,urgent,330,5,105,1170,3.0,0.623,20,289.68,0,845
+Informatique,Fès,normal,296,4,70,1170,4.2,0.873,16,201.27,0,833
+Menuiserie,Oujda,très urgent,246,3,210,2860,3.4,0.636,10,473.16,0,2157
+Peinture,Rabat,urgent,296,1,140,2080,4.3,0.847,15,80.25,0,1719
+Déménagement,Casablanca,normal,262,3,210,2860,5.0,0.988,19,247.61,0,509
+Plomberie,Fès,urgent,119,0,105,1170,4.2,0.738,22,63.07,0,993
+Déménagement,Marrakech,très urgent,248,2,210,2860,3.8,0.775,18,646.84,0,1706
+Nettoyage,Fès,urgent,155,4,70,780,3.4,0.628,22,226.9,0,694
+Plomberie,Tanger,urgent,285,4,105,1170,4.2,0.738,22,196.16,0,805
+Nettoyage,Oujda,urgent,197,1,70,780,4.7,0.79,2,537.65,0,258
+Nettoyage,Oujda,urgent,295,4,70,780,4.0,0.732,3,8.25,1,340
+Informatique,Tanger,normal,303,3,70,1170,3.8,0.863,22,203.81,0,384
+Maçonnerie,Oujda,normal,59,4,280,4550,4.2,0.668,4,346.87,0,2325
+Menuiserie,Rabat,très urgent,239,3,210,2860,4.3,0.783,16,111.98,0,2946
+Menuiserie,Tanger,urgent,157,1,210,2860,4.3,0.779,15,511.41,0,1577
+Maçonnerie,Meknès,normal,121,3,280,4550,4.5,0.808,23,208.15,0,824
+Peinture,Fès,urgent,232,5,140,2080,3.8,0.744,6,161.08,0,1611
+Menuiserie,Fès,normal,332,1,210,2860,4.6,0.724,2,297.15,0,2019
+Plomberie,Rabat,normal,127,3,105,1170,3.8,0.79,9,469.97,0,546
+Électricité,Tanger,normal,33,1,140,1820,4.1,0.755,2,296.29,0,320
+Plomberie,Tanger,normal,261,2,105,1170,3.8,0.862,13,226.19,0,529
+Déménagement,Tanger,normal,156,2,210,2860,3.9,0.891,25,381.96,0,1959
+Plomberie,Agadir,normal,183,1,105,1170,4.4,0.767,12,546.86,0,351
+Plomberie,Meknès,normal,211,3,105,1170,4.9,0.76,3,186.1,0,658
+Maçonnerie,Rabat,très urgent,132,4,280,4550,4.2,0.668,4,131.14,0,3844
+Menuiserie,Rabat,normal,100,5,210,2860,4.3,0.779,15,284.17,0,844
+Serrurerie,Meknès,urgent,42,0,70,910,3.9,0.806,5,201.89,0,622
+Déménagement,Agadir,urgent,63,2,210,2860,4.2,0.727,20,544.57,0,2430
+Déménagement,Agadir,normal,232,4,210,2860,4.9,0.928,21,547.83,0,1627
+Maçonnerie,Oujda,urgent,225,4,280,4550,4.2,0.668,4,345.28,0,4219
+Déménagement,Oujda,normal,257,0,210,2860,3.8,0.775,18,15.36,1,1503
+Électricité,Oujda,normal,149,4,140,1820,4.3,0.763,13,299.72,0,1304
+Déménagement,Rabat,urgent,73,1,210,2860,3.9,0.891,25,464.8,0,1482
+Déménagement,Meknès,normal,230,4,210,2860,4.7,0.693,4,128.23,0,1601
+Peinture,Casablanca,normal,75,4,140,2080,4.2,0.767,16,388.47,0,1212
+Informatique,Agadir,normal,165,4,70,1170,3.8,0.756,3,470.5,0,419
+Électricité,Oujda,normal,102,1,140,1820,4.1,0.755,2,544.24,0,1032
+Nettoyage,Fès,très urgent,143,2,70,780,4.7,0.822,6,588.89,0,388
+Plomberie,Meknès,normal,299,3,105,1170,4.6,0.688,2,536.0,0,788
+Électricité,Agadir,normal,157,2,140,1820,4.2,0.859,10,863.97,0,421
+Maçonnerie,Oujda,normal,157,0,280,4550,4.5,0.808,23,380.49,0,786
+Serrurerie,Tanger,urgent,170,0,70,910,3.6,0.774,15,505.05,0,606
+Informatique,Oujda,normal,294,1,70,1170,3.7,0.769,13,9.61,1,871
+Climatisation,Casablanca,urgent,235,3,350,4160,5.0,0.858,24,13.89,1,951
+Peinture,Meknès,urgent,157,5,140,2080,4.1,0.841,15,52.39,0,1375
+Peinture,Meknès,urgent,197,2,140,2080,4.2,0.767,16,536.72,0,476
+Carrelage,Rabat,urgent,61,1,175,2600,3.4,0.836,23,272.49,0,1160
+Serrurerie,Oujda,urgent,323,2,70,910,3.9,0.806,5,528.4,0,381
+Plomberie,Agadir,urgent,170,5,105,1170,4.9,0.988,23,526.42,0,607
+Carrelage,Meknès,urgent,189,2,175,2600,4.3,0.818,8,225.42,0,1704
+Plomberie,Oujda,normal,143,1,105,1170,3.0,0.623,20,372.35,0,398
+Serrurerie,Tanger,très urgent,34,5,70,910,3.9,0.686,18,495.46,0,276
+Menuiserie,Agadir,normal,274,5,210,2860,4.5,0.719,7,588.8,0,1864
+Déménagement,Rabat,normal,81,0,210,2860,3.7,0.609,13,132.26,0,1932
+Jardinage,Oujda,urgent,118,4,105,1170,4.2,0.671,7,537.56,0,991
+Peinture,Oujda,urgent,114,5,140,2080,4.7,0.853,17,390.14,0,477
+Peinture,Fès,urgent,287,2,140,2080,4.2,0.767,16,575.33,0,314
+Menuiserie,Marrakech,normal,305,4,210,2860,3.2,0.758,18,298.41,0,1571
+Plomberie,Marrakech,normal,116,0,105,1170,4.6,0.688,2,214.34,0,820
+Déménagement,Marrakech,urgent,166,4,210,2860,4.9,0.851,17,194.79,0,1626
+Menuiserie,Agadir,très urgent,163,2,210,2860,4.2,0.661,18,204.59,0,1946
+Déménagement,Rabat,normal,160,4,210,2860,3.5,0.71,20,180.46,0,1171
+Nettoyage,Fès,normal,186,2,70,780,3.4,0.55,4,242.71,0,153
+Jardinage,Fès,urgent,336,4,105,1170,3.7,0.884,18,15.31,1,366
+Électricité,Oujda,normal,320,1,140,1820,3.0,0.745,18,342.16,0,1340
+Menuiserie,Fès,normal,147,1,210,2860,3.4,0.835,15,64.23,0,1090
+Serrurerie,Meknès,normal,335,5,70,910,5.0,0.899,13,17.55,1,224
+Peinture,Tanger,normal,291,0,140,2080,5.0,0.877,23,687.48,0,1513
+Serrurerie,Fès,normal,198,5,70,910,5.0,0.832,3,593.45,0,120
+Électricité,Rabat,très urgent,174,0,140,1820,4.0,0.599,3,492.64,0,1567
+Peinture,Oujda,normal,317,1,140,2080,4.2,0.728,18,348.54,0,1334
+Serrurerie,Meknès,urgent,300,1,70,910,4.8,0.925,13,525.78,0,775
+Électricité,Oujda,urgent,344,0,140,1820,4.2,0.859,10,4.96,1,619
+Informatique,Tanger,normal,316,1,70,1170,4.3,0.853,8,501.9,0,105
+Déménagement,Tanger,urgent,214,2,210,2860,4.0,0.859,19,228.92,0,2246
+Informatique,Rabat,normal,338,1,70,1170,4.6,0.738,15,468.46,0,760
+Jardinage,Tanger,normal,165,5,105,1170,4.6,0.847,24,499.28,0,716
+Carrelage,Oujda,normal,55,0,175,2600,4.8,0.873,6,339.33,0,1089
+Plomberie,Oujda,normal,270,1,105,1170,4.6,0.688,2,867.36,0,209
+Jardinage,Fès,normal,76,1,105,1170,4.0,0.571,1,295.53,0,705
+Carrelage,Casablanca,normal,317,5,175,2600,3.9,0.816,20,245.61,0,1426
+Serrurerie,Tanger,normal,74,4,70,910,5.0,0.832,3,694.71,0,400
+Déménagement,Agadir,normal,75,4,210,2860,4.0,0.859,19,480.06,0,714
+Nettoyage,Meknès,normal,181,1,70,780,4.0,0.586,9,328.09,0,231
+Maçonnerie,Tanger,normal,237,2,280,4550,4.2,0.668,4,226.71,0,2234
+Maçonnerie,Meknès,urgent,182,3,280,4550,4.1,0.71,8,126.52,0,1868
+Menuiserie,Marrakech,normal,47,4,210,2860,4.3,0.779,15,7.82,1,1310
+Informatique,Agadir,urgent,149,0,70,1170,3.8,0.756,3,469.44,0,1088
+Électricité,Casablanca,urgent,257,5,140,1820,4.3,0.763,13,244.44,0,1081
+Déménagement,Tanger,très urgent,167,5,210,2860,4.1,0.841,14,506.96,0,803
+Menuiserie,Fès,urgent,319,2,210,2860,5.0,0.855,5,213.68,0,2085
+Informatique,Casablanca,normal,123,2,70,1170,4.6,0.738,15,377.37,0,702
+Jardinage,Tanger,très urgent,282,0,105,1170,3.1,0.851,18,281.27,0,496
+Électricité,Casablanca,très urgent,348,1,140,1820,3.0,0.745,18,205.91,0,552
+Peinture,Tanger,normal,53,4,140,2080,4.2,0.799,8,267.83,0,1311
+Climatisation,Rabat,normal,345,4,350,4160,2.8,0.714,4,497.22,0,1497
+Climatisation,Tanger,normal,60,3,350,4160,4.6,0.629,5,3.13,1,3138
+Serrurerie,Meknès,normal,67,4,70,910,3.7,0.869,17,36.41,0,145
+Informatique,Marrakech,urgent,94,5,70,1170,4.6,0.853,23,381.36,0,708
+Peinture,Tanger,normal,264,3,140,2080,4.5,0.74,9,4.4,1,216
+Électricité,Oujda,normal,125,5,140,1820,4.1,0.755,2,539.28,0,830
+Nettoyage,Meknès,normal,89,0,70,780,4.1,0.724,3,348.89,0,415
+Peinture,Tanger,normal,318,4,140,2080,4.5,0.74,9,13.95,1,1358
+Maçonnerie,Meknès,urgent,341,5,280,4550,4.5,0.808,23,200.41,0,3718
+Nettoyage,Oujda,normal,252,0,70,780,5.0,0.825,16,538.38,0,374
+Carrelage,Rabat,normal,267,5,175,2600,3.9,0.816,20,152.95,0,1031
+Nettoyage,Casablanca,urgent,151,3,70,780,5.0,0.825,16,6.93,1,193
+Électricité,Fès,normal,57,1,140,1820,4.3,0.765,12,284.61,0,668
+Informatique,Casablanca,très urgent,171,5,70,1170,3.9,0.658,1,11.58,1,1053
+Carrelage,Fès,normal,129,0,175,2600,3.4,0.56,10,46.69,0,1105
+Plomberie,Meknès,urgent,59,2,105,1170,4.2,0.738,22,14.22,1,657
+Climatisation,Rabat,urgent,111,4,350,4160,4.5,0.796,25,486.94,0,3841
+Peinture,Marrakech,urgent,64,4,140,2080,3.8,0.744,6,286.51,0,416
+Électricité,Meknès,normal,315,2,140,1820,4.9,0.827,7,126.59,0,283
+Maçonnerie,Meknès,normal,231,2,280,4550,4.4,0.67,3,9.68,1,1443
+Climatisation,Casablanca,très urgent,186,4,350,4160,3.9,0.688,4,222.52,0,4189
+Plomberie,Agadir,normal,96,1,105,1170,3.8,0.862,13,540.86,0,452
+Peinture,Marrakech,très urgent,205,5,140,2080,3.4,0.548,7,323.54,0,929
+Climatisation,Casablanca,très urgent,346,0,350,4160,4.0,0.839,16,287.27,0,2741
+Peinture,Rabat,normal,142,1,140,2080,4.7,0.853,17,217.55,0,776
+Menuiserie,Tanger,normal,155,2,210,2860,4.0,0.781,20,297.73,0,458
+Déménagement,Agadir,normal,167,5,210,2860,4.5,0.822,3,846.92,0,1038
+Serrurerie,Tanger,normal,227,5,70,910,3.6,0.774,15,504.09,0,541
+Peinture,Fès,normal,304,5,140,2080,4.1,0.841,15,5.98,1,827
+Électricité,Tanger,normal,220,4,140,1820,4.1,0.801,9,689.42,0,431
+Plomberie,Agadir,normal,110,3,105,1170,4.6,0.739,24,14.81,1,368
+Plomberie,Oujda,urgent,145,0,105,1170,4.0,0.712,3,337.24,0,848
+Informatique,Rabat,normal,115,1,70,1170,4.5,0.57,1,478.28,0,662
+Électricité,Agadir,urgent,173,5,140,1820,4.9,0.827,7,474.82,0,781
+Climatisation,Oujda,urgent,113,5,350,4160,3.7,0.803,7,333.12,0,2791
+Carrelage,Fès,normal,325,3,175,2600,4.7,0.81,19,384.99,0,649
+Plomberie,Rabat,urgent,212,1,105,1170,3.8,0.79,9,466.49,0,520
+Jardinage,Marrakech,normal,323,5,105,1170,4.2,0.797,17,296.07,0,792
+Électricité,Oujda,normal,131,3,140,1820,4.3,0.765,12,16.54,1,1261
+Serrurerie,Fès,urgent,324,5,70,910,3.4,0.631,13,235.57,0,255
+Informatique,Marrakech,normal,248,0,70,1170,4.4,0.731,4,288.61,0,193
+Nettoyage,Oujda,urgent,91,4,70,780,4.4,0.604,5,844.06,0,226
+Jardinage,Rabat,urgent,313,1,105,1170,4.1,0.893,25,468.03,0,834
+Informatique,Rabat,urgent,252,5,70,1170,4.4,0.731,4,5.32,1,614
+Carrelage,Oujda,normal,140,5,175,2600,3.5,0.555,5,529.58,0,284
+Électricité,Agadir,normal,319,1,140,1820,5.0,0.876,25,19.46,1,1029
+Serrurerie,Fès,très urgent,138,2,70,910,4.7,0.767,2,167.82,0,964
+Jardinage,Marrakech,normal,169,3,105,1170,4.6,0.847,24,12.72,1,391
+Jardinage,Tanger,normal,92,5,105,1170,4.3,0.898,25,685.78,0,825
+Maçonnerie,Meknès,normal,176,5,280,4550,3.7,0.736,15,342.67,0,1896
+Électricité,Tanger,normal,193,2,140,1820,3.8,0.647,25,294.96,0,954
+Serrurerie,Agadir,très urgent,205,2,70,910,4.9,0.82,17,599.47,0,248
+Informatique,Meknès,normal,310,3,70,1170,3.5,0.781,20,6.01,1,100
+Plomberie,Agadir,urgent,66,4,105,1170,3.0,0.623,20,680.04,0,933
+Électricité,Fès,normal,250,4,140,1820,4.4,0.892,25,209.77,0,1359
+Jardinage,Marrakech,urgent,148,0,105,1170,3.9,0.786,20,296.66,0,854
+Climatisation,Casablanca,normal,301,4,350,4160,3.3,0.729,9,207.95,0,1943
+Plomberie,Fès,urgent,208,3,105,1170,4.0,0.838,17,235.45,0,842
+Peinture,Oujda,normal,317,3,140,2080,3.4,0.548,7,338.41,0,1091
+Serrurerie,Agadir,très urgent,75,3,70,910,3.5,0.78,16,538.43,0,862
+Déménagement,Meknès,normal,86,5,210,2860,3.5,0.71,20,50.98,0,1725
+Maçonnerie,Tanger,normal,34,1,280,4550,4.5,0.808,23,5.43,1,1059
+Nettoyage,Meknès,urgent,141,4,70,780,4.5,0.823,23,527.15,0,721
+Plomberie,Oujda,normal,128,2,105,1170,4.3,0.709,16,664.51,0,633
+Menuiserie,Fès,normal,320,3,210,2860,4.5,0.719,7,15.03,1,1781
+Climatisation,Oujda,normal,70,4,350,4160,3.7,0.803,7,339.22,0,1976
+Plomberie,Marrakech,urgent,110,5,105,1170,4.3,0.777,22,350.04,0,504
+Peinture,Fès,normal,184,1,140,2080,4.0,0.778,23,377.75,0,1233
+Peinture,Meknès,normal,75,5,140,2080,4.2,0.728,18,19.18,1,331
+Menuiserie,Agadir,normal,202,5,210,2860,4.5,0.77,19,207.21,0,573
+Maçonnerie,Marrakech,normal,92,5,280,4550,4.3,0.737,19,279.91,0,2192
+Maçonnerie,Casablanca,très urgent,327,4,280,4550,3.6,0.703,2,177.81,0,857
+Peinture,Fès,normal,327,5,140,2080,3.7,0.597,4,290.19,0,533
+Climatisation,Fès,normal,241,2,350,4160,4.1,0.541,3,286.92,0,916
+Climatisation,Oujda,normal,337,1,350,4160,2.8,0.714,4,856.9,0,3120
+Maçonnerie,Oujda,urgent,203,4,280,4550,4.1,0.702,21,291.97,0,1797
+Plomberie,Tanger,normal,160,4,105,1170,4.9,0.988,23,206.45,0,405
+Jardinage,Casablanca,urgent,242,5,105,1170,3.9,0.786,20,97.18,0,1062
+Jardinage,Agadir,très urgent,336,1,105,1170,3.2,0.528,8,460.55,0,747
+Serrurerie,Agadir,normal,40,2,70,910,4.6,0.711,3,197.02,0,484
+Serrurerie,Tanger,urgent,225,1,70,910,3.8,0.766,1,220.59,0,325
+Peinture,Agadir,urgent,186,4,140,2080,4.1,0.841,15,581.51,0,1438
+Plomberie,Agadir,normal,221,4,105,1170,4.3,0.921,21,20.73,1,470
+Climatisation,Oujda,très urgent,233,3,350,4160,3.3,0.79,14,549.39,0,3368
+Maçonnerie,Agadir,normal,117,1,280,4550,4.3,0.737,19,466.08,0,2113
+Serrurerie,Tanger,urgent,44,5,70,910,3.9,0.741,1,210.19,0,731
+Climatisation,Meknès,urgent,108,5,350,4160,3.8,0.634,16,5.32,1,3754
+Plomberie,Meknès,normal,293,0,105,1170,4.3,0.777,22,13.11,1,359
+Électricité,Marrakech,normal,169,4,140,1820,4.1,0.801,9,219.72,0,331
+Électricité,Fès,urgent,69,2,140,1820,5.0,0.876,25,579.06,0,1352
+Serrurerie,Meknès,normal,34,0,70,910,5.0,0.832,3,556.72,0,368
+Nettoyage,Casablanca,urgent,30,0,70,780,4.7,0.822,6,396.61,0,634
+Climatisation,Oujda,normal,228,5,350,4160,3.9,0.781,18,298.15,0,986
+Serrurerie,Fès,normal,102,5,70,910,3.6,0.774,15,379.2,0,297
+Jardinage,Rabat,normal,238,4,105,1170,4.5,0.788,1,1.48,1,857
+Plomberie,Oujda,normal,264,3,105,1170,4.0,0.712,3,345.63,0,361
+Déménagement,Meknès,normal,277,3,210,2860,3.2,0.568,4,19.9,1,1600
+Climatisation,Meknès,normal,312,2,350,4160,3.8,0.687,9,333.78,0,1277
+Climatisation,Fès,urgent,80,5,350,4160,2.8,0.714,4,584.24,0,1390
+Informatique,Rabat,très urgent,40,3,70,1170,4.4,0.731,4,7.54,1,349
+Plomberie,Meknès,urgent,115,0,105,1170,4.9,0.76,3,192.8,0,440
+Électricité,Fès,normal,265,4,140,1820,4.2,0.859,10,300.34,0,1386
+Climatisation,Marrakech,urgent,121,5,350,4160,3.7,0.803,7,351.99,0,2225
+Carrelage,Meknès,urgent,211,4,175,2600,4.3,0.818,8,220.97,0,1148
+Déménagement,Fès,normal,252,5,210,2860,4.9,0.851,17,575.22,0,579
+Déménagement,Casablanca,normal,346,3,210,2860,3.6,0.674,25,530.86,0,1196
+Nettoyage,Tanger,normal,171,0,70,780,4.7,0.822,6,692.44,0,533
+Électricité,Meknès,normal,205,1,140,1820,4.6,0.88,24,120.87,0,1396
+Plomberie,Agadir,urgent,293,3,105,1170,3.9,0.763,8,14.77,1,1042
+Menuiserie,Meknès,normal,178,4,210,2860,4.2,0.661,18,329.66,0,666
+Nettoyage,Agadir,normal,314,4,70,780,4.4,0.604,5,17.75,1,268
+Jardinage,Tanger,normal,206,5,105,1170,4.6,0.847,24,507.97,0,756
+Déménagement,Marrakech,urgent,180,3,210,2860,3.6,0.674,25,642.06,0,2340
+Informatique,Rabat,normal,159,1,70,1170,3.5,0.781,20,122.62,0,380
+Menuiserie,Rabat,normal,180,3,210,2860,4.8,0.768,15,173.24,0,1283
+Maçonnerie,Tanger,très urgent,177,2,280,4550,4.1,0.794,17,290.36,0,1081
+Informatique,Marrakech,très urgent,64,5,70,1170,3.9,0.658,1,224.29,0,1103
+Carrelage,Tanger,normal,207,1,175,2600,3.4,0.836,23,492.76,0,486
+Carrelage,Oujda,normal,202,0,175,2600,4.9,0.805,16,10.61,1,881
+Peinture,Agadir,normal,148,3,140,2080,4.3,0.847,15,398.12,0,455
+Maçonnerie,Meknès,urgent,152,5,280,4550,4.2,0.668,4,3.27,1,4335
+Nettoyage,Oujda,urgent,315,0,70,780,3.4,0.55,4,535.52,0,326
+Peinture,Meknès,normal,92,3,140,2080,3.4,0.548,7,5.95,1,635
+Informatique,Marrakech,normal,81,4,70,1170,3.8,0.718,25,493.88,0,802
+Maçonnerie,Agadir,normal,275,3,280,4550,3.6,0.686,22,410.15,0,2811
+Peinture,Marrakech,normal,324,2,140,2080,4.6,0.862,12,196.64,0,899
+Déménagement,Casablanca,normal,313,2,210,2860,3.7,0.609,13,205.93,0,2155
+Climatisation,Tanger,normal,239,5,350,4160,4.0,0.839,16,9.24,1,1707
+Peinture,Agadir,urgent,344,5,140,2080,3.8,0.692,17,858.32,0,1399
+Jardinage,Tanger,urgent,94,4,105,1170,3.1,0.684,19,370.69,0,333
+Plomberie,Marrakech,normal,304,0,105,1170,4.9,0.988,23,339.84,0,701
+Peinture,Tanger,normal,346,5,140,2080,4.3,0.615,9,224.82,0,541
+Jardinage,Oujda,normal,247,3,105,1170,3.7,0.784,15,670.3,0,793
+Informatique,Rabat,normal,35,1,70,1170,3.7,0.769,13,465.73,0,585
+Menuiserie,Tanger,normal,323,0,210,2860,4.3,0.783,16,207.49,0,2052
+Informatique,Rabat,urgent,183,1,70,1170,4.9,0.81,4,183.07,0,1052
+Déménagement,Meknès,normal,346,0,210,2860,3.7,0.609,13,14.54,1,958
+Serrurerie,Rabat,normal,156,0,70,910,4.8,0.861,22,7.17,1,698
+Informatique,Meknès,urgent,266,2,70,1170,4.3,0.853,8,339.17,0,1018
+Menuiserie,Oujda,normal,244,1,210,2860,4.3,0.73,6,2.24,1,1597
+Climatisation,Agadir,normal,333,2,350,4160,3.3,0.729,9,205.98,0,2855
+Serrurerie,Oujda,urgent,340,5,70,910,3.9,0.686,18,655.39,0,302
+Carrelage,Oujda,normal,130,0,175,2600,2.9,0.611,2,300.03,0,495
+Serrurerie,Agadir,normal,186,1,70,910,4.8,0.925,13,3.56,1,605
+Électricité,Fès,normal,47,5,140,1820,4.3,0.765,12,289.58,0,214
+Peinture,Tanger,normal,68,0,140,2080,4.2,0.728,18,231.85,0,402
+Menuiserie,Fès,normal,330,5,210,2860,4.6,0.724,2,292.91,0,823
+Serrurerie,Rabat,normal,106,4,70,910,3.9,0.686,18,282.71,0,157
+Déménagement,Casablanca,urgent,75,1,210,2860,4.1,0.828,17,87.21,0,1078
+Électricité,Rabat,normal,290,3,140,1820,4.3,0.765,12,447.2,0,580
+Plomberie,Agadir,urgent,238,0,105,1170,4.5,0.817,10,3.87,1,747
+Jardinage,Casablanca,normal,104,1,105,1170,3.1,0.684,19,530.81,0,519
+Électricité,Meknès,normal,330,2,140,1820,4.3,0.763,13,62.35,0,1394
+Climatisation,Tanger,normal,239,0,350,4160,4.1,0.541,3,374.08,0,2782
+Climatisation,Fès,urgent,329,4,350,4160,4.7,0.889,11,583.46,0,1058
+Déménagement,Rabat,normal,76,1,210,2860,3.6,0.674,25,447.07,0,1739
+Informatique,Meknès,urgent,293,5,70,1170,4.4,0.731,4,121.64,0,185
+Nettoyage,Agadir,normal,148,3,70,780,3.7,0.811,25,478.7,0,392
+Maçonnerie,Meknès,normal,131,2,280,4550,4.3,0.647,9,11.14,1,2488
+Peinture,Oujda,normal,144,4,140,2080,4.6,0.862,12,857.24,0,1084
+Menuiserie,Casablanca,normal,281,5,210,2860,3.8,0.806,23,178.1,0,2148
+Plomberie,Marrakech,normal,310,4,105,1170,4.6,0.699,12,221.54,0,614
+Plomberie,Rabat,urgent,150,1,105,1170,4.0,0.838,17,88.4,0,876
+Serrurerie,Oujda,normal,41,4,70,910,3.7,0.869,17,299.04,0,324
+Serrurerie,Rabat,normal,258,0,70,910,5.0,0.832,3,493.85,0,194
+Peinture,Casablanca,urgent,172,3,140,2080,4.5,0.806,15,93.81,0,1427
+Déménagement,Agadir,normal,237,3,210,2860,3.1,0.605,6,683.59,0,419
+Menuiserie,Agadir,urgent,306,0,210,2860,3.4,0.636,10,460.83,0,1286
+Jardinage,Agadir,urgent,102,0,105,1170,4.9,0.821,16,680.85,0,455
+Plomberie,Casablanca,normal,316,1,105,1170,4.0,0.712,3,202.61,0,268
