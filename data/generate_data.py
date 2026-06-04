@@ -251,7 +251,22 @@ POIDS = [0.35, 0.20, 0.15, 0.15, 0.15]
 for i in range(N_INTERACTIONS):
     client = random.choice(clients)
     artisan = random.choice(artisans)
-    itype = random.choices(TYPES, weights=POIDS)[0]
+
+    # Quality signal — artisan quality drives accept probability so the model can learn
+    q = (
+        artisan["rating"] / 5.0   * 0.40
+        + artisan["global_score"] * 0.30
+        + artisan["response_rate"]* 0.20
+        + artisan["is_verified"]  * 0.10
+    )  # q ∈ [~0.20, ~0.95] with uniform rating
+
+    p_accept = 0.02 + q * 0.46   # low-quality: ~0.11  high-quality: ~0.46
+    p_reject = 0.27 - q * 0.22   # low-quality: ~0.22  high-quality: ~0.06
+    p_msg    = 0.15 + q * 0.07
+    p_view   = 0.25
+    p_ignore = max(0.0, 1.0 - p_accept - p_reject - p_msg - p_view)
+
+    itype = random.choices(TYPES, weights=[p_view, p_msg, p_accept, p_reject, p_ignore])[0]
 
     # Valeur numérique de l'interaction (pour le CF)
     value_map = {

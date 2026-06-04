@@ -99,7 +99,7 @@ def train():
                   callbacks=[lgb.early_stopping(50, verbose=False)])
 
         log.info("Calibration...")
-        calibrated = CalibratedClassifierCV(model, cv=3, method="isotonic")
+        calibrated = CalibratedClassifierCV(model, cv=3, method="sigmoid")
         calibrated.fit(X_train, y_train)
 
         y_prob = calibrated.predict_proba(X_test)[:, 1]
