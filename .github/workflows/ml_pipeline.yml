@@ -223,6 +223,7 @@ jobs:
           pricing MAE  : ${{ needs.evaluate.outputs.pricing_mae }} MAD
           matching AUC : ${{ needs.evaluate.outputs.matching_auc }}
           promoted at  : $(date -u '+%Y-%m-%d %H:%M UTC')" || echo "Rien à committer"
+          git pull --rebase origin main
           git push
 
 
