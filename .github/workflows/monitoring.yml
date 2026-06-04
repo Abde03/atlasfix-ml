@@ -10,7 +10,7 @@
 #   1. Détecte le drift dans les nouvelles données
 #   2. Suit la performance des modèles en production
 #   3. Si drift OU dégradation → déclenche automatiquement le retraining
-#
+#   4. Upload les rapports et graphiques de monitoring
 # ─────────────────────────────────────────────────────────────────────────────
 
 name: Monitoring hebdomadaire
