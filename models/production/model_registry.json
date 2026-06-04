@@ -27,5 +27,34 @@
     ],
     "git_sha": "local",
     "triggered_by": "manual"
+  },
+  {
+    "timestamp": "2026-06-04T15:37:56.966859+00:00",
+    "models": [
+      {
+        "model": "pricing_model.pkl",
+        "promoted_at": "2026-06-04T15:37:56.966859+00:00",
+        "run_id": "963db8a249dd47a7a36d34f682f9ae45",
+        "metrics": {
+          "mae": 390.36,
+          "rmse": 522.29,
+          "coverage": 37.38,
+          "width": 612.54
+        }
+      },
+      {
+        "model": "matching_model.pkl",
+        "promoted_at": "2026-06-04T15:37:56.966859+00:00",
+        "run_id": "6833ecbd820240dcab9dbb98c3696e29",
+        "metrics": {
+          "auc": 0.6673,
+          "ap": 0.3406,
+          "pk5": 0.6,
+          "pk10": 0.4
+        }
+      }
+    ],
+    "git_sha": "26d564cd8f1852feb7384e09c9520ab2f7c91bb4",
+    "triggered_by": "Abde03"
   }
 ]
