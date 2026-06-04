@@ -25,7 +25,11 @@ ROOT      = Path(__file__).resolve().parents[1]
 DATA_DIR  = ROOT / "data" / "raw"
 MODEL_DIR = ROOT / "models" / "staging"
 MODEL_DIR.mkdir(parents=True, exist_ok=True)
-MLFLOW_URI = os.getenv("MLFLOW_TRACKING_URI", str(ROOT / "mlflow_store"))
+(ROOT / "mlflow_store").mkdir(exist_ok=True)
+MLFLOW_URI = os.getenv(
+    "MLFLOW_TRACKING_URI",
+    "sqlite:///" + str(ROOT / "mlflow_store" / "mlflow.db").replace("\\", "/"),
+)
 
 
 def precision_at_k(y_true, y_scores, k=5):
