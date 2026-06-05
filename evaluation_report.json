@@ -1,0 +1,26 @@
+{
+  "pricing": {
+    "passed": true,
+    "metrics": {
+      "mae": 423.06,
+      "rmse": 564.63,
+      "coverage": 29.91,
+      "width": 599.47
+    }
+  },
+  "matching": {
+    "passed": false,
+    "metrics": {
+      "auc": 0.6768,
+      "ap": 0.4407,
+      "pk5": 0.2,
+      "pk10": 0.4
+    }
+  },
+  "gates": {
+    "GATE_PRICING_MAX_MAE": 800.0,
+    "GATE_PRICING_MIN_COVERAGE": 25.0,
+    "GATE_MATCHING_MIN_AUC": 0.5,
+    "GATE_MATCHING_MIN_PK5": 0.3
+  }
+}
