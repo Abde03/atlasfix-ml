@@ -172,5 +172,34 @@
     ],
     "git_sha": "d4f10cf5ab1c318e2199f198643c2cc71b7323b4",
     "triggered_by": "Abde03"
+  },
+  {
+    "timestamp": "2026-06-05T14:46:05.711203+00:00",
+    "models": [
+      {
+        "model": "pricing_model.pkl",
+        "promoted_at": "2026-06-05T14:46:05.711203+00:00",
+        "run_id": "79ee57ab8caa44738cf0fa23e57ddf0f",
+        "metrics": {
+          "mae": 423.06,
+          "rmse": 564.63,
+          "coverage": 29.91,
+          "width": 599.47
+        }
+      },
+      {
+        "model": "matching_model.pkl",
+        "promoted_at": "2026-06-05T14:46:05.711203+00:00",
+        "run_id": "79af8e471e1c4242a7edda5c90daebad",
+        "metrics": {
+          "auc": 0.6768,
+          "ap": 0.4407,
+          "pk5": 0.4,
+          "pk10": 0.4
+        }
+      }
+    ],
+    "git_sha": "d7efd55cabd6bc76938b0fe7ad569a4827f64360",
+    "triggered_by": "Abde03"
   }
 ]
