@@ -24,6 +24,7 @@ on:
       - "notebooks/**"
       - "training/**"
       - "api/**"
+      - "chatbot/**"
       - "tests/**"
       - ".github/workflows/ml_pipeline.yml"
 
@@ -67,7 +68,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Vérification syntaxe Python
-        run: python -m py_compile api/main.py api/features.py api/models_loader.py
+        run: python -m py_compile api/main.py api/features.py api/models_loader.py chatbot/chatbot_service.py chatbot/data/knowledge_base.py
 
       - name: Générer les données synthétiques
         run: python data/generate_data.py
