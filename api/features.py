@@ -5,15 +5,13 @@ Fonctions de feature engineering partagées entre l'API et les notebooks.
 
 ⚠️  RÈGLE IMPORTANTE :
 Ces fonctions doivent rester IDENTIQUES à celles des notebooks d'entraînement.
-Si tu modifies build_pricing_features() ici, modifie-la aussi dans 02_train_pricing.ipynb.
-Sinon le modèle recevra des features différentes de celles qu'il a apprises → prédictions fausses.
+Si tu modifies build_matching_features() ici, modifie-la aussi dans 03_train_matching.ipynb.
 """
 
 import pandas as pd
 import numpy as np
 import math
 
-# ── Listes de référence — identiques aux notebooks ────────────────────────────
 CATEGORIES = [
     "Plomberie", "Électricité", "Menuiserie", "Maçonnerie",
     "Peinture", "Carrelage", "Serrurerie", "Jardinage",
@@ -25,17 +23,19 @@ CITIES = [
 ]
 URGENCY_MAP = {"normal": 0, "urgent": 1, "très urgent": 2}
 
+# ── Subscription ───────────────────────────────────────────────────────────────
+SUBSCRIPTION_MAP   = {"free": 0, "basic": 1, "premium": 2, "elite": 3}
+
+# Boost multiplicatif appliqué SUR le score brut du modèle dans le router.
+# Séparé du modèle pour que l'admin puisse l'ajuster sans réentraîner.
+SUBSCRIPTION_BOOST = {"free": 1.00, "basic": 1.15, "premium": 1.35, "elite": 1.60}
+
 
 # ── Pricing features ──────────────────────────────────────────────────────────
 def build_pricing_features(data: dict) -> pd.DataFrame:
     """
     Transforme un dict de requête en DataFrame de features pour le modèle pricing.
-
-    Paramètres attendus (depuis Laravel) :
-      category, city, urgency, desc_len, n_photos,
-      budget_min, budget_max,
-      artisan_rating (optionnel), artisan_score (optionnel),
-      artisan_exp (optionnel), distance_km (optionnel), same_city (optionnel)
+    (inchangé — subscription ne joue pas sur le prix)
     """
     df = pd.DataFrame([data])
 
@@ -52,8 +52,6 @@ def build_pricing_features(data: dict) -> pd.DataFrame:
     X["artisan_exp"]      = pd.Series([data.get("artisan_exp", 5)])
     X["distance_km"]      = pd.Series([data.get("distance_km", 10.0)])
     X["same_city"]        = pd.Series([int(data.get("same_city", 1))])
-
-    # Features dérivées — identiques au notebook
     X["budget_range"]     = X["budget_max"] - X["budget_min"]
     X["urgency_x_budget"] = X["urgency_enc"] * X["budget_max"]
     X["rating_x_exp"]     = X["artisan_rating"] * X["artisan_exp"]
@@ -66,14 +64,11 @@ def build_pricing_features(data: dict) -> pd.DataFrame:
 def build_matching_features(artisan: dict) -> pd.DataFrame:
     """
     Transforme un dict artisan en DataFrame de features pour le modèle matching.
-
-    Paramètres attendus :
-      rating, global_score, years_experience, hourly_rate,
-      is_verified, response_time_h, response_rate, completion_rate, category
+    Inclut subscription comme feature apprise par le modèle.
     """
-    df = pd.DataFrame([artisan])
-
     X = pd.DataFrame()
+
+    # Features artisan de base (inchangées)
     X["artisan_rating"]     = pd.Series([artisan.get("rating", 3.0)])
     X["artisan_score"]      = pd.Series([artisan.get("global_score", 0.5)])
     X["years_exp"]          = pd.Series([artisan.get("years_experience", 5)])
@@ -87,11 +82,21 @@ def build_matching_features(artisan: dict) -> pd.DataFrame:
                                   categories=CATEGORIES
                               ).codes
 
-    # Features dérivées
+    # ── Subscription (NOUVEAU) ────────────────────────────────────────────────
+    sub                     = str(artisan.get("subscription", "free"))
+    X["subscription_enc"]   = pd.Series([SUBSCRIPTION_MAP.get(sub, 0)])
+
+    # Features dérivées existantes
     X["rating_x_verified"]  = X["artisan_rating"] * X["is_verified"]
     X["score_x_completion"] = X["artisan_score"]  * X["completion_rate"]
     X["exp_normalized"]     = (X["years_exp"] / 25.0).clip(0, 1)
     X["resp_speed_score"]   = (1.0 - (X["response_time_h"] / 24).clip(0, 1))
+
+    # Features dérivées avec subscription (NOUVEAU)
+    # Ces deux features aident le modèle à capturer les interactions entre
+    # l'abonnement et la qualité/vérification
+    X["sub_x_score"]        = X["subscription_enc"] * X["artisan_score"]
+    X["sub_x_verified"]     = X["subscription_enc"] * X["is_verified"]
 
     return X
 

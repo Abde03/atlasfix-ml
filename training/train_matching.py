@@ -16,7 +16,7 @@ from sklearn.metrics import roc_auc_score, average_precision_score
 from sklearn.calibration import CalibratedClassifierCV
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from api.features import CATEGORIES, URGENCY_MAP
+from api.features import CATEGORIES, URGENCY_MAP, SUBSCRIPTION_MAP
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger(__name__)
@@ -38,7 +38,13 @@ def precision_at_k(y_true, y_scores, k=5):
 
 
 def build_features(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Feature engineering du modèle matching.
+    Doit rester identique à build_matching_features() dans api/features.py.
+    """
     X = pd.DataFrame(index=df.index)
+
+    # Features artisan de base
     X["artisan_rating"]     = df["rating"].fillna(3.0)
     X["artisan_score"]      = df["global_score"].fillna(0.5)
     X["years_exp"]          = df["years_experience"].fillna(5)
@@ -47,12 +53,27 @@ def build_features(df: pd.DataFrame) -> pd.DataFrame:
     X["response_time_h"]    = df["response_time_h"].fillna(12)
     X["response_rate"]      = df["response_rate"].fillna(0.7)
     X["completion_rate"]    = df["completion_rate"].fillna(0.8)
-    cat_col = "category_x" if "category_x" in df.columns else "category"
+    cat_col                 = "category_x" if "category_x" in df.columns else "category"
     X["category_enc"]       = pd.Categorical(df[cat_col], categories=CATEGORIES).codes
+
+    # ── Subscription (NOUVEAU) ────────────────────────────────────────────────
+    sub_col                 = "subscription_x" if "subscription_x" in df.columns else "subscription"
+    X["subscription_enc"]   = (
+        df[sub_col].fillna("free").map(SUBSCRIPTION_MAP).fillna(0).astype(int)
+        if sub_col in df.columns
+        else pd.Series([0] * len(df), index=df.index)
+    )
+
+    # Features dérivées existantes
     X["rating_x_verified"]  = X["artisan_rating"] * X["is_verified"]
     X["score_x_completion"] = X["artisan_score"]  * X["completion_rate"]
     X["exp_normalized"]     = (X["years_exp"] / 25.0).clip(0, 1)
     X["resp_speed_score"]   = (1.0 - (X["response_time_h"] / 24).clip(0, 1))
+
+    # Features dérivées avec subscription (NOUVEAU)
+    X["sub_x_score"]        = X["subscription_enc"] * X["artisan_score"]
+    X["sub_x_verified"]     = X["subscription_enc"] * X["is_verified"]
+
     return X
 
 
@@ -60,16 +81,27 @@ def train():
     artisans     = pd.read_csv(DATA_DIR / "artisans.csv")
     interactions = pd.read_csv(DATA_DIR / "interactions.csv")
 
+    # ── Joindre les features artisans aux interactions ────────────────────────
     artisan_feats = artisans[[
         "id", "category", "city", "latitude", "longitude",
         "rating", "global_score", "years_experience", "hourly_rate",
-        "is_verified", "response_time_h", "response_rate", "completion_rate"
+        "is_verified", "response_time_h", "response_rate", "completion_rate",
+        "subscription",   # ← NOUVEAU
     ]].rename(columns={"id": "artisan_id"})
 
     df = interactions.merge(artisan_feats, on="artisan_id", how="left")
     df["accepted"] = (df["type"] == "accept_offer").astype(int)
 
     log.info(f"Dataset : {len(df)} lignes | pos_rate={df['accepted'].mean()*100:.1f}%")
+
+    # Log du taux d'acceptation par subscription (sanity check)
+    for sub in ["free", "basic", "premium", "elite"]:
+        sub_col = "subscription_x" if "subscription_x" in df.columns else "subscription"
+        if sub_col in df.columns:
+            mask = df[sub_col] == sub
+            if mask.sum() > 0:
+                rate = df.loc[mask, "accepted"].mean() * 100
+                log.info(f"  Taux acceptation {sub:<8} : {rate:.1f}%")
 
     X = build_features(df)
     y = df["accepted"].values
@@ -92,8 +124,9 @@ def train():
         random_state=42, verbose=-1,
     )
 
-    with mlflow.start_run(run_name="train-matching") as run:
+    with mlflow.start_run(run_name="train-matching-with-subscription") as run:
         mlflow.log_params({**params, "n_train": len(X_train), "pos_rate": round(y.mean(), 3)})
+        mlflow.log_param("features", list(X.columns))
 
         log.info("Entraînement classifieur...")
         model = lgb.LGBMClassifier(**params)
@@ -119,11 +152,19 @@ def train():
 
         log.info(f"AUC={auc} | AP={ap} | P@5={pk5} | P@10={pk10}")
 
+        # Feature importance — vérifie que subscription_enc contribue
+        importance = dict(zip(X.columns, model.feature_importances_))
+        importance_sorted = dict(sorted(importance.items(), key=lambda x: -x[1]))
+        mlflow.log_dict(importance_sorted, "feature_importance.json")
+        log.info(f"Feature importance (top 5): {list(importance_sorted.keys())[:5]}")
+        log.info(f"subscription_enc importance: {importance.get('subscription_enc', 0):.1f}")
+
         bundle = {
             "model":         calibrated,
             "feature_cols":  list(X.columns),
             "categories":    CATEGORIES,
             "urgency_map":   URGENCY_MAP,
+            "subscription_map": SUBSCRIPTION_MAP,
             "metrics":       {"auc": auc, "ap": ap, "pk5": pk5, "pk10": pk10},
             "run_id":        run.info.run_id,
         }

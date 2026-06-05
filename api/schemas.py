@@ -2,7 +2,6 @@
 schemas.py
 ==========
 Définit la forme exacte des requêtes et réponses JSON.
-Laravel envoie ces structures, FastAPI les valide automatiquement.
 """
 
 from pydantic import BaseModel, Field
@@ -26,15 +25,20 @@ class UserRole(str, Enum):
     artisan = "artisan"
     admin   = "admin"
 
+class Subscription(str, Enum):
+    free    = "free"
+    basic   = "basic"
+    premium = "premium"
+    elite   = "elite"
+
 
 # ── Pricing ───────────────────────────────────────────────────────────────────
 
 class PriceEstimateRequest(BaseModel):
-    """Envoyé par Laravel quand le client remplit le formulaire de demande."""
     category:   str     = Field(..., example="Plomberie")
     city:       str     = Field(..., example="Casablanca")
     urgency:    Urgency = Urgency.normal
-    desc_len:   int     = Field(80,  ge=0,   description="Longueur de la description")
+    desc_len:   int     = Field(80,  ge=0)
     n_photos:   int     = Field(0,   ge=0)
     budget_min: float   = Field(200, ge=0)
     budget_max: float   = Field(1500,ge=0)
@@ -42,11 +46,10 @@ class PriceEstimateRequest(BaseModel):
 class PriceEstimateResponse(BaseModel):
     p_min:      float
     p_max:      float
-    confidence: float = Field(..., description="0=faible, 1=haute confiance")
-    source:     str   = Field(..., description="'model' ou 'rule-based'")
+    confidence: float
+    source:     str
 
 class OfferCheckRequest(BaseModel):
-    """Envoyé par Laravel quand un artisan soumet une offre."""
     category:      str
     city:          str
     urgency:       Urgency = Urgency.normal
@@ -57,11 +60,11 @@ class OfferCheckRequest(BaseModel):
     offered_price: float   = Field(..., description="Prix proposé par l'artisan")
 
 class OfferCheckResponse(BaseModel):
-    status:      OfferStatus
-    p_min:       float
-    p_max:       float
-    deviation:   float  = Field(..., description="% d'écart par rapport au milieu estimé")
-    message:     str
+    status:    OfferStatus
+    p_min:     float
+    p_max:     float
+    deviation: float
+    message:   str
 
 
 # ── Matching ──────────────────────────────────────────────────────────────────
@@ -80,30 +83,33 @@ class ArtisanInput(BaseModel):
     hourly_rate:      int
     is_verified:      int
     response_time_h:  float
-    response_rate:    float   = 0.8
-    completion_rate:  float   = 0.9
-    is_available:     int     = 1
+    response_rate:    float      = 0.8
+    completion_rate:  float      = 0.9
+    is_available:     int        = 1
+    subscription:     Subscription = Subscription.free   # ← NOUVEAU
 
 class MatchRequest(BaseModel):
-    """Envoyé par Laravel à chaque publication de demande."""
-    demand_id:    int
-    category:     str
-    city:         str
-    latitude:     float
-    longitude:    float
-    artisans:     List[ArtisanInput] = Field(..., description="Candidats pré-filtrés par Laravel")
-    top_n:        int = Field(10, ge=1, le=50)
+    demand_id:  int
+    category:   str
+    city:       str
+    latitude:   float
+    longitude:  float
+    artisans:   List[ArtisanInput]
+    top_n:      int = Field(10, ge=1, le=50)
 
 class RankedArtisan(BaseModel):
     id:           int
     name:         str
     city:         str
     match_score:  float
+    raw_score:    float  = 0.0
     rank:         int
     rating:       float
     hourly_rate:  int
     is_verified:  int
     distance_km:  float
+    subscription: str = "free"   # ← NOUVEAU
+
 
 class MatchResponse(BaseModel):
     demand_id:  int
@@ -116,7 +122,7 @@ class MatchResponse(BaseModel):
 class ChatRequest(BaseModel):
     message:    str      = Field(..., example="Comment publier une demande ?")
     user_role:  UserRole = UserRole.client
-    session_id: str      = Field(..., description="UUID de la conversation")
+    session_id: str
     user_id:    int
 
 class ChatResponse(BaseModel):

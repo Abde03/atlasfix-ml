@@ -1,23 +1,19 @@
 """
 matching.py — Router FastAPI pour le module Matching
 =====================================================
-Endpoint :
+Endpoint : POST /matching/rank
 
-  POST /matching/rank → score et classe les artisans candidats pour une demande
-
-Flux :
-  1. Laravel pré-filtre les artisans (même catégorie, disponibles)
-     et les envoie à ce endpoint
-  2. Le modèle LightGBM prédit P(accepted=1) pour chaque artisan
-  3. Les artisans sont triés par ce score (+ distance comme tiebreaker)
-  4. Les top_n sont retournés à Laravel qui les affiche au client
+Score final = P(accepted) du modèle LightGBM × SUBSCRIPTION_BOOST
+  - Le modèle LightGBM apprend que subscription corrèle avec acceptance
+  - Le boost multiplicatif garantit une séparation visible dans le ranking
+  - L'admin peut ajuster SUBSCRIPTION_BOOST sans réentraîner
 """
 
 import numpy as np
 from fastapi import APIRouter, Request, HTTPException
 
 from api.schemas  import MatchRequest, MatchResponse, RankedArtisan
-from api.features import build_matching_features, haversine
+from api.features import build_matching_features, haversine, SUBSCRIPTION_BOOST
 
 router = APIRouter()
 
@@ -39,7 +35,7 @@ def rank_artisans(req: MatchRequest, request: Request):
           'latitude'   => $demand->latitude,
           'longitude'  => $demand->longitude,
           'top_n'      => 10,
-          'artisans'   => $artisans->toArray(),
+          'artisans'   => $artisans->toArray(),  // doit inclure 'subscription'
       ])
     """
     try:
@@ -57,30 +53,39 @@ def rank_artisans(req: MatchRequest, request: Request):
         for artisan in req.artisans:
             a = artisan.model_dump()
 
-            # Feature engineering (identique au notebook 03)
+            # Feature engineering (identique à train_matching.py)
             X = build_matching_features(a)
 
-            # Score du modèle LightGBM : P(accepted=1)
-            match_score = float(model.predict_proba(X)[0][1])
+            # ── Score du modèle LightGBM : P(accepted=1) ──────────────────────
+            raw_score = float(model.predict_proba(X)[0][1])
 
-            # Distance entre la demande et l'artisan
+            # ── Subscription boost ────────────────────────────────────────────
+            # Appliqué APRÈS le modèle pour garder la séparation visible
+            # et permettre à l'admin de l'ajuster sans réentraîner
+            sub   = a.get("subscription", "free")
+            boost = SUBSCRIPTION_BOOST.get(sub, 1.0)
+            match_score = min(1.0, raw_score * boost)   # cap à 1.0
+
+            # Distance géographique
             dist_km = haversine(
-                req.latitude, req.longitude,
+                req.latitude,   req.longitude,
                 a["latitude"],  a["longitude"]
             )
 
             results.append({
-                "id":          a["id"],
-                "name":        a["name"],
-                "city":        a["city"],
-                "match_score": round(match_score, 4),
-                "rating":      a["rating"],
-                "hourly_rate": a["hourly_rate"],
-                "is_verified": a["is_verified"],
-                "distance_km": dist_km,
+                "id":           a["id"],
+                "name":         a["name"],
+                "city":         a["city"],
+                "match_score":  round(match_score, 4),
+                "raw_score":    round(raw_score, 4),   # utile pour debug/admin
+                "rating":       a["rating"],
+                "hourly_rate":  a["hourly_rate"],
+                "is_verified":  a["is_verified"],
+                "distance_km":  dist_km,
+                "subscription": sub,                   # ← NOUVEAU
             })
 
-        # Tri : score décroissant, puis distance croissante (tiebreaker)
+        # Tri : score final décroissant, distance croissante comme tiebreaker
         results.sort(key=lambda x: (-x["match_score"], x["distance_km"]))
 
         # Ajouter le rang
@@ -91,7 +96,7 @@ def rank_artisans(req: MatchRequest, request: Request):
         return MatchResponse(
             demand_id=req.demand_id,
             artisans=ranked,
-            model_used="lgbm-matching",
+            model_used="lgbm-matching-with-subscription",
         )
 
     except Exception as e:

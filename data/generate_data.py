@@ -4,8 +4,8 @@ generate_data.py
 Génère les données synthétiques pour AtlasFix.
 Lance avec : python data/generate_data.py
 
-Produit 4 fichiers dans data/raw/ :
-  - artisans.csv         → profils des artisans
+Produit 5 fichiers dans data/raw/ :
+  - artisans.csv         → profils des artisans (avec subscription)
   - clients.csv          → profils des clients
   - demands.csv          → demandes publiées
   - accepted_offers.csv  → offres acceptées (vérité terrain pour le pricing)
@@ -23,9 +23,9 @@ fake = Faker("fr_FR")
 random.seed(42)
 
 # ── Config ────────────────────────────────────────────────────────────────────
-N_ARTISANS    = 300
-N_CLIENTS     = 400
-N_DEMANDS     = 800
+N_ARTISANS     = 300
+N_CLIENTS      = 400
+N_DEMANDS      = 800
 N_INTERACTIONS = 3000
 
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "raw")
@@ -49,7 +49,6 @@ CATEGORIES = [
     "Nettoyage", "Déménagement", "Climatisation", "Informatique",
 ]
 
-# Prix de base par catégorie (min, max en MAD)
 PRIX_BASE = {
     "Plomberie":     (150,  900),
     "Électricité":   (200, 1400),
@@ -65,8 +64,18 @@ PRIX_BASE = {
     "Informatique":  (100,  900),
 }
 
-URGENCES = ["normal", "urgent", "très urgent"]
+URGENCES     = ["normal", "urgent", "très urgent"]
 URGENCE_MULT = {"normal": 1.0, "urgent": 1.25, "très urgent": 1.55}
+
+# ── Subscription tiers ─────────────────────────────────────────────────────────
+# Distribution réaliste : majorité free, quelques premium
+SUBSCRIPTIONS = ["free", "basic", "premium", "elite"]
+SUB_WEIGHTS   = [0.50, 0.25, 0.15, 0.10]
+
+# Boost de probabilité d'acceptation par tier.
+# Un artisan elite a une chance ~2x plus élevée d'être accepté
+# à qualité égale → le modèle apprend cette corrélation.
+SUB_ACCEPT_BOOST = {"free": 0.00, "basic": 0.06, "premium": 0.14, "elite": 0.25}
 
 TITRES = {
     "Plomberie":     ["Fuite sous l'évier", "Chauffe-eau en panne", "WC bouché", "Robinet qui goutte"],
@@ -119,39 +128,44 @@ for i in range(N_ARTISANS):
     cat = random.choice(CATEGORIES)
 
     # Uniform pour maximiser la variance — le modèle matching a besoin d'artisans très différents
-    rating = round(random.uniform(1.5, 5.0), 1)
+    rating    = round(random.uniform(1.5, 5.0), 1)
     n_reviews = random.randint(0, 130)
-    exp = random.randint(1, 25)
+    exp       = random.randint(1, 25)
 
-    # Score global synthétique (sera recalculé par le vrai modèle)
+    # ── Subscription ──────────────────────────────────────────────────────────
+    # Les artisans premium tendent à avoir de meilleures stats (self-selection bias)
+    subscription = random.choices(SUBSCRIPTIONS, weights=SUB_WEIGHTS)[0]
+
+    # Score global (sera recalculé par le vrai modèle)
     score = round(
         0.35 * (rating / 5)
-        + 0.30 * random.uniform(0.5, 1.0)   # fiabilité simulée
-        + 0.20 * (1 if random.random() > 0.4 else 0.4)   # confiance
-        + 0.15 * min(exp / 20, 1.0),         # activité
+        + 0.30 * random.uniform(0.5, 1.0)
+        + 0.20 * (1 if random.random() > 0.4 else 0.4)
+        + 0.15 * min(exp / 20, 1.0),
         3
     )
 
     artisans.append({
-        "id":                i + 1,
-        "name":              fake.name(),
-        "phone":             phone(),
-        "city":              city,
-        "latitude":          lat,
-        "longitude":         lon,
-        "category":          cat,
-        "years_experience":  exp,
-        "hourly_rate":       random.randint(80, 350),
-        "rating":            rating,
-        "n_reviews":         n_reviews,
-        "response_time_h":   round(random.expovariate(1/3), 1),
-        "response_rate":     round(random.uniform(0.5, 1.0), 2),
-        "completion_rate":   round(random.uniform(0.7, 1.0), 2),
-        "no_show_rate":      round(random.uniform(0.0, 0.15), 2),
-        "is_verified":       random.choices([1, 0], weights=[0.6, 0.4])[0],
-        "is_available":      random.choices([1, 0], weights=[0.8, 0.2])[0],
-        "global_score":      score,
-        "created_at":        random_date(730),
+        "id":               i + 1,
+        "name":             fake.name(),
+        "phone":            phone(),
+        "city":             city,
+        "latitude":         lat,
+        "longitude":        lon,
+        "category":         cat,
+        "years_experience": exp,
+        "hourly_rate":      random.randint(80, 350),
+        "rating":           rating,
+        "n_reviews":        n_reviews,
+        "response_time_h":  round(random.expovariate(1/3), 1),
+        "response_rate":    round(random.uniform(0.5, 1.0), 2),
+        "completion_rate":  round(random.uniform(0.7, 1.0), 2),
+        "no_show_rate":     round(random.uniform(0.0, 0.15), 2),
+        "is_verified":      random.choices([1, 0], weights=[0.6, 0.4])[0],
+        "is_available":     random.choices([1, 0], weights=[0.8, 0.2])[0],
+        "subscription":     subscription,   # ← NOUVEAU
+        "global_score":     score,
+        "created_at":       random_date(730),
     })
 
 write_csv("artisans.csv", artisans)
@@ -174,9 +188,9 @@ for i in range(N_CLIENTS):
 
 write_csv("clients.csv", clients)
 
-# ── 3. Demandes + offres acceptées (vérité terrain pricing) ────────────────────
+# ── 3. Demandes + offres acceptées ────────────────────────────────────────────
 print("Génération des demandes et offres acceptées...")
-demands = []
+demands         = []
 accepted_offers = []
 
 artisans_by_cat = {}
@@ -184,93 +198,95 @@ for a in artisans:
     artisans_by_cat.setdefault(a["category"], []).append(a)
 
 for i in range(N_DEMANDS):
-    client = random.choice(clients)
-    cat = random.choice(CATEGORIES)
+    client   = random.choice(clients)
+    cat      = random.choice(CATEGORIES)
     city_name, base_lat, base_lon = random.choice(CITIES)
     lat, lon = jitter(base_lat, base_lon)
-    urgency = random.choices(URGENCES, weights=[0.6, 0.3, 0.1])[0]
-    mult = URGENCE_MULT[urgency]
+    urgency  = random.choices(URGENCES, weights=[0.6, 0.3, 0.1])[0]
+    mult     = URGENCE_MULT[urgency]
     p_min, p_max = PRIX_BASE[cat]
     desc_len = random.randint(30, 350)
     n_photos = random.randint(0, 5)
-    status = random.choices(["open", "completed"], weights=[0.35, 0.65])[0]
+    status   = random.choices(["open", "completed"], weights=[0.35, 0.65])[0]
 
     demand = {
-        "id":          i + 1,
-        "client_id":   client["id"],
-        "title":       random.choice(TITRES[cat]),
-        "category":    cat,
-        "city":        city_name,
-        "latitude":    lat,
-        "longitude":   lon,
-        "urgency":     urgency,
-        "budget_min":  int(p_min * 0.7),
-        "budget_max":  int(p_max * 1.3),
-        "desc_len":    desc_len,
-        "n_photos":    n_photos,
-        "status":      status,
-        "created_at":  random_date(365),
+        "id":         i + 1,
+        "client_id":  client["id"],
+        "title":      random.choice(TITRES[cat]),
+        "category":   cat,
+        "city":       city_name,
+        "latitude":   lat,
+        "longitude":  lon,
+        "urgency":    urgency,
+        "budget_min": int(p_min * 0.7),
+        "budget_max": int(p_max * 1.3),
+        "desc_len":   desc_len,
+        "n_photos":   n_photos,
+        "status":     status,
+        "created_at": random_date(365),
     }
     demands.append(demand)
 
-    # Pour les demandes complétées → on crée une offre acceptée
-    # C'est la VÉRITÉ TERRAIN pour entraîner le modèle de pricing
     if status == "completed":
-        candidates = artisans_by_cat.get(cat, artisans)
-        artisan = random.choice(candidates)
-        real_price = int(random.randint(int(p_min * mult), int(p_max * mult)))
-        dist = haversine(lat, lon, artisan["latitude"], artisan["longitude"])
+        candidates  = artisans_by_cat.get(cat, artisans)
+        artisan     = random.choice(candidates)
+        real_price  = int(random.randint(int(p_min * mult), int(p_max * mult)))
+        dist        = haversine(lat, lon, artisan["latitude"], artisan["longitude"])
 
         accepted_offers.append({
-            # ── Features (inputs du modèle) ──
-            "category":          cat,
-            "city":              city_name,
-            "urgency":           urgency,
-            "desc_len":          desc_len,
-            "n_photos":          n_photos,
-            "budget_min":        demand["budget_min"],
-            "budget_max":        demand["budget_max"],
-            "artisan_rating":    artisan["rating"],
-            "artisan_score":     artisan["global_score"],
-            "artisan_exp":       artisan["years_experience"],
-            "distance_km":       dist,
-            "same_city":         1 if artisan["city"] == city_name else 0,
-            # ── Target (ce qu'on veut prédire) ──
-            "accepted_price":    real_price,
+            "category":       cat,
+            "city":           city_name,
+            "urgency":        urgency,
+            "desc_len":       desc_len,
+            "n_photos":       n_photos,
+            "budget_min":     demand["budget_min"],
+            "budget_max":     demand["budget_max"],
+            "artisan_rating": artisan["rating"],
+            "artisan_score":  artisan["global_score"],
+            "artisan_exp":    artisan["years_experience"],
+            "distance_km":    dist,
+            "same_city":      1 if artisan["city"] == city_name else 0,
+            "accepted_price": real_price,
         })
 
 write_csv("demands.csv", demands)
 write_csv("accepted_offers.csv", accepted_offers)
 
-# ── 4. Interactions (pour le matching collaboratif) ────────────────────────────
+# ── 4. Interactions ────────────────────────────────────────────────────────────
 print("Génération des interactions...")
 interactions = []
 TYPES = ["view_profile", "message_sent", "accept_offer", "reject_offer", "ignore"]
-POIDS = [0.35, 0.20, 0.15, 0.15, 0.15]
 
 for i in range(N_INTERACTIONS):
-    client = random.choice(clients)
+    client  = random.choice(clients)
     artisan = random.choice(artisans)
 
-    # Quality signal — artisan quality drives accept probability so the model can learn
+    # ── Signal qualité (ton code existant, inchangé) ──────────────────────────
     q = (
-        artisan["rating"] / 5.0   * 0.40
-        + artisan["global_score"] * 0.30
-        + artisan["response_rate"]* 0.20
-        + artisan["is_verified"]  * 0.10
-    )  # q ∈ [~0.20, ~0.95] with uniform rating
+        artisan["rating"] / 5.0    * 0.40
+        + artisan["global_score"]  * 0.30
+        + artisan["response_rate"] * 0.20
+        + artisan["is_verified"]   * 0.10
+    )  # q ∈ [~0.20, ~0.95]
 
-    # Steep sigmoid: low-quality ~0.3% accept, high-quality ~56% accept (~200x ratio)
-    # Wide separation ensures model reliably ranks top artisans first (P@5 > 0.3)
-    p_accept = 0.65 / (1 + math.exp(-12 * (q - 0.75)))  # low: ~0.003  high: ~0.56
-    p_reject = 0.25 / (1 + math.exp( 12 * (q - 0.75)))  # low: ~0.25   high: ~0.04
-    p_msg    = 0.04 + q * 0.08
-    p_view   = 0.20
-    p_ignore = max(0.0, 1.0 - p_accept - p_reject - p_msg - p_view)
+    # Steep sigmoid: low-quality ~0.3% accept, high-quality ~56% accept
+    p_accept_base = 0.65 / (1 + math.exp(-12 * (q - 0.75)))
+    p_reject      = 0.25 / (1 + math.exp( 12 * (q - 0.75)))
+    p_msg         = 0.04 + q * 0.08
+    p_view        = 0.20
+
+    # ── Subscription boost ────────────────────────────────────────────────────
+    # Les artisans avec abonnement payant ont plus de visibilité → plus d'acceptations.
+    # Ce signal apprend au modèle que subscription corrèle avec acceptance.
+    # On booste p_accept et on réduit p_ignore proportionnellement.
+    sub           = artisan["subscription"]
+    boost         = SUB_ACCEPT_BOOST[sub]           # 0.0 à 0.25
+    p_accept      = min(0.80, p_accept_base + boost) # cap à 80% pour rester réaliste
+
+    p_ignore      = max(0.0, 1.0 - p_accept - p_reject - p_msg - p_view)
 
     itype = random.choices(TYPES, weights=[p_view, p_msg, p_accept, p_reject, p_ignore])[0]
 
-    # Valeur numérique de l'interaction (pour le CF)
     value_map = {
         "view_profile": 0.2,
         "message_sent": 0.6,
@@ -280,25 +296,51 @@ for i in range(N_INTERACTIONS):
     }
 
     interactions.append({
-        "client_id":  client["id"],
-        "artisan_id": artisan["id"],
-        "category":   artisan["category"],
-        "type":       itype,
-        "value":      value_map[itype],
-        "date":       random_date(365),
+        "client_id":    client["id"],
+        "artisan_id":   artisan["id"],
+        "category":     artisan["category"],
+        "subscription": sub,                # ← NOUVEAU (utile pour l'analyse)
+        "type":         itype,
+        "value":        value_map[itype],
+        "date":         random_date(365),
     })
 
 write_csv("interactions.csv", interactions)
 
 # ── Résumé ─────────────────────────────────────────────────────────────────────
-print("\n" + "="*50)
+sub_counts = {}
+for a in artisans:
+    sub_counts[a["subscription"]] = sub_counts.get(a["subscription"], 0) + 1
+
+accept_by_sub = {}
+for inter in interactions:
+    if inter["type"] == "accept_offer":
+        s = inter["subscription"]
+        accept_by_sub[s] = accept_by_sub.get(s, 0) + 1
+total_by_sub = {}
+for inter in interactions:
+    s = inter["subscription"]
+    total_by_sub[s] = total_by_sub.get(s, 0) + 1
+
+print("\n" + "="*55)
 print("DONNÉES GÉNÉRÉES")
-print("="*50)
+print("="*55)
 print(f"  Artisans           : {len(artisans)}")
 print(f"  Clients            : {len(clients)}")
 print(f"  Demandes           : {len(demands)}")
 print(f"  Offres acceptées   : {len(accepted_offers)}  ← vérité terrain pricing")
 print(f"  Interactions       : {len(interactions)}  ← vérité terrain matching")
-print(f"\n  Dossier            : {OUTPUT_DIR}")
-print("="*50)
-print("\nProchaine étape : ouvre notebooks/01_EDA.ipynb")
+print()
+print("  Répartition subscription artisans :")
+for s in SUBSCRIPTIONS:
+    n = sub_counts.get(s, 0)
+    print(f"    {s:<8} : {n:3} artisans ({n/len(artisans)*100:.0f}%)")
+print()
+print("  Taux d'acceptation par subscription (validation du bias) :")
+for s in SUBSCRIPTIONS:
+    tot = total_by_sub.get(s, 1)
+    acc = accept_by_sub.get(s, 0)
+    print(f"    {s:<8} : {acc/tot*100:.1f}%  ({acc}/{tot})")
+print()
+print(f"  Dossier : {OUTPUT_DIR}")
+print("="*55)
