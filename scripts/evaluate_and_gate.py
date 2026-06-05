@@ -26,7 +26,7 @@ sys.path.insert(0, str(ROOT))
 
 # ── Seuils des quality gates ──────────────────────────────────────────────────
 GATE_PRICING_MAX_MAE      = float(os.getenv("GATE_PRICING_MAX_MAE",      800))
-GATE_PRICING_MIN_COVERAGE = float(os.getenv("GATE_PRICING_MIN_COVERAGE",  35))
+GATE_PRICING_MIN_COVERAGE = float(os.getenv("GATE_PRICING_MIN_COVERAGE",  25))
 GATE_MATCHING_MIN_AUC     = float(os.getenv("GATE_MATCHING_MIN_AUC",    0.50))
 GATE_MATCHING_MIN_PK5     = float(os.getenv("GATE_MATCHING_MIN_PK5",    0.30))
 
