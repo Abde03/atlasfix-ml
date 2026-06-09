@@ -12,7 +12,66 @@ from fastapi import APIRouter, Request, HTTPException
 
 from api.schemas  import (PriceEstimateRequest, PriceEstimateResponse,
                            OfferCheckRequest,    OfferCheckResponse)
-from api.features import build_pricing_features
+from api.features import build_pricing_features, CATEGORIES
+
+# Maps app service names (French, various spellings) → nearest known ML category.
+# Unknown categories fall back to None and use budget range as the primary signal.
+CATEGORY_MAP: dict[str, str] = {
+    # Plomberie
+    "plomberie": "Plomberie",
+    # Electricité
+    "électricité": "Électricité", "electricite": "Électricité", "electricité": "Électricité",
+    # Menuiserie
+    "menuiserie": "Menuiserie",
+    # Maçonnerie
+    "maçonnerie": "Maçonnerie", "maconnerie": "Maçonnerie",
+    # Peinture
+    "peinture": "Peinture",
+    # Carrelage
+    "carrelage": "Carrelage",
+    # Serrurerie
+    "serrurerie": "Serrurerie",
+    # Jardinage
+    "jardinage": "Jardinage",
+    # Nettoyage
+    "nettoyage": "Nettoyage",
+    # Déménagement
+    "déménagement": "Déménagement", "demenagement": "Déménagement",
+    # Climatisation
+    "climatisation": "Climatisation",
+    "chauffage ventilation et climatisation": "Climatisation",
+    "chauffage et climatisation": "Climatisation",
+    "chauffage climatisation": "Climatisation",
+    "chauffage, ventilation et climatisation": "Climatisation",
+    # Informatique
+    "informatique": "Informatique",
+    "réparation ordinateurs": "Informatique",
+    "réseau wifi": "Informatique",
+    "maison connectée": "Informatique",
+    "support technique": "Informatique",
+    "réparation téléphones & tablettes": "Informatique",
+    # Best-effort mappings for app categories not in training set
+    "réparations générales": "Menuiserie",
+    "electroménager": "Informatique",
+    "électroménager": "Informatique",
+    "mécanicien mobile": "Maçonnerie",
+    "vidange mobile": "Maçonnerie",
+    "assistance routière": "Maçonnerie",
+    "organisation d'événements": "Nettoyage",
+    "photographie": "Nettoyage",
+    "vidéographie": "Nettoyage",
+    "musique & animation": "Nettoyage",
+    "beauté & style": "Nettoyage",
+    "services de restauration": "Nettoyage",
+    "décoration d'événements": "Nettoyage",
+    "location de matériel": "Nettoyage",
+}
+
+
+def _normalize_category(raw: str) -> str:
+    """Return the nearest known ML category, or 'Nettoyage' as fallback."""
+    key = raw.strip().lower()
+    return CATEGORY_MAP.get(key, raw)  # keep original if already in CATEGORIES
 
 router = APIRouter()
 
@@ -58,7 +117,9 @@ def estimate_price(req: PriceEstimateRequest, request: Request):
     """
     try:
         bundle = request.app.state.models["pricing"]
-        p_min, p_max, confidence = _predict(bundle, req.model_dump())
+        data   = req.model_dump()
+        data["category"] = _normalize_category(data["category"])
+        p_min, p_max, confidence = _predict(bundle, data)
         return PriceEstimateResponse(
             p_min=p_min,
             p_max=p_max,
@@ -79,7 +140,9 @@ def check_offer(req: OfferCheckRequest, request: Request):
     """
     try:
         bundle = request.app.state.models["pricing"]
-        p_min, p_max, _ = _predict(bundle, req.model_dump())
+        data   = req.model_dump()
+        data["category"] = _normalize_category(data["category"])
+        p_min, p_max, _ = _predict(bundle, data)
 
         offered = req.offered_price
         midpoint = (p_min + p_max) / 2
