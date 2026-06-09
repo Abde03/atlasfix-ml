@@ -172,5 +172,63 @@
     ],
     "git_sha": "d4f10cf5ab1c318e2199f198643c2cc71b7323b4",
     "triggered_by": "Abde03"
+  },
+  {
+    "timestamp": "2026-06-05T14:53:08.807947+00:00",
+    "models": [
+      {
+        "model": "pricing_model.pkl",
+        "promoted_at": "2026-06-05T14:53:08.807947+00:00",
+        "run_id": "252241ad561249b6ae00be9316d45e8b",
+        "metrics": {
+          "mae": 423.06,
+          "rmse": 564.63,
+          "coverage": 29.91,
+          "width": 599.47
+        }
+      },
+      {
+        "model": "matching_model.pkl",
+        "promoted_at": "2026-06-05T14:53:08.807947+00:00",
+        "run_id": "8f5191cf17f84c07b6aba1597b8ddc83",
+        "metrics": {
+          "auc": 0.6768,
+          "ap": 0.4407,
+          "pk5": 0.4,
+          "pk10": 0.4
+        }
+      }
+    ],
+    "git_sha": "c4b7e1e556c40d1e6336d7a8ed402803d1af10fa",
+    "triggered_by": "Abde03"
+  },
+  {
+    "timestamp": "2026-06-08T06:46:21.919579+00:00",
+    "models": [
+      {
+        "model": "pricing_model.pkl",
+        "promoted_at": "2026-06-08T06:46:21.919579+00:00",
+        "run_id": "89994a846b8e4b63ba28421510b09dab",
+        "metrics": {
+          "mae": 423.06,
+          "rmse": 564.63,
+          "coverage": 29.91,
+          "width": 599.47
+        }
+      },
+      {
+        "model": "matching_model.pkl",
+        "promoted_at": "2026-06-08T06:46:21.919579+00:00",
+        "run_id": "fb6c7df3052b4e649a54b60a8c843423",
+        "metrics": {
+          "auc": 0.6768,
+          "ap": 0.4407,
+          "pk5": 0.4,
+          "pk10": 0.4
+        }
+      }
+    ],
+    "git_sha": "ff8d1806cace58c6e0ab395f0b034df3e3a24233",
+    "triggered_by": "Abde03"
   }
 ]
